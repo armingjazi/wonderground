@@ -19,7 +19,7 @@ export default function Page() {
   const [piece, setPiece] = useState<Piece | null>(null);
 
   return (
-    <div className="flex flex-col h-screen bg-black text-white font-light">
+    <div className="flex flex-col h-full bg-black text-white font-light">
       <AnimatePresence>
         {!hasInitialLoad && (
           <motion.div
