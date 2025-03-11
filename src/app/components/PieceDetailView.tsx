@@ -85,40 +85,54 @@ export const PieceDetailView = ({ piece, onClose }: PieceDetailViewProps) => {
         />
 
         <div className="relative z-30 min-h-full pt-24 pb-32" ref={root}>
-          <div className="max-w-4xl mx-auto px-6">
-            {/* Title first */}
+          <div className="max-w-6xl mx-auto p-2">
             <motion.div
               className="text-center mb-12"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <h1 className="text-5xl mb-4 font-medium">{piece.title}</h1>
+              <h1 className="text-5xl mb-4">{piece.title}</h1>
               <div className="mb-8 h-px w-24 bg-white opacity-50 mx-auto"></div>
             </motion.div>
 
-            {/* Content */}
             <motion.div
-              className=" rounded-lg p-8 mb-12"
+              className="rounded-lg p-8"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.4 }}
             >
-              {piece.fullDesc.split(". ").map(
-                (paragraph, index) =>
-                  paragraph.trim() && (
-                    <motion.p
-                      key={index}
-                      className="mb-6 text-lg leading-relaxed"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
-                    >
-                      {paragraph.trim() + (paragraph.endsWith(".") ? "" : ".")}
-                    </motion.p>
-                  ),
-              )}
+              <p className="text-6xl mb-4">{piece.shortDesc}</p>
             </motion.div>
+
+            <div className="flex flex-col md:flex-row gap-8 items-start">
+              <motion.div className="flex-1">
+                {piece.fullDesc.split(". ").map(
+                  (paragraph, index) =>
+                    paragraph.trim() && (
+                      <motion.p
+                        key={index}
+                        className="mb-6 text-xl leading-relaxed"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
+                      >
+                        {paragraph.trim() +
+                          (paragraph.endsWith(".") ? "" : ".")}
+                      </motion.p>
+                    ),
+                )}
+              </motion.div>
+              <motion.img
+                src="/images/momentum/IMG_8739_Wonderground_CANAL_Girona_aidavargas_2023_ALTES.jpg"
+                alt="Dance performance capturing momentum"
+                className="w-full md:w-1/2 lg:w-2/3"
+              />
+            </div>
+
+            <div className="mt-12">
+              <span dangerouslySetInnerHTML={{ __html: piece.castAndCrew }} />
+            </div>
 
             {/* CTA button */}
             <motion.div
