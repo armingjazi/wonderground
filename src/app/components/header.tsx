@@ -8,9 +8,8 @@ export const Header = () => {
       animate={{opacity: 1, y: 0}}
       transition={{duration: 0.6, delay: 0.5}}
     >
-      <div className="text-xl tracking-widest">WONDERGROUND</div>
+      <div className="text-l md:text-xl tracking-widest">WONDERGROUND</div>
       <nav className="flex gap-6 text-sm">
-        <a href="#" className="hover:underline">OUR WORK</a>
         <a href="#" className="hover:underline">ABOUT</a>
         <a href="#" className="hover:underline">CONTACT</a>
       </nav>
