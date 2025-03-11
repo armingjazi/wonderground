@@ -111,12 +111,10 @@ const PieceItem = ({
   blur?: boolean;
   active: boolean;
 }) => {
-  const [isHovered, setIsHovered] = useState(false);
-
   return (
     <motion.div
       key={piece.id}
-      className="relative rounded-lg shadow-2xl overflow-hidden cursor-pointer w-full image-full mb-2"
+      className="relative rounded-lg shadow-2xl overflow-hidden cursor-pointer w-full image-full mb-2 group"
       style={{
         backgroundColor: piece.color,
         transformStyle: "preserve-3d",
@@ -133,8 +131,6 @@ const PieceItem = ({
         transition: { duration: 0.3 },
         zIndex: 10,
       }}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
       transition={{
         type: "spring",
         stiffness: 200,
@@ -142,7 +138,6 @@ const PieceItem = ({
       }}
       onClick={onClick}
     >
-      {/* Color block */}
       <motion.img
         src={piece.image}
         className="w-full h-full object-cover"
@@ -155,7 +150,6 @@ const PieceItem = ({
         style={{ backgroundColor: piece.color }}
       ></motion.img>
 
-      {/* Text Mask big font overlay */}
       <div className="absolute top-0 left-0 p-4 h-full w-full flex pointer-events-none">
         <svg xmlns="http://www.w3.org/2000/svg" className="w-full">
           <svg
@@ -203,13 +197,8 @@ const PieceItem = ({
                 </text>
               </mask>
             </defs>
-            <motion.rect
-              animate={{
-                opacity: isHovered ? 1 : 0,
-              }}
-              transition={{
-                duration: 2
-              }}
+            <rect
+              className='opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-2000'
               width="1200"
               height="904"
               fill={`url(#image-pattern-${piece.id})`}
@@ -219,7 +208,6 @@ const PieceItem = ({
         </svg>
       </div>
 
-      {/* Text overlay */}
       <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/90 to-transparent">
         <p className="text-xs text-gray-300">{piece.shortDesc}</p>
       </div>
@@ -233,7 +221,7 @@ export const PieceGrid = ({
   activePiece,
 }: PieceGridProps) => {
   return (
-    <div className="inset-0 z-0 flex items-center justify-center m-10">
+    <div className="inset-0 z-0 flex items-center justify-center m-2">
       <div className="relative columns-1 xs:columns-1 sm:columns-2 md:columns-3 gap-2 pb-2 w-1040">
         {pieces.map((piece) => (
           <PieceItem

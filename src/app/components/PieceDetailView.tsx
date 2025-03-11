@@ -13,62 +13,49 @@ export const PieceDetailView = ({ piece, onClose }: PieceDetailViewProps) => {
   const root = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Flag to track if we're in a programmatic scroll
     let isAnimatingScroll = false;
 
-    // Handler for user-initiated scrolls
     const handleScroll = () => {
-      // Only close if this is a user scroll, not our animation
       if (window.scrollY <= 5 && !isAnimatingScroll) {
         onClose();
       }
     };
 
-    // Add scroll event listener
     window.addEventListener("scroll", handleScroll);
 
-    // Handle initial scroll to center the detail view
     let scrollTimeout: NodeJS.Timeout | null = null;
 
     if (root.current) {
-      // Wait a moment before scrolling
       scrollTimeout = setTimeout(() => {
         const elementRect = root.current?.getBoundingClientRect();
         if (!elementRect) return;
 
         const absoluteElementTop = elementRect.top + window.pageYOffset;
 
-        // Animation variables
-        const duration = 1500; // milliseconds - increase for slower scroll
+        const duration = 1500;
         const start = window.pageYOffset;
         const distance = absoluteElementTop - start;
         let startTime: number | null = null;
 
-        // Easing function - cubic ease-out for smooth deceleration
         const easeInCubic = (t: number) => t * t * t;
 
-        // Animation function
         function animateScroll(currentTime: number) {
-          // Set the flag to prevent closing during animation
           isAnimatingScroll = true;
 
           if (startTime === null) startTime = currentTime;
           const elapsedTime = currentTime - startTime;
           const progress = Math.min(elapsedTime / duration, 1);
 
-          // Apply easing and scroll
           window.scrollTo(0, start + distance * easeInCubic(progress));
 
           // Continue animation if not complete
           if (progress < 1) {
             requestAnimationFrame(animateScroll);
           } else {
-            // Animation complete, allow user scrolls to trigger close again
             isAnimatingScroll = false;
           }
         }
 
-        // Start animation
         requestAnimationFrame(animateScroll);
       }, 100);
     }
