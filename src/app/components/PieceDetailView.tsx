@@ -18,6 +18,13 @@ export const PieceDetailView = ({ piece, onClose }: PieceDetailViewProps) => {
   const isMobile = isSm || isXs;
 
   useEffect(() => {
+    console.log("isMobile", isMobile);
+    if (!root.current) return;
+    if (isMobile) {
+      root.current.scrollIntoView({ behavior: "smooth" });
+      return;
+    }
+
     let isAnimatingScroll = false;
 
     const handleScroll = () => {
@@ -30,7 +37,7 @@ export const PieceDetailView = ({ piece, onClose }: PieceDetailViewProps) => {
 
     let scrollTimeout: NodeJS.Timeout | null = null;
 
-    if (!isMobile && root.current) {
+    if (root.current) {
       scrollTimeout = setTimeout(() => {
         const elementRect = root.current?.getBoundingClientRect();
         if (!elementRect) return;
@@ -172,7 +179,7 @@ export const PieceDetailView = ({ piece, onClose }: PieceDetailViewProps) => {
               className="w-full ml-[-4px] mt-4"
             />
 
-            <div className="mt-12 pl-100">
+            <div className="mt-12 md:pl-100">
               <span className="text-lg" dangerouslySetInnerHTML={{ __html: piece.concept }} />
             </div>
 
@@ -185,7 +192,7 @@ export const PieceDetailView = ({ piece, onClose }: PieceDetailViewProps) => {
               {piece.quote}
             </motion.p>
 
-            <div className="mt-12 w-2/3">
+            <div className="mt-12 md:w-2/3">
               <span
                 className="text-lg"
                 dangerouslySetInnerHTML={{ __html: piece.aesthetics }}
