@@ -3,8 +3,9 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Header } from "@/app/components/header";
-import {Piece, PieceGrid} from "@/app/components/PieceGrid";
-import {PieceDetailView} from "@/app/components/PieceDetailView";
+import { PieceGrid } from "@/app/components/PieceGrid";
+import { PieceDetailView } from "@/app/components/PieceDetailView";
+import { Piece } from "@/app/data/usePieces";
 
 export default function Page() {
   const [hasInitialLoad, setHasInitialLoad] = useState(false);
@@ -43,7 +44,9 @@ export default function Page() {
       <Header />
       <main className="flex-1 flex flex-col">
         <PieceGrid onPieceClick={setPiece} blur={!!piece} activePiece={piece} />
-        {piece && <PieceDetailView piece={piece} onClose={() => setPiece(null)} />}
+        {piece && (
+          <PieceDetailView piece={piece} onClose={() => setPiece(null)} />
+        )}
       </main>
     </div>
   );
