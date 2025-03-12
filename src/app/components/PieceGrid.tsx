@@ -1,103 +1,5 @@
 import { motion } from "framer-motion";
-
-export interface Piece {
-  id: string;
-  title: string;
-  shortDesc: string;
-  fullDesc: string;
-  castAndCrew: string;
-  color: string;
-  width: number;
-  height: number;
-  image: string;
-  maskImage: string;
-  fontSize?: number;
-  xTranslate: number;
-  yTranslate: number;
-}
-
-const pieces = [
-  {
-    id: "wall-peace",
-    title: "WALL & PEACE",
-    shortDesc: "A site-specific night following two men, a wall, and a woman.",
-    fullDesc:
-      "Through dance, circus and martial arts, the two men rediscover their friendship and perhaps, their place in the world. The show transforms the public space into an imaginary theatrical landscape that pushes the boundaries of artisanal aesthetics and physical storytelling.",
-    castAndCrew: "",
-    color: "rgb(58,255,0)",
-    width: 380,
-    height: 500,
-    fontSize: 100,
-    xTranslate: 100,
-    yTranslate: -250,
-    image: "/pieces/wall_and_peace.png",
-    maskImage: "/pieces/wall_and_peace.png",
-  },
-  {
-    id: "after-rain",
-    title: "AFTER THE RAIN",
-    shortDesc: "A kinetic poem about letting go of someone you love.",
-    fullDesc:
-      "Through an energetic dance of forces, open narratives and transient landscapes; The meeting and constant transformation of two individuals awakens unexpected memories about the nature of our lives. After the Rain is a dance of hopes and fears.",
-    castAndCrew: "",
-    color: "#ff0000",
-    width: 200,
-    height: 300,
-    fontSize: 90,
-    xTranslate: -500,
-    yTranslate: -10,
-    image: "/pieces/after_the_rain.png",
-    maskImage: "/pieces/after_the_rain.png",
-  },
-  {
-    id: "momentum",
-    title: "MOMENTUM",
-    shortDesc: "A mythological tale about humans, nature and gravity.",
-    fullDesc:
-      "With this definition, the company presents a new work in which three dancers—two women and one man—and a live musician delve into the contemporary interaction between the environment, gravity and desire. Through them, we embark on a journey through alternative natures, kinetic forces, human relationships, and internal landscapes. So, for our next show, we decided to focus on the concept of momentum, exploring why it continues to captivate us and the poetic dimensions it might reveal. ",
-    castAndCrew: "<strong> Concept, choreography and direction</strong> Roser Tutusaus and Tom Weksler / Dancers Tom Weksler, Nora Baylach and Yuval Finkelshtein / Original music and artistic collaboration  Miguel Marin Pavón / Lighting Design Filip Horn / Costumes Design Benjamin Nivison / Col·laboració artística Oded Avinathan, Ariadna Montfort and Joan Català / Participants of the first phase of creation Carla Piris Lasaga and Girordan Cruz / Communication and promotion during the creation A129Lacarte -  Anso Raybaut-Pérès / Distribution Fani Benages / Production Wonderground / Videography Ignasi Castañé / Photography Aida Vargas / Coproduction/Mercat de les Flors and Ajuntament de Tarragona / Residencies / El Canal Centre d’arts Escèniques de Salt and The Island / Supported By Beca recerca OSIC, Departament de Cultura-Generalitat de Catalunya i l’Institut Ramón Llull.",
-    color: "#5DAD8C",
-    width: 460,
-    height: 240,
-    fontSize: 140,
-    xTranslate: 100,
-    yTranslate: 0,
-    image: "/pieces/momentum.png",
-    maskImage: "/pieces/falling_man.png",
-  },
-  {
-    id: "rise",
-    title: "RISE",
-    shortDesc: "A wild brushstroke of calligraphy in public space.",
-    fullDesc:
-      "It is the movement forwards and upwards, from distant to intimate that drives this performance. An invitation to ask what it is to be human. It is a unique street spectacle that interacts with the audience and erases the boundary between dance, daily movement and acrobatics.",
-    castAndCrew: "",
-    color: "rgba(255,255,255)",
-    width: 160,
-    height: 600,
-    fontSize: 180,
-    xTranslate: -400,
-    yTranslate: 100,
-    image: "/pieces/rise.png",
-    maskImage: "/pieces/rise.png",
-  },
-  {
-    id: "falling-man",
-    title: "THE FALLING MAN",
-    shortDesc: "Questioning dance, imagination, and mental health.",
-    fullDesc:
-      "It moves between collective memory and the personal, creating a fluid flow of images inspired by the act of falling. Falling is an archetype that has accompanied humans from ancient times to the present.",
-    castAndCrew: "",
-    color: "rgb(175,100,60)",
-    width: 260,
-    height: 800,
-    fontSize: 80,
-    xTranslate: -300,
-    yTranslate: 10,
-    image: "/pieces/falling_man.png",
-    maskImage: "/pieces/falling_man.png",
-  },
-];
+import {Piece, usePieces} from "@/app/data/usePieces";
 
 interface PieceGridProps {
   onPieceClick: (piece: Piece) => void;
@@ -109,7 +11,7 @@ const PieceItem = ({
   piece,
   blur,
   onClick,
-  active
+  active,
 }: {
   piece: Piece;
   onClick: () => void;
@@ -144,7 +46,7 @@ const PieceItem = ({
       onClick={onClick}
     >
       <motion.img
-        src={piece.image}
+        src={piece.images.main}
         className="w-full h-full object-cover"
         whileHover={{
           scale: 1.1,
@@ -179,11 +81,11 @@ const PieceItem = ({
                   fill={piece.color}
                 />
                 <image
-                  href={piece.maskImage}
+                  href={piece.images.mask}
                   width="1046"
                   height="904"
                   opacity={0.8}
-                  filter={'contrast(200%)'}
+                  filter={"contrast(200%)"}
                 />
               </pattern>
               <mask id={`text-mask-${piece.id}`}>
@@ -203,7 +105,7 @@ const PieceItem = ({
               </mask>
             </defs>
             <rect
-              className='opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-2000'
+              className="opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-2000"
               width="1200"
               height="904"
               fill={`url(#image-pattern-${piece.id})`}
@@ -225,6 +127,7 @@ export const PieceGrid = ({
   blur,
   activePiece,
 }: PieceGridProps) => {
+  const pieces = usePieces();
   return (
     <div className="inset-0 z-0 flex items-center justify-center m-2">
       <div className="relative columns-1 xs:columns-1 sm:columns-2 md:columns-3 gap-2 pb-2 w-1040">

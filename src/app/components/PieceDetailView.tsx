@@ -1,8 +1,9 @@
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
 
-import { Piece } from "@/app/components/PieceGrid";
 import { useEffect, useRef } from "react";
+import { Piece } from "@/app/data/usePieces";
+import {useBreakpoint} from "@/app/util/useBreakpoint";
 
 interface PieceDetailViewProps {
   piece: Piece;
@@ -11,6 +12,10 @@ interface PieceDetailViewProps {
 
 export const PieceDetailView = ({ piece, onClose }: PieceDetailViewProps) => {
   const root = useRef<HTMLDivElement>(null);
+
+  const {isSm, isXs } = useBreakpoint();
+
+  const isMobile = isSm || isXs;
 
   useEffect(() => {
     let isAnimatingScroll = false;
@@ -25,7 +30,7 @@ export const PieceDetailView = ({ piece, onClose }: PieceDetailViewProps) => {
 
     let scrollTimeout: NodeJS.Timeout | null = null;
 
-    if (root.current) {
+    if (!isMobile && root.current) {
       scrollTimeout = setTimeout(() => {
         const elementRect = root.current?.getBoundingClientRect();
         if (!elementRect) return;
@@ -65,12 +70,12 @@ export const PieceDetailView = ({ piece, onClose }: PieceDetailViewProps) => {
       window.removeEventListener("scroll", handleScroll);
       if (scrollTimeout) clearTimeout(scrollTimeout);
     };
-  }, [onClose]);
+  }, [isMobile, onClose]);
 
   return (
     <AnimatePresence>
       <motion.div
-        className="inset-0 z-20 mt-[-512px]"
+        className="absolute md:relative inset-0 z-20 md:-mt-96 p-2 md:p-auto"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -124,11 +129,26 @@ export const PieceDetailView = ({ piece, onClose }: PieceDetailViewProps) => {
                 )}
               </motion.div>
               <motion.img
-                src="/images/momentum/IMG_8739_Wonderground_CANAL_Girona_aidavargas_2023_ALTES.jpg"
+                src={piece.images.main}
                 alt="Dance performance capturing momentum"
                 className="w-full md:w-1/2 lg:w-2/3"
               />
             </div>
+
+            <motion.p
+              className="text-3xl text-center p-12 uppercase"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.4 }}
+            >
+              {piece.tagline}
+            </motion.p>
+
+            <motion.img
+              src={piece.images.promos[0]}
+              alt="Dance performance capturing momentum"
+              className="w-full md:w-2/3 lg:w-3/4 ml-[-4px] mt-4"
+            />
 
             <div className="mt-12">
               <span dangerouslySetInnerHTML={{ __html: piece.castAndCrew }} />
@@ -145,17 +165,47 @@ export const PieceDetailView = ({ piece, onClose }: PieceDetailViewProps) => {
                 WATCH TRAILER
               </button>
             </motion.div>
+
+            <motion.img
+              src={piece.images.promos[1]}
+              alt="Dance performance capturing momentum"
+              className="w-full ml-[-4px] mt-4"
+            />
+
+            <div className="mt-12 pl-100">
+              <span className="text-lg" dangerouslySetInnerHTML={{ __html: piece.concept }} />
+            </div>
+
+            <motion.p
+              className="text-3xl text-center p-12 uppercase"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.4 }}
+            >
+              {piece.quote}
+            </motion.p>
+
+            <div className="mt-12 w-2/3">
+              <span
+                className="text-lg"
+                dangerouslySetInnerHTML={{ __html: piece.aesthetics }}
+              />
+            </div>
           </div>
 
           {/* Close button */}
           <motion.button
             onClick={onClose}
-            className="fixed top-6 right-6 z-50 text-3xl hover:opacity-70 transition-opacity bg-black/50 w-10 h-10 rounded-full flex items-center justify-center"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.3, delay: 0.8 }}
+            className="fixed top-12 right-6 z-50 text-3xl hover:opacity-70 transition-opacity bg-black/50 w-10 h-10 rounded-full flex items-center justify-center cursor-pointer"
+            initial={{opacity: 0, scale: 0.8}}
+            animate={{opacity: 1, scale: 1}}
+            transition={{duration: 0.3, delay: 0.8}}
           >
-            &times;
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" strokeWidth="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
           </motion.button>
         </div>
       </motion.div>
