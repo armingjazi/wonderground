@@ -25,6 +25,7 @@ export interface Piece {
   HeightClearance?: string;
   TouringParty?: string;
   contact?: string;
+  position: 0 | 1 | 2;
 }
 
 export const usePieces = (): Piece[] => {
@@ -38,11 +39,13 @@ export const usePieces = (): Piece[] => {
         "Through dance, circus and martial arts, the two men rediscover their friendship and perhaps, their place in the world. The show transforms the public space into an imaginary theatrical landscape that pushes the boundaries of artisanal aesthetics and physical storytelling.",
       castAndCrew: "",
       tagline: "",
-      concept: "Walls are architectures with great socio-political content. But what they " +
+      concept:
+        "Walls are architectures with great socio-political content. But what they " +
         "really hide is the image of who or what is on the other side. They create a " +
         "physical and mental division between self and other, between us and them. " +
         "<strong> It is tempting to wonder if on the other side there is someone just like us... </strong>",
-      aesthetics: "WALL & PEACE has the aesthetics of Film Noir and is handcrafted with portable light " +
+      aesthetics:
+        "WALL & PEACE has the aesthetics of Film Noir and is handcrafted with portable light " +
         "objects. The show can be performed on any wall in any town or city. " +
         "It is inspired by the mystery and fantasy of bedtime stories. A play with shadows; with " +
         "visible and invisible; with dreams and ghosts. " +
@@ -50,7 +53,7 @@ export const usePieces = (): Piece[] => {
         "<strong> A unique show that seeks to convey the spectacular nature of intimacy.</strong>",
       color: "rgb(58,255,0)",
       width: 380,
-      height: 500,
+      height: 560,
       fontSize: 100,
       xTranslate: 100,
       yTranslate: -250,
@@ -63,6 +66,7 @@ export const usePieces = (): Piece[] => {
           "/pieces/wall_and_peace/3.png",
         ],
       },
+      position: 0,
     },
     {
       id: "after_the_rain",
@@ -76,7 +80,7 @@ export const usePieces = (): Piece[] => {
       aesthetics: "",
       color: "#ff0000",
       width: 200,
-      height: 300,
+      height: 360,
       fontSize: 90,
       xTranslate: -500,
       yTranslate: -10,
@@ -89,6 +93,7 @@ export const usePieces = (): Piece[] => {
           "/pieces/after_the_rain/3.png",
         ],
       },
+      position: 0,
     },
     {
       id: "momentum",
@@ -110,7 +115,8 @@ export const usePieces = (): Piece[] => {
       castAndCrew:
         "<strong> Concept, choreography and direction</strong> Roser Tutusaus and Tom Weksler / <strong>Dancers</strong> Tom Weksler, Nora Baylach and Yuval Finkelshtein / <strong>Original music and artistic collaboration</strong>  Miguel Marin Pavón / <strong>Lighting Design</strong> Filip Horn / <strong>Costumes Design</strong> Benjamin Nivison / <strong>Col·laboració artística</strong> Oded Avinathan, Ariadna Montfort and Joan Català / <strong>Participants of the first phase of creation</strong> Carla Piris Lasaga and Girordan Cruz / <strong>Communication and promotion during the creation</strong> A129Lacarte -  Anso Raybaut-Pérès / <strong>Distribution</strong> Fani Benages / <strong>Production</strong> Wonderground / <strong>Videography</strong> Ignasi Castañé / <strong>Photography</strong> Aida Vargas / <strong>Coproduction</strong> Mercat de les Flors and Ajuntament de Tarragona / <strong>Residencies</strong> El Canal Centre d’arts Escèniques de Salt and The Island / <strong>Supported By</strong> Beca recerca OSIC, Departament de Cultura-Generalitat de Catalunya i l’Institut Ramón Llull.",
       tagline: "What moves us in a world that seems to have lost its balance?",
-      concept: "There is a universal truth when one feels gravity and the weight of the " +
+      concept:
+        "There is a universal truth when one feels gravity and the weight of the " +
         "body. It is one of the most primal human experiences of what it means to " +
         "be in the world. If we add displacement, a multiplicity of questions begins to arise. Why " +
         "do we move in one direction? What drives us? Where do we want to go? " +
@@ -122,7 +128,8 @@ export const usePieces = (): Piece[] => {
         "ground. <br/>  <br/> <strong> We place these actions within archetypal natural landscapes, which " +
         "follow one another and intuitively reveal symbolic relationships—" +
         "both of the soul’s inner landscapes and of the forces that sometimes govern our relationships. </strong>",
-      aesthetics: "The soundscape is created from deconstructed natural " +
+      aesthetics:
+        "The soundscape is created from deconstructed natural " +
         "sounds and live music. The musical staging ranges from a " +
         "poetic recital to a rock concert with a computer, samplers, " +
         "electric guitar, and electronic drums." +
@@ -137,7 +144,8 @@ export const usePieces = (): Piece[] => {
         "and mythological. At the same time, it wishes to look" +
         "with humor at where we are and where we are going" +
         "(or could go!). </strong>",
-      quote: "\"To the eyes of the man of imagination, nature is imagination itself. As a man is, so he sees.\" William Blake",
+      quote:
+        '"To the eyes of the man of imagination, nature is imagination itself. As a man is, so he sees." William Blake',
       color: "#5DAD8C",
       width: 300,
       height: 420,
@@ -153,6 +161,7 @@ export const usePieces = (): Piece[] => {
           "/pieces/momentum/3.jpg",
         ],
       },
+      position: 1,
     },
     {
       id: "rise",
@@ -179,6 +188,7 @@ export const usePieces = (): Piece[] => {
           "/pieces/rise/3.png",
         ],
       },
+      position: 1,
     },
     {
       id: "falling-man",
@@ -192,7 +202,7 @@ export const usePieces = (): Piece[] => {
       aesthetics: "",
       color: "rgb(175,100,60)",
       width: 260,
-      height: 800,
+      height: 900,
       fontSize: 80,
       xTranslate: -300,
       yTranslate: 10,
@@ -205,6 +215,7 @@ export const usePieces = (): Piece[] => {
           "/pieces/falling_man/3.png",
         ],
       },
+      position: 2,
     },
   ];
 };

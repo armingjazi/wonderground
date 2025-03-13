@@ -21,7 +21,7 @@ const PieceItem = ({
   return (
     <motion.div
       key={piece.id}
-      className="relative rounded-lg shadow-2xl overflow-hidden cursor-pointer w-full image-full mb-2 group"
+      className="relative rounded-md shadow-2xl overflow-hidden cursor-pointer w-full image-full mb-2 group"
       style={{
         backgroundColor: piece.color,
         transformStyle: "preserve-3d",
@@ -128,18 +128,49 @@ export const PieceGrid = ({
   activePiece,
 }: PieceGridProps) => {
   const pieces = usePieces();
+  const first_position_pieces = pieces.filter((piece) => piece.position === 0);
+  const second_position_pieces = pieces.filter((piece) => piece.position === 1);
+  const third_position_pieces = pieces.filter((piece) => piece.position === 2);
+
   return (
     <div className="inset-0 z-0 flex items-center justify-center m-2">
-      <div className="relative columns-1 xs:columns-1 sm:columns-2 md:columns-3 gap-2 pb-2 w-1040">
-        {pieces.map((piece) => (
-          <PieceItem
-            piece={piece}
-            blur={blur}
-            key={piece.id}
-            active={piece.id === activePiece?.id}
-            onClick={() => onPieceClick(piece)}
-          />
-        ))}
+      <div className="relative flex gap-2 pb-2 w-full">
+        <div className="w-[30%] space-y-4">
+          {first_position_pieces.map((piece) => (
+            <PieceItem
+              piece={piece}
+              blur={blur}
+              key={piece.id}
+              active={piece.id === activePiece?.id}
+              onClick={() => onPieceClick(piece)}
+            />
+          ))}
+        </div>
+
+        <div className="w-[45%] space-y-4">
+          {second_position_pieces.map((piece) => (
+            <PieceItem
+              piece={piece}
+              blur={blur}
+              key={piece.id}
+              active={piece.id === activePiece?.id}
+              onClick={() => onPieceClick(piece)}
+            />
+          ))}
+        </div>
+
+        <div className="w-[25%]">
+          {third_position_pieces.map((piece) => (
+            <PieceItem
+              piece={piece}
+              blur={blur}
+              key={piece.id}
+              active={piece.id === activePiece?.id}
+              onClick={() => onPieceClick(piece)}
+            />
+          ))}
+        </div>
+
       </div>
     </div>
   );
