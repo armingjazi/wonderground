@@ -1,4 +1,12 @@
+export interface CalEvent {
+  id: string;
+  date: string;
+  time: string;
+  name: string;
+  location: string;
+}
 export interface Piece {
+  type: "piece" | "calendar" | "other";
   id: string;
   title: string;
   shortDesc: string;
@@ -26,49 +34,13 @@ export interface Piece {
   TouringParty?: string;
   contact?: string;
   position: 0 | 1 | 2;
+  events: CalEvent[]
 }
 
 export const usePieces = (): Piece[] => {
   return [
     {
-      id: "wall-peace",
-      title: "WALL & PEACE",
-      shortDesc:
-        "A site-specific night following two men, a wall, and a woman.",
-      fullDesc:
-        "Through dance, circus and martial arts, the two men rediscover their friendship and perhaps, their place in the world. The show transforms the public space into an imaginary theatrical landscape that pushes the boundaries of artisanal aesthetics and physical storytelling.",
-      castAndCrew: "",
-      tagline: "",
-      concept:
-        "Walls are architectures with great socio-political content. But what they " +
-        "really hide is the image of who or what is on the other side. They create a " +
-        "physical and mental division between self and other, between us and them. " +
-        "<strong> It is tempting to wonder if on the other side there is someone just like us... </strong>",
-      aesthetics:
-        "WALL & PEACE has the aesthetics of Film Noir and is handcrafted with portable light " +
-        "objects. The show can be performed on any wall in any town or city. " +
-        "It is inspired by the mystery and fantasy of bedtime stories. A play with shadows; with " +
-        "visible and invisible; with dreams and ghosts. " +
-        "An act of transformation. " +
-        "<strong> A unique show that seeks to convey the spectacular nature of intimacy.</strong>",
-      color: "rgb(58,255,0)",
-      width: 380,
-      height: 560,
-      fontSize: 100,
-      xTranslate: 100,
-      yTranslate: -250,
-      images: {
-        main: "/pieces/wall_and_peace/main.png",
-        mask: "/pieces/wall_and_peace/main.png",
-        promos: [
-          "/pieces/wall_and_peace/1.png",
-          "/pieces/wall_and_peace/2.png",
-          "/pieces/wall_and_peace/3.png",
-        ],
-      },
-      position: 0,
-    },
-    {
+      type: "piece",
       id: "after_the_rain",
       title: "AFTER THE RAIN",
       shortDesc: "A kinetic poem about letting go of someone you love.",
@@ -93,9 +65,11 @@ export const usePieces = (): Piece[] => {
           "/pieces/after_the_rain/3.png",
         ],
       },
+      events: [],
       position: 0,
     },
     {
+      type: "piece",
       id: "momentum",
       title: "MOMENTUM",
       shortDesc: "A mythological tale about humans, nature and gravity.",
@@ -148,7 +122,7 @@ export const usePieces = (): Piece[] => {
         '"To the eyes of the man of imagination, nature is imagination itself. As a man is, so he sees." William Blake',
       color: "#5DAD8C",
       width: 300,
-      height: 420,
+      height: 560,
       fontSize: 140,
       xTranslate: 200,
       yTranslate: -250,
@@ -161,9 +135,51 @@ export const usePieces = (): Piece[] => {
           "/pieces/momentum/3.jpg",
         ],
       },
+      events: [],
       position: 1,
     },
     {
+      type: "piece",
+      id: "wall-peace",
+      title: "WALL & PEACE",
+      shortDesc:
+        "A site-specific night following two men, a wall, and a woman.",
+      fullDesc:
+        "Through dance, circus and martial arts, the two men rediscover their friendship and perhaps, their place in the world. The show transforms the public space into an imaginary theatrical landscape that pushes the boundaries of artisanal aesthetics and physical storytelling.",
+      castAndCrew: "",
+      tagline: "",
+      concept:
+        "Walls are architectures with great socio-political content. But what they " +
+        "really hide is the image of who or what is on the other side. They create a " +
+        "physical and mental division between self and other, between us and them. " +
+        "<strong> It is tempting to wonder if on the other side there is someone just like us... </strong>",
+      aesthetics:
+        "WALL & PEACE has the aesthetics of Film Noir and is handcrafted with portable light " +
+        "objects. The show can be performed on any wall in any town or city. " +
+        "It is inspired by the mystery and fantasy of bedtime stories. A play with shadows; with " +
+        "visible and invisible; with dreams and ghosts. " +
+        "An act of transformation. " +
+        "<strong> A unique show that seeks to convey the spectacular nature of intimacy.</strong>",
+      color: "rgb(58,255,0)",
+      width: 380,
+      height: 360,
+      fontSize: 100,
+      xTranslate: 100,
+      yTranslate: -250,
+      images: {
+        main: "/pieces/wall_and_peace/main.png",
+        mask: "/pieces/wall_and_peace/main.png",
+        promos: [
+          "/pieces/wall_and_peace/1.png",
+          "/pieces/wall_and_peace/2.png",
+          "/pieces/wall_and_peace/3.png",
+        ],
+      },
+      events: [],
+      position: 1,
+    },
+    {
+      type: "piece",
       id: "rise",
       title: "RISE",
       shortDesc: "A wild brushstroke of calligraphy in public space.",
@@ -175,7 +191,7 @@ export const usePieces = (): Piece[] => {
       aesthetics: "",
       color: "rgba(255,255,255)",
       width: 160,
-      height: 600,
+      height: 640,
       fontSize: 180,
       xTranslate: -400,
       yTranslate: 100,
@@ -188,9 +204,11 @@ export const usePieces = (): Piece[] => {
           "/pieces/rise/3.png",
         ],
       },
-      position: 1,
+      events: [],
+      position: 0,
     },
     {
+      type: "piece",
       id: "falling-man",
       title: "THE FALLING MAN",
       shortDesc: "Questioning dance, imagination, and mental health.",
@@ -202,7 +220,7 @@ export const usePieces = (): Piece[] => {
       aesthetics: "",
       color: "rgb(175,100,60)",
       width: 260,
-      height: 900,
+      height: 920,
       fontSize: 80,
       xTranslate: -300,
       yTranslate: 10,
@@ -215,7 +233,72 @@ export const usePieces = (): Piece[] => {
           "/pieces/falling_man/3.png",
         ],
       },
+      events: [],
       position: 2,
     },
+    {
+      type: "calendar",
+      id: "event-calendar",
+      title: "",
+      shortDesc: "",
+      fullDesc: "",
+      castAndCrew: "",
+      tagline: "",
+      concept: "",
+      aesthetics: "",
+      color: "rgb(0,0,0)",
+      width: 260,
+      height: 500,
+      fontSize: 80,
+      xTranslate: -300,
+      yTranslate: 10,
+      images: {
+        main: "/pieces/event_calendar/main.jpg",
+        mask: "/pieces/event_calendar/main.jpg",
+        promos: [
+          "/pieces/event_calendar/1.png",
+          "/pieces/event_calendar/2.png",
+          "/pieces/event_calendar/3.png",
+        ],
+      },
+      events: [
+        {
+          id: "event-1",
+          date: "2022-01-01",
+          time: "20:00",
+          location: "Barcelona",
+          name: "After the Rain",
+        },
+        {
+          id: "event-2",
+          date: "2022-01-02",
+          time: "20:00",
+          location: "Madrid",
+          name: "Momentum",
+        },
+        {
+          id: "event-3",
+          date: "2022-01-03",
+          time: "20:00",
+          location: "Valencia",
+          name: "Wall & Peace",
+        },
+        {
+          id: "event-4",
+          date: "2022-01-03",
+          time: "20:00",
+          location: "Valencia",
+          name: "Wall & Peace",
+        },
+        {
+          id: "event-5",
+          date: "2022-01-03",
+          time: "20:00",
+          location: "Valencia",
+          name: "Wall & Peace",
+        }
+      ],
+      position: 1,
+    }
   ];
 };
