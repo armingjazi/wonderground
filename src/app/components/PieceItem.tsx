@@ -48,7 +48,6 @@ export const PieceItem = ({
         transition={{
           duration: 0.4,
         }}
-        style={{ backgroundColor: piece.color }}
       ></motion.img>
 
       <div className="absolute top-0 left-0 p-4 h-full w-full flex pointer-events-none">
