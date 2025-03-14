@@ -161,13 +161,13 @@ export const usePieces = (): Piece[] => {
         "visible and invisible; with dreams and ghosts. " +
         "An act of transformation. " +
         "<strong> A unique show that seeks to convey the spectacular nature of intimacy.</strong>",
-      color: "rgb(255,255,255)",
+      color: "rgb(0,0,0)",
       width: 500,
       height: 360,
       fontSize: 110,
-      xTranslate: 100,
-      yTranslate: -250,
-      maskOpacity: 0.6,
+      xTranslate: 350,
+      yTranslate: -30,
+      maskOpacity: 0.4,
       images: {
         main: "/pieces/wall_and_peace/main.png",
         mask: "/pieces/wall_and_peace/main.png",
