@@ -56,15 +56,19 @@ export const PieceGrid = ({
   activePiece,
 }: PieceGridProps) => {
   const pieces = usePieces();
-  const first_position_pieces = pieces.filter((piece) => piece.position === 0);
-  const second_position_pieces = pieces.filter((piece) => piece.position === 1);
-  const third_position_pieces = pieces.filter((piece) => piece.position === 2);
+  const first_desktop = pieces.filter((piece) => piece.position === 0).map((piece) => ({...piece, id: piece.id + 'first'}));
+  const second_desktop = pieces.filter((piece) => piece.position === 1).map((piece) => ({...piece, id: piece.id + 'second'}));
+  const third_desktop = pieces.filter((piece) => piece.position === 2).map((piece) => ({...piece, id: piece.id + 'third'}));
+
+  const first_tablet = pieces.filter((piece) => piece.position === 0 || piece.position === 2).map((piece) => ({...piece, id: piece.id + 'first_third'}));
+  const second_tablet = pieces.filter((piece) => piece.position === 1).map((piece) => ({...piece, id: piece.id + 'second_tablet'}));
+
 
   return (
     <div className="inset-0 z-0 flex items-center justify-center m-2">
       <div className="relative flex gap-2 pb-2 w-full">
         <div className="hidden lg:block w-[30%] space-y-4">
-          {first_position_pieces.map((piece) => (
+          {first_desktop.map((piece) => (
             <PieceFactory
               piece={piece}
               blur={blur}
@@ -76,7 +80,7 @@ export const PieceGrid = ({
         </div>
 
         <div className="hidden lg:block w-[45%] space-y-4">
-          {second_position_pieces.map((piece) => (
+          {second_desktop.map((piece) => (
             <PieceFactory
               piece={piece}
               blur={blur}
@@ -88,7 +92,7 @@ export const PieceGrid = ({
         </div>
 
         <div className="hidden lg:block w-[25%]">
-          {third_position_pieces.map((piece) => (
+          {third_desktop.map((piece) => (
             <PieceFactory
               piece={piece}
               blur={blur}
@@ -99,7 +103,7 @@ export const PieceGrid = ({
           ))}
         </div>
         <div className="hidden md:block lg:hidden w-[45%] space-y-4">
-          {first_position_pieces.concat(third_position_pieces).map((piece) => (
+          {first_tablet.map((piece) => (
             <PieceFactory
               piece={piece}
               blur={blur}
@@ -111,7 +115,7 @@ export const PieceGrid = ({
         </div>
 
         <div className="hidden md:block lg:hidden w-[55%] space-y-4">
-          {second_position_pieces.map((piece) => (
+          {second_tablet.map((piece) => (
             <PieceFactory
               piece={piece}
               blur={blur}

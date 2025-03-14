@@ -1,12 +1,12 @@
-import {Piece} from "@/app/data/usePieces";
-import {motion} from "framer-motion";
+import { Piece } from "@/app/data/usePieces";
+import { motion } from "framer-motion";
 
 export const PieceItem = ({
-                     piece,
-                     blur,
-                     onClick,
-                     active,
-                   }: {
+  piece,
+  blur,
+  onClick,
+  active,
+}: {
   piece: Piece;
   onClick: () => void;
   blur?: boolean;
@@ -78,7 +78,7 @@ export const PieceItem = ({
                   href={piece.images.mask}
                   width="1046"
                   height="904"
-                  opacity={0.8}
+                  opacity={piece.maskOpacity ?? 0.8}
                   filter={"contrast(200%)"}
                 />
               </pattern>
@@ -89,7 +89,7 @@ export const PieceItem = ({
                   letterSpacing={20}
                   textAnchor="middle"
                   dominantBaseline="middle"
-                  fontFamily="var(--font-nunito-sans)"
+                  fontFamily="var(--font-jost-sans)"
                   fontSize={piece.fontSize}
                   fontWeight="700"
                   fill="white"

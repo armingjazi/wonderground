@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 const nunitoSans = Jost({
-  variable: "--font-nunito-sans",
+  variable: "--font-jost-sans",
   subsets: ["latin"]
 })
 

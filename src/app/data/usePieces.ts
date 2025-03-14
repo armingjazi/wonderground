@@ -22,6 +22,7 @@ export interface Piece {
   fontSize?: number;
   xTranslate: number;
   yTranslate: number;
+  maskOpacity?: number;
   images: {
     main: string;
     mask: string;
@@ -34,7 +35,7 @@ export interface Piece {
   TouringParty?: string;
   contact?: string;
   position: 0 | 1 | 2;
-  events: CalEvent[]
+  events: CalEvent[];
 }
 
 export const usePieces = (): Piece[] => {
@@ -160,12 +161,13 @@ export const usePieces = (): Piece[] => {
         "visible and invisible; with dreams and ghosts. " +
         "An act of transformation. " +
         "<strong> A unique show that seeks to convey the spectacular nature of intimacy.</strong>",
-      color: "rgb(58,255,0)",
-      width: 380,
+      color: "rgb(255,255,255)",
+      width: 500,
       height: 360,
-      fontSize: 100,
+      fontSize: 110,
       xTranslate: 100,
       yTranslate: -250,
+      maskOpacity: 0.6,
       images: {
         main: "/pieces/wall_and_peace/main.png",
         mask: "/pieces/wall_and_peace/main.png",
