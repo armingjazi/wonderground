@@ -1,9 +1,9 @@
+"use client";
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
-
-import { useEffect, useRef } from "react";
 import { Piece } from "@/app/data/usePieces";
-import { useBreakpoint } from "@/app/util/useBreakpoint";
+import { CloseButton } from "@/app/components/CloseButton";
+import { useScrollAnimation } from "@/app/util/useScrollAnimation";
 
 interface PieceDetailViewProps {
   piece: Piece;
@@ -11,78 +11,12 @@ interface PieceDetailViewProps {
 }
 
 export const PieceDetailView = ({ piece, onClose }: PieceDetailViewProps) => {
-  const root = useRef<HTMLDivElement>(null);
-
-  const { isSm, isXs } = useBreakpoint();
-
-  const isMobile = isSm || isXs;
-
-  useEffect(() => {
-    console.log("isMobile", isMobile);
-    if (!root.current) return;
-    if (isMobile) {
-      root.current.scrollIntoView({ behavior: "smooth" });
-      return;
-    }
-
-    let isAnimatingScroll = false;
-
-    const handleScroll = () => {
-      if (window.scrollY <= 5 && !isAnimatingScroll) {
-        onClose();
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    let scrollTimeout: NodeJS.Timeout | null = null;
-
-    if (root.current) {
-      scrollTimeout = setTimeout(() => {
-        const elementRect = root.current?.getBoundingClientRect();
-        if (!elementRect) return;
-
-        const absoluteElementTop = elementRect.top + window.pageYOffset;
-
-        const duration = 1500;
-        const start = window.pageYOffset;
-        const distance = absoluteElementTop - start;
-        let startTime: number | null = null;
-
-        const easeInCubic = (t: number) => t * t * t;
-
-        function animateScroll(currentTime: number) {
-          isAnimatingScroll = true;
-
-          if (startTime === null) startTime = currentTime;
-          const elapsedTime = currentTime - startTime;
-          const progress = Math.min(elapsedTime / duration, 1);
-
-          window.scrollTo(0, start + distance * easeInCubic(progress));
-
-          // Continue animation if not complete
-          if (progress < 1) {
-            requestAnimationFrame(animateScroll);
-          } else {
-            isAnimatingScroll = false;
-          }
-        }
-
-        requestAnimationFrame(animateScroll);
-      }, 100);
-    }
-
-    // Cleanup event listener and timeout on unmount
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      if (scrollTimeout) clearTimeout(scrollTimeout);
-    };
-  }, [isMobile, onClose]);
+  const root = useScrollAnimation(onClose);
 
   return (
     <AnimatePresence>
       <motion.div
-        className="absolute md:relative inset-0 z-20 md:-mt-96 p-2 md:p-auto bg-black bg-opacity-50 md:bg-transparent"
+        className="absolute md:relative inset-0 z-20 md:-mt-96 p-2 md:p-auto bg-black opacity-50 md:bg-transparent"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -217,27 +151,7 @@ export const PieceDetailView = ({ piece, onClose }: PieceDetailViewProps) => {
             <span dangerouslySetInnerHTML={{ __html: piece.castAndCrew }} />
           </div>
 
-          <motion.button
-            onClick={onClose}
-            className="fixed top-12 right-6 z-50 text-3xl hover:opacity-70 transition-opacity bg-black/50 w-10 h-10 rounded-full flex items-center justify-center cursor-pointer"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.3, delay: 0.8 }}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <line x1="18" y1="6" x2="6" y2="18"></line>
-              <line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg>
-          </motion.button>
-
+          <CloseButton onClick={onClose} />
           <motion.button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="fixed bottom-12 right-1/2 z-50 text-3xl hover:opacity-70 transition-opacity bg-black/50 w-10 h-10 rounded-full flex items-center justify-center cursor-pointer"

@@ -1,3 +1,4 @@
+'use client';
 import { Piece, usePieces } from "@/app/data/usePieces";
 import { PieceItem } from "@/app/components/PieceItem";
 import {EventCalendar} from "@/app/components/EventCalendar";

@@ -1,3 +1,4 @@
+'use client';
 import { Piece } from "@/app/data/usePieces";
 import { motion } from "framer-motion";
 

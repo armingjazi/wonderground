@@ -1,3 +1,4 @@
+'use client';
 import { Piece } from "@/app/data/usePieces";
 import { motion } from "framer-motion";
 
@@ -54,7 +55,7 @@ export const EventCalendar = ({
         {piece.events.map((event) => (
           <motion.div
             key={event.id}
-            className="bg-black bg-opacity-50 p-3 rounded-md bg-transparent"
+            className="bg-black opacity-50 p-3 rounded-md bg-transparent"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
