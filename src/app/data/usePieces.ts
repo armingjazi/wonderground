@@ -4,6 +4,9 @@ export interface CalEvent {
   time: string;
   name: string;
   location: string;
+  country: string;
+  venue?: string;
+  link?: string;
 }
 export interface Piece {
   type: "piece" | "calendar" | "other";
@@ -49,7 +52,8 @@ export const usePieces = (): Piece[] => {
         "Through an energetic dance of forces, open narratives and transient landscapes; The meeting and constant transformation of two individuals awakens unexpected memories about the nature of our lives. After the Rain is a dance of hopes and fears.",
       castAndCrew: "",
       tagline: "",
-      concept: "After the Rain takes this natural phenomenon as a metaphor for the ephemeral. " +
+      concept:
+        "After the Rain takes this natural phenomenon as a metaphor for the ephemeral. " +
         "At the same time that Tom and Roser entered a studio together, Roser’s father was diagnosed with a brain tumor. " +
         "AFTER THE RAIN is the artistic work that has accompanied and moved through the process of her father’s illness and passing. " +
         "It holds the sensations and questions that arise—many of which are deeply tied to the very essence of living. And it does so by looking at nature as a reflection. " +
@@ -93,7 +97,7 @@ export const usePieces = (): Piece[] => {
         "concert, MOMENTUM fuses movement, acrobatic dance, " +
         "minimalism, and humor to imagine what our future could be.",
       castAndCrew:
-        "<strong> Concept, choreography and direction</strong> Roser Tutusaus and Tom Weksler / <strong>Dancers</strong> Tom Weksler, Nora Baylach and Yuval Finkelshtein / <strong>Original music and artistic collaboration</strong>  Miguel Marin Pavón / <strong>Lighting Design</strong> Filip Horn / <strong>Costumes Design</strong> Benjamin Nivison / <strong>Col·laboració artística</strong> Oded Avinathan, Ariadna Montfort and Joan Català / <strong>Participants of the first phase of creation</strong> Carla Piris Lasaga and Girordan Cruz / <strong>Communication and promotion during the creation</strong> A129Lacarte -  Anso Raybaut-Pérès / <strong>Distribution</strong> Fani Benages / <strong>Production</strong> Wonderground / <strong>Videography</strong> Ignasi Castañé / <strong>Photography</strong> Aida Vargas / <strong>Coproduction</strong> Mercat de les Flors and Ajuntament de Tarragona / <strong>Residencies</strong> El Canal Centre d’arts Escèniques de Salt and The Island / <strong>Supported By</strong> Beca recerca OSIC, Departament de Cultura-Generalitat de Catalunya i l’Institut Ramón Llull.",
+        "<strong>Concept, choreography and direction</strong> Roser Tutusaus and Tom Weksler / <strong>Dancers</strong> Tom Weksler, Nora Baylach and Yuval Finkelshtein / <strong>Original music and artistic collaboration</strong>  Miguel Marin Pavón / <strong>Lighting Design</strong> Filip Horn / <strong>Costumes Design</strong> Benjamin Nivison / <strong>Col·laboració artística</strong> Oded Avinathan, Ariadna Montfort and Joan Català / <strong>Participants of the first phase of creation</strong> Carla Piris Lasaga and Girordan Cruz / <strong>Communication and promotion during the creation</strong> A129Lacarte -  Anso Raybaut-Pérès / <strong>Distribution</strong> Fani Benages / <strong>Production</strong> Wonderground / <strong>Videography</strong> Ignasi Castañé / <strong>Photography</strong> Aida Vargas / <strong>Coproduction</strong> Mercat de les Flors and Ajuntament de Tarragona / <strong>Residencies</strong> El Canal Centre d’arts Escèniques de Salt and The Island / <strong>Supported By</strong> Beca recerca OSIC, Departament de Cultura-Generalitat de Catalunya i l’Institut Ramón Llull.",
       tagline: "What moves us in a world that seems to have lost its balance?",
       concept:
         "There is a universal truth when one feels gravity and the weight of the " +
@@ -154,7 +158,8 @@ export const usePieces = (): Piece[] => {
       fullDesc:
         "Through dance, circus and martial arts, the two men rediscover their friendship and perhaps, their place in the world. The show transforms the public space into an imaginary theatrical landscape that pushes the boundaries of handmade aesthetics and physical storytelling.",
       castAndCrew: "",
-      tagline: "What lies beyond the wall when shadows become our bridge to the other side?",
+      tagline:
+        "What lies beyond the wall when shadows become our bridge to the other side?",
       concept:
         "Walls are architectures with great socio-political content. But what they " +
         "really hide is the image of who or what is on the other side. They create a " +
@@ -193,10 +198,14 @@ export const usePieces = (): Piece[] => {
       shortDesc: "A wild brushstroke of calligraphy in public space.",
       fullDesc:
         "It is the movement forwards and upwards, from distant to intimate that drives this performance. An invitation to ask what it is to be human. It is a unique street spectacle that interacts with the audience and erases the boundary between dance, daily movement and acrobatics.",
-      castAndCrew: "",
+      castAndCrew:
+        "<strong>Creation & Interpretation</strong> Roser Tutusaus Tom Weksler / <strong>Artistic Collaboration</strong> Orit Nevo, Oryan Zacks & Spela Vodev / <strong>Costume Design</strong> Benjamin Nivisson & Tom Weklser / <strong>Artistic Collaboration</strong> Oded Avinathan, Ariadna Montfort and Joan Català / <strong>Musical Composition </strong> Miguel Marín Pavón / <strong>Choreography assistant</strong> Marta Dalmau / <strong>Distribution</strong> Fani Benages / <strong>Production</strong> Wonderground and Brechtje Randag/ <strong>Supported By</strong> Circuit Est-Centre Chorégraphique Montréal, Maison pour la danse de Québec, Me’ever Mitzpe Ramon a Israel, Aula de Teatre i Dansa de Mataró, On Contemporary Circus Creation de Israel, Centre Cívic de la Barceloneta, Institut Ramon Lull.",
       tagline: "What moves us in a world that seems to have lost its balance?",
       concept: "",
-      aesthetics: "",
+      aesthetics:
+        "RISE explores the collision and encounter of different physical languages corresponding to the diverse artistic backgrounds of Tom and Roser." +
+        "These languages—Butoh, Contemporary Dance, Acrobatics, Capoeira, and Partnering—have been placed outside their original context to respond to current expressive needs and encourage the reappearance of personal and gestural meanings.\n" +
+        "<strong> Inspired by the urban and cold aesthetic of the movie Matrix and the cave art of ancient times, RISE expresses this transformation or regression </strong>",
       color: "rgba(255,255,255)",
       width: 160,
       height: 640,
@@ -248,7 +257,7 @@ export const usePieces = (): Piece[] => {
     {
       type: "calendar",
       id: "event-calendar",
-      title: "",
+      title: "UPCOMING EVENTS",
       shortDesc: "",
       fullDesc: "",
       castAndCrew: "",
@@ -272,42 +281,77 @@ export const usePieces = (): Piece[] => {
       },
       events: [
         {
-          id: "event-1",
-          date: "2022-01-01",
-          time: "20:00",
-          location: "Barcelona",
-          name: "After the Rain",
+          "id": "event-5",
+          "date": "2025/01/24",
+          "time": "20:00",
+          "location": "Barcelona",
+          "name": "Momentum Premiere",
+          "venue": "Mercat de les Flors",
+          "link": "https://mercatflors.cat/",
+          "country": "Catalunya"
         },
         {
-          id: "event-2",
-          date: "2022-01-02",
-          time: "20:00",
-          location: "Madrid",
-          name: "Momentum",
+          "id": "event-4",
+          "date": "2024/08/24",
+          "time": "20:00",
+          "location": "Amersfoort",
+          "name": "Wall & Peace",
+          "venue": "Spoffin Festival",
+          "link": "https://spoffin.nl/",
+          "country": "Netherlands"
         },
         {
-          id: "event-3",
-          date: "2022-01-03",
-          time: "20:00",
-          location: "Valencia",
-          name: "Wall & Peace",
+          "id": "event-3",
+          "date": "2024/08/23",
+          "time": "20:00",
+          "location": "Amersfoort",
+          "name": "Wall & Peace Premiere",
+          "venue": "Spoffin Festival",
+          "link": "https://spoffin.nl/",
+          "country": "Netherlands"
         },
         {
-          id: "event-4",
-          date: "2022-01-03",
-          time: "20:00",
-          location: "Valencia",
-          name: "Wall & Peace",
+          "id": "event-2",
+          "date": "2024/08/09",
+          "time": "20:00",
+          "location": "Les Piles",
+          "name": "Wall & Peace Pre-premiere",
+          "venue": "Danseu Festival",
+          "link": "https://danseufestival.com/",
+          "country": "Catalunya"
         },
         {
-          id: "event-5",
-          date: "2022-01-03",
-          time: "20:00",
-          location: "Valencia",
-          name: "Wall & Peace",
+          "id": "event-1",
+          "date": "2024/05/18",
+          "time": "20:00",
+          "location": "Tarragona",
+          "name": "The Falling Man",
+          "venue": "Centre Penitenciari",
+          "link": "https://www.tarragona.cat/cultura/agenda/2024/programacio-marc-juny-2024/cd/rise-roser-tutusaus-i-tom-weksler",
+          "country": "Catalunya"
+        },
+        {
+          "id": "event-6",
+          "date": "Postponed",
+          "time": "20:00",
+          "location": "Mollet del Vallès",
+          "name": "After the Rain",
+          "venue": "Teatre Can Gomà",
+          "link": "https://molletvalles.koobin.com/index.php",
+          "country": "Catalunya"
+        },
+        {
+          "id": "event-7",
+          "date": "Postponed",
+          "time": "20:00",
+          "location": "Mataró",
+          "name": "After the Rain",
+          "venue": "Teatre Monumental",
+          "link": "https://www.culturamataro.cat/teatre-monumental",
+          "country": "Catalunya"
         }
       ],
       position: 1,
-    }
+    },
   ];
 };

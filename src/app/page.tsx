@@ -8,6 +8,7 @@ import { Piece } from "@/app/data/usePieces";
 import { Header } from "@/app/components/Header";
 import { About } from "@/app/components/About";
 import { Contact } from "@/app/components/Contact";
+import { CalendarDetailView } from "@/app/components/CalendarDetailView";
 
 export default function Page() {
   const [hasInitialLoad, setHasInitialLoad] = useState(false);
@@ -47,9 +48,14 @@ export default function Page() {
       <Header onAbout={setAbout} />
       <main className="flex-1 flex flex-col">
         <PieceGrid onPieceClick={setPiece} blur={!!piece || about} activePiece={piece} />
-        {piece && (
+        {piece && (piece.type === "piece") && (
           <PieceDetailView piece={piece} onClose={() => setPiece(null)} />
         )}
+        {
+          piece && (piece.type === "calendar") && (
+            <CalendarDetailView piece={piece} onClose={() => setPiece(null)} />
+          )
+        }
         {about && <About onClose={() => setAbout(false)} />}
         <Contact />
       </main>
