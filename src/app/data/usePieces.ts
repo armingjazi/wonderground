@@ -49,7 +49,11 @@ export const usePieces = (): Piece[] => {
         "Through an energetic dance of forces, open narratives and transient landscapes; The meeting and constant transformation of two individuals awakens unexpected memories about the nature of our lives. After the Rain is a dance of hopes and fears.",
       castAndCrew: "",
       tagline: "",
-      concept: "",
+      concept: "After the Rain takes this natural phenomenon as a metaphor for the ephemeral. " +
+        "At the same time that Tom and Roser entered a studio together, Roser’s father was diagnosed with a brain tumor. " +
+        "AFTER THE RAIN is the artistic work that has accompanied and moved through the process of her father’s illness and passing. " +
+        "It holds the sensations and questions that arise—many of which are deeply tied to the very essence of living. And it does so by looking at nature as a reflection. " +
+        "Letting go of someone you love is a deeply personal experience, yet also a universal one. From this perspective, the piece explores beliefs about love, death, transformation, spirit, and transcendence, mirroring itself in the natural world and its processes.",
       aesthetics: "",
       color: "#ff0000",
       width: 200,
@@ -61,9 +65,10 @@ export const usePieces = (): Piece[] => {
         main: "/pieces/after_the_rain/main.png",
         mask: "/pieces/after_the_rain/main.png",
         promos: [
-          "/pieces/after_the_rain/1.png",
-          "/pieces/after_the_rain/2.png",
-          "/pieces/after_the_rain/3.png",
+          "/pieces/after_the_rain/1.jpg",
+          "/pieces/after_the_rain/2.jpg",
+          "/pieces/after_the_rain/3.jpg",
+          "/pieces/after_the_rain/4.jpg",
         ],
       },
       events: [],
@@ -125,15 +130,16 @@ export const usePieces = (): Piece[] => {
       width: 300,
       height: 560,
       fontSize: 140,
-      xTranslate: 200,
-      yTranslate: -250,
+      xTranslate: 300,
+      yTranslate: -100,
       images: {
-        main: "/pieces/momentum/main.png",
-        mask: "/pieces/momentum/main.png",
+        main: "/pieces/momentum/main.jpg",
+        mask: "/pieces/momentum/2.jpg",
         promos: [
           "/pieces/momentum/1.jpg",
           "/pieces/momentum/2.jpg",
           "/pieces/momentum/3.jpg",
+          "/pieces/momentum/4.jpg",
         ],
       },
       events: [],
@@ -144,37 +150,37 @@ export const usePieces = (): Piece[] => {
       id: "wall-peace",
       title: "WALL & PEACE",
       shortDesc:
-        "A site-specific night following two men, a wall, and a woman.",
+        "A site-specific night show that follows the mysterious story of two men and a wall, told and illuminated",
       fullDesc:
-        "Through dance, circus and martial arts, the two men rediscover their friendship and perhaps, their place in the world. The show transforms the public space into an imaginary theatrical landscape that pushes the boundaries of artisanal aesthetics and physical storytelling.",
+        "Through dance, circus and martial arts, the two men rediscover their friendship and perhaps, their place in the world. The show transforms the public space into an imaginary theatrical landscape that pushes the boundaries of handmade aesthetics and physical storytelling.",
       castAndCrew: "",
-      tagline: "",
+      tagline: "What lies beyond the wall when shadows become our bridge to the other side?",
       concept:
         "Walls are architectures with great socio-political content. But what they " +
         "really hide is the image of who or what is on the other side. They create a " +
         "physical and mental division between self and other, between us and them. " +
-        "<strong> It is tempting to wonder if on the other side there is someone just like us... </strong>",
+        "<strong>It is tempting to wonder if on the other side there is someone just like us...</strong>",
       aesthetics:
         "WALL & PEACE has the aesthetics of Film Noir and is handcrafted with portable light " +
         "objects. The show can be performed on any wall in any town or city. " +
         "It is inspired by the mystery and fantasy of bedtime stories. A play with shadows; with " +
-        "visible and invisible; with dreams and ghosts. " +
-        "An act of transformation. " +
-        "<strong> A unique show that seeks to convey the spectacular nature of intimacy.</strong>",
-      color: "rgb(0,0,0)",
+        "visible and invisible; with dreams and ghosts. An act of transformation." +
+        "<strong> A unique show that seeks to convey the spectacular nature of intimacy. </strong>",
+      color: "rgb(255,255,255)",
       width: 500,
       height: 360,
       fontSize: 110,
-      xTranslate: 350,
-      yTranslate: -30,
+      xTranslate: 850,
+      yTranslate: -1000,
       maskOpacity: 0.4,
       images: {
         main: "/pieces/wall_and_peace/main.png",
         mask: "/pieces/wall_and_peace/main.png",
         promos: [
-          "/pieces/wall_and_peace/1.png",
-          "/pieces/wall_and_peace/2.png",
-          "/pieces/wall_and_peace/3.png",
+          "/pieces/wall_and_peace/1.jpg",
+          "/pieces/wall_and_peace/2.jpg",
+          "/pieces/wall_and_peace/3.jpg",
+          "/pieces/wall_and_peace/4.jpg",
         ],
       },
       events: [],
@@ -201,9 +207,10 @@ export const usePieces = (): Piece[] => {
         main: "/pieces/rise/main.png",
         mask: "/pieces/rise/main.png",
         promos: [
-          "/pieces/rise/1.png",
-          "/pieces/rise/2.png",
-          "/pieces/rise/3.png",
+          "/pieces/rise/1.jpg",
+          "/pieces/rise/2.jpg",
+          "/pieces/rise/3.jpg",
+          "/pieces/rise/4.jpg",
         ],
       },
       events: [],
