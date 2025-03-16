@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
-import { FaYoutube, FaVimeo, FaInstagram, FaFacebook } from 'react-icons/fa';
+import { FaYoutube, FaVimeo, FaInstagram, FaFacebook } from "react-icons/fa";
 import Link from "next/link";
-
 
 export const Contact = () => {
   const containerVariants = {
@@ -29,7 +28,7 @@ export const Contact = () => {
   const lineVariants = {
     hidden: { width: 0 },
     visible: {
-      width: '100%',
+      width: "100%",
       transition: {
         duration: 0.8,
       },
@@ -63,19 +62,28 @@ export const Contact = () => {
         </div>
 
         {/* Email */}
-        <motion.div variants={itemVariants} className="mb-16">
+        <motion.div
+          variants={itemVariants}
+          className="mb-16 flex flex-col items-center"
+        >
           <Link
-            href="mailto:distribution@wondergroundcompany.com"
+            href="mailto:international@wondergroundcompany.com"
             className="text-lg md:text-xl hover:text-gray-300 transition-colors duration-300"
           >
-            distribution@wondergroundcompany.com
+            international@wondergroundcompany.com
+          </Link>
+          <Link
+            href="mailto:fani@fanibenages.com"
+            className="text-lg md:text-xl hover:text-gray-300 transition-colors duration-300"
+          >
+            fani@fanibenages.com
           </Link>
         </motion.div>
 
         {/* Social Media Icons */}
         <motion.div variants={itemVariants} className="flex space-x-8">
           <motion.a
-            href="https://youtube.com"
+            href="https://www.youtube.com/@wonderground_company"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }}
@@ -85,7 +93,7 @@ export const Contact = () => {
             <FaYoutube size={24} />
           </motion.a>
           <motion.a
-            href="https://vimeo.com"
+            href="https://vimeo.com/wonderground"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }}
@@ -95,7 +103,7 @@ export const Contact = () => {
             <FaVimeo size={24} />
           </motion.a>
           <motion.a
-            href="https://instagram.com"
+            href="https://www.instagram.com/wonderground_company/"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }}
@@ -105,7 +113,7 @@ export const Contact = () => {
             <FaInstagram size={24} />
           </motion.a>
           <motion.a
-            href="https://facebook.com"
+            href="https://www.facebook.com/wondergroundcompany"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }}
