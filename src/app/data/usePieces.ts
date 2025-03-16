@@ -50,7 +50,8 @@ export const usePieces = (): Piece[] => {
       shortDesc: "A kinetic poem about letting go of someone you love.",
       fullDesc:
         "Through an energetic dance of forces, open narratives and transient landscapes; The meeting and constant transformation of two individuals awakens unexpected memories about the nature of our lives. After the Rain is a dance of hopes and fears.",
-      castAndCrew: "",
+      castAndCrew: "<strong>Direction, Choreography and Interpretation</strong>: Roser Tutusaus and Tom Weksler/ <strong>Original Music and Soundscape</strong>: Miguel Marin Pavón / <strong>Musical Research</strong>: Adrien Grellet (Didacte) / <strong>Lighting Design:</strong> Filip Horn / <strong>Lighting Research</strong>: Conchita Pons / <strong>Costume Design:</strong> Benjamin Nivison /<strong>Production: </strong>Wonderground and Brechtje Randag / <strong>Promotion and Communication:</strong> Katerina Vassiliadis\n" +
+        "<strong>Distribution: </strong>Fani Benages / <strong>Coproduction: </strong>Dansa Metropolitana and Derida Dance Center / <strong>Artistic Collaborators</strong>: Mal Pelo (Pep Ramis and Maria Muñoz), Marta Dalmau and Ariadna Montfort <strong>Special Thanks:</strong> Oryan Zacks, Nicols Protopappas, Berta Escalas, Carla Piris / <strong>Videography:</strong> Petya Ivanova / <strong>Supported by</strong>: Generalitat de Catalunya, Espai Pla Roig, Centre Cívic Barceloneta, Can Gassol Mataró, Ca l'Estruch, Ajuntament de Sabadell, L'Animal a l'Esquena, Certamen Coreográfico de Madrid, La Visiva, Instituto Cervantes Sofia.",
       tagline: "",
       concept:
         "After the Rain takes this natural phenomenon as a metaphor for the ephemeral. " +
@@ -70,9 +71,9 @@ export const usePieces = (): Piece[] => {
         mask: "/pieces/after_the_rain/main.png",
         promos: [
           "/pieces/after_the_rain/1.jpg",
-          "/pieces/after_the_rain/2.jpg",
-          "/pieces/after_the_rain/3.jpg",
-          "/pieces/after_the_rain/4.jpg",
+          "/pieces/after_the_rain/2.jpeg",
+          "/pieces/after_the_rain/3.jpeg",
+          "/pieces/after_the_rain/4.jpeg",
         ],
       },
       events: [],
