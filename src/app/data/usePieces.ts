@@ -155,7 +155,7 @@ export const usePieces = (): Piece[] => {
       id: "wall-peace",
       title: "WALL & PEACE",
       shortDesc:
-        "A site-specific night show that follows the mysterious story of two men and a wall, told and illuminated",
+        "A site-specific night show that follows the mysterious story of two men and a wall, illuminated by a woman",
       fullDesc:
         "Through dance, circus and martial arts, the two men rediscover their friendship and perhaps, their place in the world. The show transforms the public space into an imaginary theatrical landscape that pushes the boundaries of handmade aesthetics and physical storytelling.",
       castAndCrew: "",
@@ -183,10 +183,10 @@ export const usePieces = (): Piece[] => {
         main: "/pieces/wall_and_peace/main.png",
         mask: "/pieces/wall_and_peace/main.png",
         promos: [
-          "/pieces/wall_and_peace/1.jpg",
-          "/pieces/wall_and_peace/2.jpg",
-          "/pieces/wall_and_peace/3.jpg",
-          "/pieces/wall_and_peace/4.jpg",
+          "/pieces/wall_and_peace/1.jpeg",
+          "/pieces/wall_and_peace/2.jpeg",
+          "/pieces/wall_and_peace/3.jpeg",
+          "/pieces/wall_and_peace/4.jpeg",
         ],
       },
       events: [],
