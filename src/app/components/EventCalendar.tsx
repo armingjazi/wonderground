@@ -51,22 +51,22 @@ export const EventCalendar = ({
         }}
         style={{ backgroundColor: piece.color }}
       ></motion.img>
-      <div className="absolute top-4 left-0 p-4 h-4/5 w-full flex flex-col flex-wrap pointer-events-none">
+      <div className="absolute top-4 left-0 pt-6 pl-2 h-4/5 w-full flex flex-col flex-wrap pointer-events-none">
         {piece.events.map((event) => (
           <motion.div
             key={event.id}
-            className="bg-black opacity-50 p-3 rounded-md bg-transparent"
+            className="bg-black opacity-50 p-2 rounded-md bg-transparent"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
             <h1
-              className="text-white text-xl font-medium"
+              className="text-white text-md sm:text-lg lg:text-xl font-medium"
             >
               {event.name}
             </h1>
-            <p className="text-white text-sm font-normal">{event.date}</p>
-            <p className="text-white text-sm font-normal">{event.location}</p>
+            <p className="text-white text-xs sm:text-sm font-normal">{event.date}</p>
+            <p className="text-white text-xs sm:text-sm font-normal">{event.location}</p>
           </motion.div>
         ))}
       </div>

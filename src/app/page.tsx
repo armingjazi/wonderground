@@ -46,7 +46,7 @@ export default function Page() {
         )}
       </AnimatePresence>
       <Header onAbout={setAbout} />
-      <main className="flex-1 flex flex-col">
+      <main className="flex-1 flex flex-col overflow-y-auto">
         <PieceGrid onPieceClick={setPiece} blur={!!piece || about} activePiece={piece} />
         {piece && (piece.type === "piece") && (
           <PieceDetailView piece={piece} onClose={() => setPiece(null)} />

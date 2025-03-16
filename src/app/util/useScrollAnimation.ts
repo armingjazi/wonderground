@@ -1,24 +1,16 @@
-import { useEffect, useRef } from "react";
-import { useBreakpoint } from "@/app/util/useBreakpoint";
+import { useEffect } from "react";
+import { useIsVisible } from "@/app/util/useIsVisible";
 
 export function useScrollAnimation(onClose: () => void) {
-  const root = useRef<HTMLDivElement>(null);
-
-  const { isSm, isXs } = useBreakpoint();
-
-  const isMobile = isSm || isXs;
+  const [visibleRef, isVisible] = useIsVisible<HTMLDivElement>();
 
   useEffect(() => {
-    if (!root.current) return;
-    if (isMobile) {
-      root.current.scrollIntoView({ behavior: "smooth" });
-      return;
-    }
+    if (!visibleRef.current) return;
 
     let isAnimatingScroll = false;
 
     const handleScroll = () => {
-      if (window.scrollY <= 5 && !isAnimatingScroll) {
+      if (!isVisible && !isAnimatingScroll) {
         onClose();
       }
     };
@@ -27,9 +19,9 @@ export function useScrollAnimation(onClose: () => void) {
 
     let scrollTimeout: NodeJS.Timeout | null = null;
 
-    if (root.current) {
+    if (visibleRef.current) {
       scrollTimeout = setTimeout(() => {
-        const elementRect = root.current?.getBoundingClientRect();
+        const elementRect = visibleRef.current?.getBoundingClientRect();
         if (!elementRect) return;
 
         const absoluteElementTop = elementRect.top + window.pageYOffset;
@@ -62,11 +54,10 @@ export function useScrollAnimation(onClose: () => void) {
       }, 100);
     }
 
-    // Cleanup event listener and timeout on unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
       if (scrollTimeout) clearTimeout(scrollTimeout);
     };
-  }, [isMobile, onClose]);
-  return root;
+  }, [isVisible, visibleRef, onClose]);
+  return visibleRef;
 }

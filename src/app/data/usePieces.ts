@@ -246,9 +246,10 @@ export const usePieces = (): Piece[] => {
         main: "/pieces/falling_man/main.png",
         mask: "/pieces/falling_man/main.png",
         promos: [
-          "/pieces/falling_man/1.png",
-          "/pieces/falling_man/2.png",
-          "/pieces/falling_man/3.png",
+          "/pieces/falling_man/1.jpeg",
+          "/pieces/falling_man/2.jpeg",
+          "/pieces/falling_man/3.jpeg",
+          "/pieces/falling_man/4.jpeg",
         ],
       },
       events: [],
