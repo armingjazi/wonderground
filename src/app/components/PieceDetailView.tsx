@@ -89,7 +89,7 @@ export const PieceDetailView = ({ piece, onClose }: PieceDetailViewProps) => {
             />
 
             <motion.div
-              className="m-12 md:pl-100"
+              className="m-4 md:m-12 md:pl-100"
               whileInView={{ scale: 1.1 }}
               transition={{ duration: 1.5 }}
             >
@@ -127,7 +127,7 @@ export const PieceDetailView = ({ piece, onClose }: PieceDetailViewProps) => {
             </motion.p>
 
             <motion.div
-              className="mt-12 md:w-2/3 mb-12"
+              className="mt-12 md:w-2/3 mb-12 p-6 md:p-12"
               whileInView={{ scale: 1.1 }}
               transition={{ duration: 1.5 }}
             >
@@ -144,7 +144,7 @@ export const PieceDetailView = ({ piece, onClose }: PieceDetailViewProps) => {
             className="w-full"
           />
 
-          <div className="p-10">
+          <div className="p-2 md:p-10">
             <span dangerouslySetInnerHTML={{ __html: piece.castAndCrew }} />
           </div>
 
