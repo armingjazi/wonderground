@@ -25,15 +25,15 @@ export const Header = ({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.5 }}
     >
-      <div className="flex items-center align-center">
+      <div className="flex flex-col items-left">
         <Image
           src="/icon_inverted.png"
           alt="Wonderground"
-          width="32"
-          height="32"
-          className="mr-[-4]"
+          width="16"
+          height="16"
+          className="mb-[-8]"
         />
-        <div className="text-l md:text-xl tracking-widest">ONDERGROUND</div>
+        <div className="text-l md:text-xl tracking-widest">WONDERGROUND</div>
       </div>
       <div className="flex-grow" />
       <div className="flex items-center gap-6">

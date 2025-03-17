@@ -13,7 +13,7 @@ export async function GET(request: NextRequest) {
 
   try {
     const filePath = path.join(process.cwd(), 'src', 'app', 'data', `${lang}.json`);
-    console.log('filePath:', filePath);
+
     if (!fs.existsSync(filePath)) {
       return NextResponse.json(
         { error: `Language file for ${lang} not found` },

@@ -63,15 +63,15 @@ function Main() {
               transition={{ duration: 2 }}
               className="text-4xl tracking-widest font-extralight"
             >
-              <div className="flex items-center align-center">
+              <div className="flex flex-col items-left">
                 <Image
                   src="/icon_inverted.png"
                   alt="Wonderground"
-                  width="48"
-                  height="48"
-                  className="mr-[-8]"
+                  width="32"
+                  height="32"
+                  className="mb-[-8]"
                 />
-                ONDERGROUND
+                WONDERGROUND
               </div>
             </motion.div>
           </motion.div>
