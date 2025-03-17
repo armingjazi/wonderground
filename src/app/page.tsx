@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useCallback, useEffect, useState } from "react";
+import React, { Suspense, useCallback, useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { PieceGrid } from "@/app/components/PieceGrid";
 import { PieceDetailView } from "@/app/components/PieceDetailView";
@@ -13,11 +13,12 @@ import Image from "next/image";
 import { Language } from "@/app/util/language";
 import { useSearchParams, useRouter } from "next/navigation";
 
-export default function Page() {
+
+function Main() {
   const searchParams = useSearchParams();
   const router = useRouter();
 
-  const language = (searchParams.get('language') as Language) || "ENGLISH";
+  const language = (searchParams.get("language") as Language) || "ENGLISH";
   const [hasInitialLoad, setHasInitialLoad] = useState(false);
 
   useEffect(() => {
@@ -98,5 +99,14 @@ export default function Page() {
         <Contact />
       </main>
     </div>
+  );
+}
+
+
+export default function Page() {
+  return (
+    <Suspense fallback={null}>
+      <Main />
+    </Suspense>
   );
 }
