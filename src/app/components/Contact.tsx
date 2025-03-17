@@ -43,7 +43,6 @@ export const Contact = () => {
       variants={containerVariants}
     >
       <div className="w-full max-w-6xl px-4 flex flex-col items-center">
-        {/* Decorative lines and title */}
         <div className="flex items-center w-full mb-12">
           <motion.div
             variants={lineVariants}

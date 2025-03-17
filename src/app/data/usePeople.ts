@@ -3,6 +3,7 @@ export interface Person {
   name: string;
   bio: string;
   image: string;
+  type: 'main' | 'collaborator';
 }
 export const usePeople = (): Person[] => {
   return [
@@ -19,6 +20,7 @@ export const usePeople = (): Person[] => {
         "In 2018 Roser co-founded WONDERGROUND Company, together Tom Weksler. And she began to actively participate in the development of MOVEMENT ARCHERY, the pedagogical body that was founded by Tom in 2014.\n" +
         "In 2021 Roser was nominated as a finalist for ‘Best Female Dancer Of The Year In Spain’ in the prestigious MAX Awards.",
       image: "/about/rosertutusaus.jpg",
+      type: 'main',
     },
     {
       id: "2",
@@ -32,6 +34,28 @@ export const usePeople = (): Person[] => {
         "He has founded WONDERGROUND together with his partner Roser Tutusaus in 2018.\n" +
         "Tom is also the founder of ‘Movement Archery’ (www.movementarchery.com), a workshop concept that presents a unique approach to Movement, philosophy and dance. Since 2014 he has been teaching this approach internationally in dance schools, circus schools, universities, professional companies, martial arts gyms and more. Tom’s teaching is globally acclaimed and he is considered one of the pioneers of the modern ‘Movement Culture’.",
       image: "/about/tomweksler.jpg",
+      type: 'main',
+    },
+    {
+      id: "3",
+      name: "Odeda Vinathan",
+      bio: "",
+      image: "/about/odedavinathan.jpg",
+      type: 'collaborator',
+    },
+    {
+      id: "4",
+      name: "Fani Benages",
+      bio: "",
+      image: "/about/fanibenages.jpg",
+      type: 'collaborator',
+    },
+    {
+      id: "5",
+      name: "Armin Jazi",
+      bio: "",
+      image: "/about/arminjazi.jpeg",
+      type: 'collaborator',
     }
   ]
 }
