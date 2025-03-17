@@ -12,16 +12,12 @@ interface PieceDetailViewProps {
 }
 
 export const PieceDetailView = ({ piece, onClose }: PieceDetailViewProps) => {
-  const root = useScrollAnimation(onClose);
+  const rootRef = useScrollAnimation(onClose);
 
   return (
     <AnimatePresence>
       <motion.div
-        className="relative inset-0 z-20 -mt-96 p-2 md:p-auto bg-black opacity-50 bg-transparent"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 1 }}
+        className="relative inset-0 z-20 -mt-224 p-2 md:p-auto bg-transparent"
       >
         <motion.div
           className="absolute inset-0 bg-transparent"
@@ -31,7 +27,7 @@ export const PieceDetailView = ({ piece, onClose }: PieceDetailViewProps) => {
           onClick={onClose}
         />
 
-        <div className="relative z-30 min-h-full pt-24 pb-32" ref={root}>
+        <div className="relative z-30 min-h-full pt-24 pb-32" ref={rootRef}>
           <div className="max-w-6xl mx-auto p-2 w-full">
             <motion.div
               className="text-center mb-12"

@@ -9,10 +9,7 @@ export const About = ({ onClose }: { onClose: () => void }) => {
   return (
     <AnimatePresence>
       <motion.div
-        className="absolute md:relative inset-0 z-20 md:-mt-96 p-2 md:p-auto bg-black opacity-50 md:bg-transparent"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
+        className="absolute md:relative inset-0 z-20 -mt-100 p-2 md:p-auto"
         transition={{ duration: 1 }}
       >
         <motion.div

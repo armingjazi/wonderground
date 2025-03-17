@@ -1,16 +1,15 @@
-import { useEffect } from "react";
-import { useIsVisible } from "@/app/util/useIsVisible";
+import { useEffect, useRef } from "react";
 
 export function useScrollAnimation(onClose: () => void) {
-  const [visibleRef, isVisible] = useIsVisible<HTMLDivElement>();
+  const root = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!visibleRef.current) return;
+    if (!root.current) return;
 
     let isAnimatingScroll = false;
 
     const handleScroll = () => {
-      if (!isVisible && !isAnimatingScroll) {
+      if (window.scrollY < 20 && !isAnimatingScroll) {
         onClose();
       }
     };
@@ -19,9 +18,9 @@ export function useScrollAnimation(onClose: () => void) {
 
     let scrollTimeout: NodeJS.Timeout | null = null;
 
-    if (visibleRef.current) {
+    if (root.current) {
       scrollTimeout = setTimeout(() => {
-        const elementRect = visibleRef.current?.getBoundingClientRect();
+        const elementRect = root.current?.getBoundingClientRect();
         if (!elementRect) return;
 
         const absoluteElementTop = elementRect.top + window.pageYOffset;
@@ -58,6 +57,6 @@ export function useScrollAnimation(onClose: () => void) {
       window.removeEventListener("scroll", handleScroll);
       if (scrollTimeout) clearTimeout(scrollTimeout);
     };
-  }, [isVisible, visibleRef, onClose]);
-  return visibleRef;
+  }, [root, onClose]);
+  return root;
 }

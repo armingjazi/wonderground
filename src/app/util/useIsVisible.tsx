@@ -14,6 +14,8 @@ export function useIsVisible<T extends HTMLDivElement>(): [
     const observer = new IntersectionObserver(([entry]) => {
       // Update state when observer callback fires
       setIsVisible(entry.isIntersecting);
+    }, {
+      rootMargin: "20px",
     });
 
     observer.observe(currentElement);
