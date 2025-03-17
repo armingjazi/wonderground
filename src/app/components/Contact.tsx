@@ -80,7 +80,6 @@ export const Contact = () => {
           </Link>
         </motion.div>
 
-        {/* Social Media Icons */}
         <motion.div variants={itemVariants} className="flex space-x-8">
           <motion.a
             href="https://www.youtube.com/@wonderground_company"

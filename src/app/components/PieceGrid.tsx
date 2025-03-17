@@ -1,5 +1,5 @@
 'use client';
-import { Piece, usePieces } from "@/app/data/usePieces";
+import { Piece } from "@/app/data/usePieces";
 import { PieceItem } from "@/app/components/PieceItem";
 import {EventCalendar} from "@/app/components/EventCalendar";
 
@@ -7,6 +7,7 @@ interface PieceGridProps {
   onPieceClick: (piece: Piece) => void;
   blur?: boolean;
   activePiece: Piece | null;
+  pieces: Piece[];
 }
 
 export const PieceFactory = ({
@@ -55,13 +56,13 @@ export const PieceGrid = ({
   onPieceClick,
   blur,
   activePiece,
+  pieces
 }: PieceGridProps) => {
-  const pieces = usePieces();
   const first_desktop = pieces.filter((piece) => piece.position === 0).map((piece) => ({...piece, id: piece.id + 'first'}));
   const second_desktop = pieces.filter((piece) => piece.position === 1).map((piece) => ({...piece, id: piece.id + 'second'}));
   const third_desktop = pieces.filter((piece) => piece.position === 2).map((piece) => ({...piece, id: piece.id + 'third'}));
 
-  const first_tablet = pieces.filter((piece) => piece.position === 0 || piece.position === 2).map((piece) => ({...piece, id: piece.id + 'first_third'}));
+  const first_tablet = pieces.filter((piece) => piece.position === 0 || piece.position === 2).map((piece) => ({...piece, id: piece.id + 'first_tablet'}));
   const second_tablet = pieces.filter((piece) => piece.position === 1).map((piece) => ({...piece, id: piece.id + 'second_tablet'}));
 
 

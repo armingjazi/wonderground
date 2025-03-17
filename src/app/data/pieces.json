@@ -1,0 +1,205 @@
+[
+  {
+    "id": "after_the_rain",
+    "color": "#ff0000",
+    "width": 200,
+    "height": 360,
+    "fontSize": 90,
+    "xTranslate": -400,
+    "yTranslate": -100,
+    "maskOpacity": 0.6,
+    "images": {
+      "main": "/pieces/after_the_rain/1.jpg",
+      "mask": "/pieces/after_the_rain/4.jpeg",
+      "promos": [
+        "/pieces/after_the_rain/main.png",
+        "/pieces/after_the_rain/2.jpeg",
+        "/pieces/after_the_rain/3.jpeg",
+        "/pieces/after_the_rain/4.jpeg"
+      ]
+    },
+    "events": [],
+    "position": 0
+  },
+  {
+    "type": "piece",
+    "id": "momentum",
+    "color": "#5DAD8C",
+    "width": 300,
+    "height": 560,
+    "fontSize": 140,
+    "xTranslate": 300,
+    "yTranslate": -100,
+    "images": {
+      "main": "/pieces/momentum/main.jpeg",
+      "mask": "/pieces/momentum/2.jpeg",
+      "promos": [
+        "/pieces/momentum/1.jpeg",
+        "/pieces/momentum/2.jpeg",
+        "/pieces/momentum/3.jpeg",
+        "/pieces/momentum/4.jpeg"
+      ]
+    },
+    "events": [],
+    "position": 1
+  },
+  {
+    "type": "piece",
+    "id": "wall-peace",
+    "color": "rgb(255,255,255)",
+    "width": 500,
+    "height": 360,
+    "fontSize": 100,
+    "xTranslate": 850,
+    "yTranslate": -1000,
+    "maskOpacity": 0.4,
+    "images": {
+      "main": "/pieces/wall_and_peace/main.png",
+      "mask": "/pieces/wall_and_peace/main.png",
+      "promos": [
+        "/pieces/wall_and_peace/1.jpeg",
+        "/pieces/wall_and_peace/2.jpeg",
+        "/pieces/wall_and_peace/3.jpeg",
+        "/pieces/wall_and_peace/4.jpeg"
+      ]
+    },
+    "events": [],
+    "position": 1
+  },
+  {
+    "type": "piece",
+    "id": "rise",
+    "color": "rgba(255,255,255)",
+    "width": 160,
+    "height": 640,
+    "fontSize": 180,
+    "xTranslate": -400,
+    "yTranslate": 100,
+    "images": {
+      "main": "/pieces/rise/main.jpeg",
+      "mask": "/pieces/rise/main.jpeg",
+      "promos": [
+        "/pieces/rise/1.jpeg",
+        "/pieces/rise/2.jpeg",
+        "/pieces/rise/3.jpeg",
+        "/pieces/rise/4.jpg"
+      ]
+    },
+    "events": [],
+    "position": 0
+  },
+  {
+    "type": "piece",
+    "id": "falling-man",
+    "color": "rgb(175,100,60)",
+    "width": 260,
+    "height": 920,
+    "fontSize": 60,
+    "xTranslate": -300,
+    "yTranslate": 10,
+    "images": {
+      "main": "/pieces/falling_man/main.png",
+      "mask": "/pieces/falling_man/main.png",
+      "promos": [
+        "/pieces/falling_man/1.jpeg",
+        "/pieces/falling_man/3.jpeg",
+        "/pieces/falling_man/2.jpeg",
+        "/pieces/falling_man/4.jpeg"
+      ]
+    },
+    "events": [],
+    "position": 2
+  },
+  {
+    "type": "calendar",
+    "id": "event-calendar",
+    "color": "rgb(0,0,0)",
+    "width": 260,
+    "height": 500,
+    "fontSize": 80,
+    "xTranslate": -300,
+    "yTranslate": 10,
+    "images": {
+      "main": "/pieces/event_calendar/main.jpg",
+      "mask": "/pieces/event_calendar/main.jpg",
+      "promos": [
+        "/pieces/event_calendar/1.png",
+        "/pieces/event_calendar/2.png",
+        "/pieces/event_calendar/3.png"
+      ]
+    },
+    "events": [
+      {
+        "id": "event-5",
+        "date": "2025/01/24",
+        "time": "20:00",
+        "location": "Barcelona",
+        "name": "Momentum Premiere",
+        "venue": "Mercat de les Flors",
+        "link": "https://mercatflors.cat/",
+        "country": "Catalunya"
+      },
+      {
+        "id": "event-4",
+        "date": "2024/08/24",
+        "time": "20:00",
+        "location": "Amersfoort",
+        "name": "Wall & Peace",
+        "venue": "Spoffin Festival",
+        "link": "https://spoffin.nl/",
+        "country": "Netherlands"
+      },
+      {
+        "id": "event-3",
+        "date": "2024/08/23",
+        "time": "20:00",
+        "location": "Amersfoort",
+        "name": "Wall & Peace Premiere",
+        "venue": "Spoffin Festival",
+        "link": "https://spoffin.nl/",
+        "country": "Netherlands"
+      },
+      {
+        "id": "event-2",
+        "date": "2024/08/09",
+        "time": "20:00",
+        "location": "Les Piles",
+        "name": "Wall & Peace Pre-premiere",
+        "venue": "Danseu Festival",
+        "link": "https://danseufestival.com/",
+        "country": "Catalunya"
+      },
+      {
+        "id": "event-1",
+        "date": "2024/05/18",
+        "time": "20:00",
+        "location": "Tarragona",
+        "name": "The Falling Man",
+        "venue": "Centre Penitenciari",
+        "link": "https://www.tarragona.cat/cultura/agenda/2024/programacio-marc-juny-2024/cd/rise-roser-tutusaus-i-tom-weksler",
+        "country": "Catalunya"
+      },
+      {
+        "id": "event-6",
+        "date": "Postponed",
+        "time": "20:00",
+        "location": "Mollet del Vallès",
+        "name": "After the Rain",
+        "venue": "Teatre Can Gomà",
+        "link": "https://molletvalles.koobin.com/index.php",
+        "country": "Catalunya"
+      },
+      {
+        "id": "event-7",
+        "date": "Postponed",
+        "time": "20:00",
+        "location": "Mataró",
+        "name": "After the Rain",
+        "venue": "Teatre Monumental",
+        "link": "https://www.culturamataro.cat/teatre-monumental",
+        "country": "Catalunya"
+      }
+    ],
+    "position": 1
+  }
+]
