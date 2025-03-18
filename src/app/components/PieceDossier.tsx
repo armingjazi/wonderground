@@ -80,7 +80,7 @@ export const PieceDossier = ({ piece }: { piece: Piece }) => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.7 }}
         >
-          <button className="border border-white px-8 py-3 rounded-full hover:bg-white hover:text-black transition-colors">
+          <button className="border border-white px-8 py-3 rounded-full hover:bg-white hover:text-black transition-colors cursor-pointer">
             WATCH TRAILER
           </button>
         </motion.div>
