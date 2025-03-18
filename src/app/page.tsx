@@ -6,9 +6,9 @@ import { PieceGrid } from "@/app/components/PieceGrid";
 import { PieceDetailOverlay } from "@/app/components/PieceDetailOverlay";
 import { Piece, usePieces } from "@/app/data/usePieces";
 import { Header } from "@/app/components/Header";
-import { About } from "@/app/components/About";
+import { AboutOverlay } from "@/app/components/AboutOverlay";
 import { Contact } from "@/app/components/Contact";
-import { CalendarDetailView } from "@/app/components/CalendarDetailView";
+import { CalendarDetailOverlay } from "@/app/components/CalendarDetailOverlay";
 import Image from "next/image";
 import { Language } from "@/app/util/language";
 import { useSearchParams } from "next/navigation";
@@ -77,9 +77,9 @@ function Main() {
           <PieceDetailOverlay piece={piece} onClose={() => setPiece(null)} />
         )}
         {piece && piece.type === "calendar" && (
-          <CalendarDetailView piece={piece} onClose={() => setPiece(null)} />
+          <CalendarDetailOverlay piece={piece} onClose={() => setPiece(null)} />
         )}
-        {about && <About onClose={() => setAbout(false)} />}
+        {about && <AboutOverlay onClose={() => setAbout(false)} />}
         <Contact />
       </main>
     </div>

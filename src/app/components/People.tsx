@@ -14,13 +14,14 @@ const Profile = ({ person, index }: { person: Person; index: number }) => {
       transition={{duration: 0.6, delay: index * 0.2}}
     >
       <div
-        className={`flex flex-col md:flex-row w-full items-center  ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} gap-10 md:gap-16`}>
+        className={`flex flex-col md:flex-row w-full items-center  ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} gap-2 md:gap-10 md:gap-16`}>
         <div className="w-full md:w-1/4 mb-8 md:mb-0">
-          <div className="relative overflow-hidden aspect-square">
+          <div className="relative overflow-hidden aspect-square  w-1/2 h-1/2 md:w-full md:h-full">
             <Image
               src={person.image}
               alt={person.name}
               fill
+              sizes={"600px"}
               className="object-cover rounded-md transition-transform duration-700 hover:scale-105"
             />
           </div>

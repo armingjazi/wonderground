@@ -4,14 +4,17 @@ import { useBreakpoint } from "@/app/util/useBreakpoint";
 export function useScrollAnimation(onClose: () => void) {
   const root = useRef<HTMLDivElement>(null);
 
-  const {isXs, isSm, isMd } = useBreakpoint();
+  const { isXs, isSm, isMd } = useBreakpoint();
 
   const isSingleRow = isXs || isSm || isMd;
 
   console.log(isXs, isSm, isMd, isSingleRow);
 
   useEffect(() => {
-    if (isSingleRow) return;
+    if (isSingleRow) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
     if (!root.current) return;
 
     let isAnimatingScroll = false;
