@@ -34,12 +34,3 @@ export default async function Page({
     </div>
   );
 }
-
-export async function generateStaticParams() {
-
-  const {default: pieces } = await import("@/app/data/pieces.json");
-
-  return (pieces as Piece[]).map((piece: Piece) => ({
-    params: { slug: piece.id },
-  }));
-}
