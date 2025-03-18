@@ -65,9 +65,10 @@ export const PieceGrid = ({
   const first_tablet = pieces.filter((piece) => piece.position === 0 || piece.position === 2).map((piece) => ({...piece, id: piece.id + 'first_tablet'}));
   const second_tablet = pieces.filter((piece) => piece.position === 1).map((piece) => ({...piece, id: piece.id + 'second_tablet'}));
 
+  const classes = blur ? "pointer-events-none" : "";
 
   return (
-    <div className="inset-0 z-0 flex items-center justify-center m-2">
+    <div className={`inset-0 z-0 flex items-center justify-center m-2 ${classes}`}>
       <div className="relative flex gap-2 pb-2 w-full">
         <div className="hidden lg:block w-[30%] space-y-4">
           {first_desktop.map((piece) => (
