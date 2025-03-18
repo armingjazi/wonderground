@@ -4,6 +4,7 @@ import { Header } from "@/app/components/Header";
 import React from "react";
 import { Language } from "@/app/util/language";
 import { notFound } from "next/navigation";
+import { CalendarDetailView } from "@/app/components/CalendarDetailView";
 
 export default async function Page({
   params,
@@ -31,7 +32,8 @@ export default async function Page({
   return (
     <div>
       <Header selectedLanguage={language} />
-      <PieceDetailView piece={piece} />
+      {piece.type === "piece" && <PieceDetailView piece={piece} />}
+      {piece.type === "calendar" && <CalendarDetailView piece={piece} />}
     </div>
   );
 }
