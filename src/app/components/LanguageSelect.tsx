@@ -1,3 +1,5 @@
+'use client';
+
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -23,7 +25,7 @@ export const LanguageSelect = ({
     <div className="flex justify-center items-center bg-black">
       <div className="relative">
         <motion.button
-          className="flex items-center space-x-2 px-3 py-2 bg-black rounded-md"
+          className="flex items-center space-x-2 px-3 py-2 bg-black rounded-md cursor-pointer"
           onClick={toggleDropdown}
           whileTap={{ scale: 0.97 }}
         >

@@ -1,49 +1,60 @@
+'use client';
+
 import { motion } from "framer-motion";
 import React, { MouseEvent } from "react";
 import { LanguageSelect } from "@/app/components/LanguageSelect";
 import Image from "next/image";
 import { Language } from "@/app/util/language";
+import { usePathname, useRouter } from "next/navigation";
+import Link from "next/link";
 
 export const Header = ({
   onAbout,
-  onLanguageChange,
   selectedLanguage,
 }: {
-  onAbout: (show: boolean) => void;
-  onLanguageChange: (language: Language) => void;
+  onAbout?: (show: boolean) => void;
   selectedLanguage: Language;
 }) => {
+  const router = useRouter();
+  const pathname = usePathname();
+
   const handleAboutClick = (e: MouseEvent) => {
     e.preventDefault();
-    onAbout(true);
+    onAbout?.(true);
+  };
+
+  const handleLanguageChange = (language: Language) => {
+    router.push(`${pathname}?language=${language}`);
   };
 
   return (
     <motion.header
-      className="p-6 flex justify-between items-center z-10 relative"
+      className="p-6 flex justify-between items-center z-30 relative "
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.5 }}
     >
-      <div className="flex flex-col items-left">
+      <Link className="flex flex-col items-left cursor-pointer" href="/">
         <Image
           src="/icon_inverted.png"
           alt="Wonderground"
-          width="16"
-          height="16"
-          className="mb-[-8]"
+          width="305"
+          height="359"
+          className="sm:mb-[-8] w-8 h-8 sm:w-6 sm:h-6"
         />
-        <div className="text-l md:text-xl tracking-widest">WONDERGROUND</div>
-      </div>
+        <span className="hidden sm:inline text-l md:text-xl tracking-widest">WONDERGROUND</span>
+      </Link>
       <div className="flex-grow" />
       <div className="flex items-center gap-6">
-        <nav className="flex gap-6 text-sm">
-          <a href="#" onClick={handleAboutClick} className="hover:underline">
-            ABOUT
-          </a>
-        </nav>
+        {onAbout &&
+          <nav className="flex gap-6 text-sm">
+            <a href="#" onClick={handleAboutClick} className="hover:underline">
+              ABOUT
+            </a>
+          </nav>
+        }
         <LanguageSelect
-          onChange={onLanguageChange}
+          onChange={handleLanguageChange}
           selectedLanguage={selectedLanguage}
         />
       </div>

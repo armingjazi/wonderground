@@ -1,9 +1,17 @@
 import { useEffect, useRef } from "react";
+import { useBreakpoint } from "@/app/util/useBreakpoint";
 
 export function useScrollAnimation(onClose: () => void) {
   const root = useRef<HTMLDivElement>(null);
 
+  const {isXs, isSm, isMd } = useBreakpoint();
+
+  const isSingleRow = isXs || isSm || isMd;
+
+  console.log(isXs, isSm, isMd, isSingleRow);
+
   useEffect(() => {
+    if (isSingleRow) return;
     if (!root.current) return;
 
     let isAnimatingScroll = false;
@@ -57,6 +65,6 @@ export function useScrollAnimation(onClose: () => void) {
       window.removeEventListener("scroll", handleScroll);
       if (scrollTimeout) clearTimeout(scrollTimeout);
     };
-  }, [root, onClose]);
+  }, [isSingleRow, root, onClose]);
   return root;
 }
