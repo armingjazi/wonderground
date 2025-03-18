@@ -3,6 +3,7 @@ import { PieceDetailView } from "@/app/components/PieceDetailView";
 import { Header } from "@/app/components/Header";
 import React from "react";
 import { Language } from "@/app/util/language";
+import { notFound } from "next/navigation";
 
 export default async function Page({
   params,
@@ -24,7 +25,7 @@ export default async function Page({
   const piece = pieces.find((piece: Piece) => piece.id === slug);
 
   if (!piece) {
-    return <div>404: Not found</div>;
+    notFound();
   }
 
   return (
