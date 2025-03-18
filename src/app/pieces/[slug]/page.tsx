@@ -1,6 +1,5 @@
 import { Piece } from "@/app/data/usePieces";
 import { PieceDetailView } from "@/app/components/PieceDetailView";
-import { headers } from "next/headers";
 import { Header } from "@/app/components/Header";
 import React from "react";
 import { Language } from "@/app/util/language";
@@ -17,11 +16,7 @@ export default async function Page({
 
   const language = (search.language as Language) || "ENGLISH";
 
-  const headersList = await headers();
-  const host = headersList.get("host") || "localhost:3000";
-  const proto = process.env.NODE_ENV === "production" ? "https" : "http";
-
-  const baseUrl = `${proto}://${host}`;
+  const baseUrl = process.env.BASE_URL || "";
 
   const response = await fetch(`${baseUrl}/api/pieces?language=${language}`);
   const pieces = await response.json();
