@@ -8,8 +8,6 @@ export function useScrollAnimation(onClose: () => void) {
 
   const isSingleRow = isXs || isSm || isMd;
 
-  console.log(isXs, isSm, isMd, isSingleRow);
-
   useEffect(() => {
     if (isSingleRow) {
       window.scrollTo({ top: 0, behavior: "smooth" });
