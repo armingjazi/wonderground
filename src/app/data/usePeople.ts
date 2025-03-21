@@ -3,58 +3,95 @@ export interface Person {
   name: string;
   bio: string;
   image: string;
+  title?: string;
   type: 'main' | 'collaborator';
 }
 export const usePeople = (): Person[] => {
   return [
     {
-      id: "1",
+      id: "roser-tutusaus",
       name: "Roser Tutusaus",
-      bio: "Roser is a dancer, choreographer and director of Wonderground Movement Arts." +
-        "Roser was born in 1985 in Tarragona, Spain. She spent her childhood competing in Rythmic gymnastics, playing the flute and participating in several theatre and dance classes where she’s performed enthusiastically.\n" +
-        "After completing preliminary dance Formation in ‘Àrea Espai de Dansa i Creació’ (2005-2007) she moved to Holland to pursue a Bachelor of Dance at ‘Artez Dans Academie’ in Arnhem, which she completed in 2010. In parallel, she also attained a Bachelor’s degree in Journalism from the ‘Universitat Autònoma de Barcelona’ in 2008. In 2021 Roser attained a Master’s Degree in Space Design (Ephemeral Architectures and Interior Design) from ’The Polytechnic University of Barcelona’ in Collaboration with ’CCCB’.\n" +
-        "In Holland, she danced for different acclaimed choreographers in Holland like Anouk van Dijk, Giulio d’Anna, Anouke de Groot, Erik Kaiel and more.\n" +
-        "In 2012, Roser moved back to Barcelona where she danced for several companies, such as ‘Transit Dansa’ of Maria Rovira, ’Enclave Arts Del Movement’ of Roberto Oliván, Ana Eulate, ‘Lamajara Collective’ and Pere Faura. From 2014 to 2020, she danced and performed internationally with the company Guy Nader and Maria Campos.\n" +
-        "She collaborated extensively with the circus/dance artist Joan Català in the creation of the street duet Menar, which premiered at ‘Fira Tàrrega’ in 2016. The piece was was Awarded ‘Best Street Piece Of The Year’ by the Catalan Critics Award and Roser was also nominated as a finalist for ‘Best Female Dancer Of The Year’.\n" +
-        "Between 2014 and 2019 she created two solos for the theatre, called 'Simún' and 'Tecnologías Del Yo'. Both performed in at varias venues and festivals around Spain.\n" +
-        "In 2018 Roser co-founded WONDERGROUND Company, together Tom Weksler. And she began to actively participate in the development of MOVEMENT ARCHERY, the pedagogical body that was founded by Tom in 2014.\n" +
-        "In 2021 Roser was nominated as a finalist for ‘Best Female Dancer Of The Year In Spain’ in the prestigious MAX Awards.",
+      bio: "Born in 1985 in Tarragona, Roser Tutusaus began as a rhythmic gymnast and studied music and theater before turning to dance. She train at Artez Dance Academy (Netherlands), studied journalism at UAB, and space design at UPC-CCCB." +
+        "Her multidisciplinary background shapes a unique perspective, revealing performers’ inner landscapes and their dialogue with space." +
+        "She has performed with Anouk van Dijk, Giulio d’Anna, Erik Kaiel, Maria Rovira, Roberto Oliván, and Pere Faura. Her street duet Menar with Joan Català won Best Street Performance at the 2016 Catalan Critics’ Awards. From 2014 to 2020, she toured internationally with Guy Nader & Maria Campos." +
+        "Her work explores fragility and strength, limits and transcendence, shaping movement where friction drives expression." +
+        "She is also deeply engaged in Movement Archery, contributing as both a teacher and a developer of its pedagogical content, shaping its methodology and practice. She is also deeply engaged in Movement Archery, contributing as both a teacher and a developer of its pedagogical content, shaping its methodology and practice.",
       image: "/about/rosertutusaus.jpg",
       type: 'main',
     },
     {
-      id: "2",
+      id: "tom-weksler",
       name: "Tom Weksler",
-      bio: "Tom is a dancer, choreographer and director of the company Wonderground Movement Arts.\n" +
-        "Tom was born in 1989 in Haifa, Israel. Tom has been practicing Martial Arts and different forms of acrobatic disciplines from a young age. Between the years 1998- 2009 he was a student in ‘Hacasa’ Ido Portal’s Movement and Capoeira school. There he also began his teaching practice at the age of 16. 2007-2009 Tom completed his preliminary dance studies in ‘The Workshop For Dancers and Choreographers in Haifa’.\n" +
-        "In 2009 – 2011 Tom has worked as a dancer and acrobat in the ‘Israeli Opera’, including a central role in the creation and casting of the internationally acclaimed production “The Child Dreams” written by Hanoch Levin, composed by Gil Shohat and directed by Omri Nitzan. \n" +
-        "From 2010 to 2014, he danced with ‘Inbal Pinto and Avshallom Pollak Dance Company’ and performed in various creations of the company around the world. From 2014 to 2017, he participated in the creation and performed Collective Loss Of Memory - choreographed by ‘Rootlessroot’ (Jozef Fruček and Linda Kapetanea) and commissioned by ‘DOT504’ in Prague. The piece was awarded Best Performance of the year in ‘Tanec Praha’ festival and toured extensively in Europe. \n" +
-        "From 2017 to 2020, Tom danced in ‘Guy Nader and Maria Campos Dance Company’. In 2021 Tom was nominated as a finalist for ‘Best Male Dancer Of The Year In Spain’ in the prestigious ‘MAX Awards’.\n" +
-        "As a creator, in 2012 he created LOBOS in collaboration with Circus Artists Yogi Dekel, Yuval Oz and Breno Caetano. In 2014, Tom created the Duets SARU and HEDER in collaboration with Tokyo Based Dancer and Choreographer Mayumu Minakawa, which have performed internationally in various theatres and festivals. In 2017 he premiered the duet Pilim in Collaboration with Circus Artist Yogi Dekel.\n" +
-        "He has founded WONDERGROUND together with his partner Roser Tutusaus in 2018.\n" +
-        "Tom is also the founder of ‘Movement Archery’ (www.movementarchery.com), a workshop concept that presents a unique approach to Movement, philosophy and dance. Since 2014 he has been teaching this approach internationally in dance schools, circus schools, universities, professional companies, martial arts gyms and more. Tom’s teaching is globally acclaimed and he is considered one of the pioneers of the modern ‘Movement Culture’.",
+      bio: "Born in 1989 in Haifa, Israel, Tom Weksler began exploring movement at a young age, drawn to explore gravity, risk, and unpredictability through acrobatics and martial arts. He started teaching at 16 and trained at The Workshop for Dancers and Choreographers in Haifa. \n" +
+        "Between 2009 and 2011, he danced and performed as an acrobat at the Israeli Opera. From 2010 to 2014, he toured worldwide with the Inbal Pinto & Avshalom Pollak Dance Company. He later collaborated with Rootlessroot and DOT504 on *Collective Loss of Memory*, which won Best Performance at Tanec Praha and toured Europe. From 2017 to 2020, he performed with Guy Nader & Maria Campos. In 2021, he was a finalist for Best Dancer of the Year at Spain’s Premios MAX. \n" +
+        "His career combines strong physical technique with a philosophical sensitivity, shaping a movement language deeply rooted in the relationship between body, space, and nature." +
+        "He is the founder of *Movement Archery* and a globally acclaimed movement teacher.",
       image: "/about/tomweksler.jpg",
       type: 'main',
     },
     {
-      id: "3",
+      id: "fani-benages",
+      name: "Fani Benages",
+      bio: "Fani Benages has worked in the performing arts sector since 1994, specializing in contemporary dance. Since 2002, she has operated independently, focusing on representation, coaching, and distribution for dance companies and creators working with movement and physical theatre. Through her agency, Fani Benages, she supports international touring and market access across Europe, the Middle East, and Latin America. She is an active member of several industry associations, including CDAEC, ACPDC, and APGCC.",
+      title: "Cultural Manager and Distributor",
+      image: "/about/fanibenages.jpg",
+      type: 'collaborator',
+    },
+    {
+      id: "odeda-vinathan",
       name: "Odeda Vinathan",
-      bio: "",
+      bio: "Oded Avinathan is a circus artist specializing in group hand-to-hand acrobatics, based in Toulouse, France. Born in 1989 in Haifa, Israel, he began performing in 2012 at Sandciel, the Israeli Circus School. He later trained at CRAC de Lomme in Lille, France, under Mahmoud Louertani and Abdeliazide Senhadji of Company XY. Oded performed in the collective BimBim and collaborated on several creations, including works with Bernadette Gruson and Komplexkapharnaüm. In 2018, he joined Company XY for the creation of Möbius and later participated in Pas du Monde (2024). He has been collaborating with Wonderground since 2022, contributing to acrobatic and movement research and performing in Wall & Peace.",
+      title: "Performer, Acrobat and Artistic Collaborator",
       image: "/about/odedavinathan.jpg",
       type: 'collaborator',
     },
     {
-      id: "4",
-      name: "Fani Benages",
-      bio: "",
-      image: "/about/fanibenages.jpg",
+      id: "miguel-marin-pavon",
+      name: "Miguel Marín Pavón",
+      bio: "Miguel Marín is a prolific composer with a strong background in independent music, contemporary dance, and film scores. He began his career in the 1990s in London as a member of the influential indie band Piano Magic. In 2001, he composed the soundtrack for Son de Mar, directed by Bigas Luna, marking a shift towards sound experimentation in cinema and dance. He later launched his solo project Árbol, releasing four albums and collaborating with Fibla. Árbol has performed internationally, including in Japan, the USA, Germany, and Turkey. Since 2015, he has continued his work from Seville and collaborates with various dance companies worldwide. Miguel has worked with Wonderground since 2019, composing for RISE, After The Rain, Wall & Peace, and Momentum—the latter featuring his live performance on stage.",
+      title: "Composer and Sound Designer",
+      image: "/about/miguelmarin.jpg",
+      type: 'collaborator',
+    },
+    {
+      id: "filp-horn",
+      name: "Filp Horn",
+      bio: "Born in 1997 in Prague, Czech Republic, Filip Horn studied Stage Technology and Production at the Janáček Academy of Music and Performing Arts in Brno. His focus on lighting design developed under Pavla Beranová, with a particular interest in dance and physical theatre. Since 2020, he has worked with Roberta Legros Štěpánková and Relax Brothers on puppet theatre projects using new technologies. In 2021, he joined STUDIO ALTA in Prague as a lighting technician and currently collaborates as a lighting designer with companies such as Spitfire Company, Tantehorse, and Dočasná Company. He is also part of the La Putika circus. Filip has been collaborating with Wonderground since 2022.",
+      image: "/about/filphorn.png",
+      type: 'collaborator',
+    },
+    {
+      id: "benjamin-nivison",
+      name: "Benjamin Nivison",
+      bio: "Benjamin Nivison is a South African designer, artist, and entrepreneur. After completing his studies in textile design at Shenkar College in Tel Aviv, he returned to Cape Town to launch a fashion and textile brand. In 2021, he co-founded and became the creative director of BABA YAYA, an NGO dedicated to contemporary African dance and youth development in South African townships. His work bridges culture, movement, and design. As he puts it: \"The interaction between movement and intelligent design is what excites me most. Much can be achieved when body and aesthetics meet.\" Benjamin has been collaborating with Wonderground since 2022.",
+      image: "/about/benjaminnvison.jpeg",
+      title: "Costume Design",
+      type: 'collaborator',
+    },
+    {
+      id: "paola-didrontino",
+      name: "Paola d’Idrontino",
+      bio: "Paola d’Idrontino is a textile artist, costume designer, and visual creator. Her work merges storytelling with intricate textile arrangements to create costumes, sculptures, and masks inspired by otherworldly forms. A graduate of Central Saint Martins in London, she founded the brand Papayapie in 2005, focusing on amplifying and dramatizing the body’s natural silhouette. Her creations have been featured at MACBA, the Design Museum of Barcelona, the Maritime Museum of Barcelona, and in publications such as Condé Nast Traveller and Hi-Fructose. She has also designed for stage productions like Macbeth (directed by Moreno Bernardi) and directed the music video Wake Up by Radio83. Paola has been collaborating with Wonderground since 2024.",
+      image: "/about/paoladidrontino.jpg",
+      title: "Costume Design and Creation",
+      type: 'collaborator',
+    },
+    {
+      id: "aida-vargas",
+      name: "Aida Vargas",
+      bio: "Aida Vargas is a photographer with a distinct sensitivity for light and movement. Her work often explores the expressive possibilities of natural light, while also embracing the depth and nuance offered by theatrical and low lighting environments." +
+        "With a personal connection to the world of dance, much of her work is dedicated to studying movement through photography and video. She is drawn to capturing the essence of a gesture or the atmosphere of a specific moment in time and space—translating it through her lens." +
+        "Her artistic approach combines observation and imagination: capturing what exists, inventing from inspiration. Through the play of light, she constructs and deconstructs moments—creating visual poems that go beyond words.",
+      image: "/about/aidavargas.jpg",
+      title: "Photography",
       type: 'collaborator',
     },
     {
       id: "5",
       name: "Armin Jazi",
-      bio: "",
+      bio: "A digital architect, Armin transforms Wonderground's artistic vision into compelling digital stories. As a software developer and designer, he crafts interfaces that mirror the creative vision of Wonderground. He operates in connections between physical and digital art. Armin co-manages Movement Archery with Tom and Roser.",
       image: "/about/arminjazi.jpeg",
+      title: "Digital Manager",
       type: 'collaborator',
     }
   ]

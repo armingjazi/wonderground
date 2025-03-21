@@ -66,16 +66,16 @@ export const Contact = () => {
           className="mb-16 flex flex-col items-center"
         >
           <Link
-            href="mailto:international@wondergroundcompany.com"
-            className="text-lg md:text-xl hover:text-gray-300 transition-colors duration-300"
-          >
-            international@wondergroundcompany.com
-          </Link>
-          <Link
             href="mailto:fani@fanibenages.com"
             className="text-lg md:text-xl hover:text-gray-300 transition-colors duration-300"
           >
             fani@fanibenages.com
+          </Link>
+          <Link
+            href="mailto:international@wondergroundcompany.com"
+            className="text-lg md:text-xl hover:text-gray-300 transition-colors duration-300"
+          >
+            international@wondergroundcompany.com
           </Link>
         </motion.div>
 

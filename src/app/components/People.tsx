@@ -2,6 +2,7 @@ import { Person, usePeople } from "@/app/data/usePeople";
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useCompany } from "@/app/data/useCompany";
 
 const Profile = ({ person, index }: { person: Person; index: number }) => {
   const isEven = index % 2 === 0;
@@ -9,12 +10,13 @@ const Profile = ({ person, index }: { person: Person; index: number }) => {
   return (
     <motion.div
       className="flex flex-col md:flex-row items-center gap-8 py-16 md:py-24 first:pt-0"
-      initial={{opacity: 0, y: 20}}
-      animate={{opacity: 1, y: 0}}
-      transition={{duration: 0.6, delay: index * 0.2}}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: index * 0.2 }}
     >
       <div
-        className={`flex flex-col md:flex-row w-full items-center  ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} gap-2 md:gap-10 md:gap-16`}>
+        className={`flex flex-col md:flex-row w-full items-center  ${isEven ? "md:flex-row" : "md:flex-row-reverse"} gap-2 md:gap-10 md:gap-16`}
+      >
         <div className="w-full md:w-1/4 mb-8 md:mb-0">
           <div className="relative overflow-hidden aspect-square  w-1/2 h-1/2 md:w-full md:h-full">
             <Image
@@ -27,8 +29,12 @@ const Profile = ({ person, index }: { person: Person; index: number }) => {
           </div>
         </div>
 
-        <div className={`w-full md:w-7/12 ${isEven ? 'md:text-left' : 'md:text-left'}`}>
-          <h3 className="text-2xl font-light tracking-wide mb-1">{person.name}</h3>
+        <div
+          className={`w-full md:w-7/12 ${isEven ? "md:text-left" : "md:text-left"}`}
+        >
+          <h3 className="text-2xl font-light tracking-wide mb-1">
+            {person.name}
+          </h3>
           <p className="text-base font-light leading-relaxed">{person.bio}</p>
         </div>
       </div>
@@ -38,9 +44,12 @@ const Profile = ({ person, index }: { person: Person; index: number }) => {
 
 export const People = () => {
   const people = usePeople();
+  const company = useCompany();
 
   const main = people.filter((person) => person.type === "main");
-  const collaborators = people.filter((person) => person.type === "collaborator");
+  const collaborators = people.filter(
+    (person) => person.type === "collaborator",
+  );
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -72,6 +81,28 @@ export const People = () => {
           transition={{ duration: 0.6 }}
           className="max-w-6xl mx-auto"
         >
+          <div className="flex flex-col mb-16">
+            <div className="flex items-center w-full mb-12">
+              <motion.div
+                variants={lineVariants}
+                className="h-px bg-white flex-1"
+              />
+              <motion.h2
+                variants={itemVariants}
+                className="px-4 text-2xl font-light uppercase tracking-widest"
+              >
+                THE COMPANY
+              </motion.h2>
+              <motion.div
+                variants={lineVariants}
+                className="h-px bg-white flex-1"
+              />
+            </div>
+            <span
+              className="text-lg"
+              dangerouslySetInnerHTML={{ __html: company.bio }}
+            />
+          </div>
           <div className="flex flex-col">
             {main.map((person, index) => (
               <Profile key={person.id} person={person} index={index} />
