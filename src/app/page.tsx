@@ -9,7 +9,6 @@ import { Header } from "@/app/components/Header";
 import { AboutOverlay } from "@/app/components/AboutOverlay";
 import { Contact } from "@/app/components/Contact";
 import { CalendarDetailOverlay } from "@/app/components/CalendarDetailOverlay";
-import Image from "next/image";
 import { Language } from "@/app/util/language";
 import { useSearchParams } from "next/navigation";
 
