@@ -14,6 +14,7 @@ const Profile = ({ person, index }: { person: Person; index: number }) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.2 }}
       whileInView={{ scale: 1.1 }}
+      id={person.id}
     >
       <div
         className={`flex flex-col md:flex-row w-full items-center  ${isEven ? "md:flex-row" : "md:flex-row-reverse"} gap-2 md:gap-10 md:gap-16`}
@@ -36,7 +37,12 @@ const Profile = ({ person, index }: { person: Person; index: number }) => {
           <h3 className="text-2xl font-light tracking-wide mb-1">
             {person.name}
           </h3>
-          <p className="text-base font-light leading-relaxed">{person.bio}</p>
+          <p className="text-base font-light leading-relaxed mb-4">
+            <em>{person.title}</em>
+          </p>
+          <p className="text-base font-light leading-relaxed"
+            dangerouslySetInnerHTML={{ __html: person.bio }}
+          />
         </div>
       </div>
     </motion.div>
@@ -100,7 +106,7 @@ export const People = () => {
               />
             </div>
             <span
-              className="text-lg"
+              className="text-lg font-light leading-relaxed"
               dangerouslySetInnerHTML={{ __html: company.bio }}
             />
           </div>

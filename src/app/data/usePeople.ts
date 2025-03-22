@@ -23,7 +23,7 @@ export const usePeople = (): Person[] => {
       id: "tom-weksler",
       name: "Tom Weksler",
       bio: "Born in 1989 in Haifa, Israel, Tom Weksler began exploring movement at a young age, drawn to explore gravity, risk, and unpredictability through acrobatics and martial arts. He started teaching at 16 and trained at The Workshop for Dancers and Choreographers in Haifa. \n" +
-        "Between 2009 and 2011, he danced and performed as an acrobat at the Israeli Opera. From 2010 to 2014, he toured worldwide with the Inbal Pinto & Avshalom Pollak Dance Company. He later collaborated with Rootlessroot and DOT504 on *Collective Loss of Memory*, which won Best Performance at Tanec Praha and toured Europe. From 2017 to 2020, he performed with Guy Nader & Maria Campos. In 2021, he was a finalist for Best Dancer of the Year at Spain’s Premios MAX. \n" +
+        "Between 2009 and 2011, he danced and performed as an acrobat at the Israeli Opera. From 2010 to 2014, he toured worldwide with the Inbal Pinto & Avshalom Pollak Dance Company. He later collaborated with Rootlessroot and DOT504 on <strong>Collective Loss of Memory</strong>, which won Best Performance at Tanec Praha and toured Europe. From 2017 to 2020, he performed with Guy Nader & Maria Campos. In 2021, he was a finalist for Best Dancer of the Year at Spain’s Premios MAX. \n" +
         "His career combines strong physical technique with a philosophical sensitivity, shaping a movement language deeply rooted in the relationship between body, space, and nature." +
         "He is the founder of *Movement Archery* and a globally acclaimed movement teacher.",
       image: "/about/tomweksler.jpg",
@@ -87,7 +87,17 @@ export const usePeople = (): Person[] => {
       type: 'collaborator',
     },
     {
-      id: "5",
+      id: "igni-castane",
+      name: "Ignasi Castañé",
+      bio: "Ignasi Castañé is an audiovisual creator, video director, and cinematographer. He holds a Higher Degree in Audiovisual Production (ITES) and a Master’s in Cinematography (ESCAC). Since 2010, he leads Cligbcn Productions, collaborating across performing arts, documentary, and sports media." +
+        "He has worked with companies such as Evasión TV, Lavinia, Goroka, and APdC, and contributed to projects like Serás Hombre, Propietarios de sueños, NunArt – el documental, and the Re-mou-te series. He also directed videos for the Mancomunitat del Pla de Mallorca, highlighting cultural heritage and sustainable tourism." +
+        "Ignasi has been working extensively in the Spanish contemporary dance landscape and has created numerous dance films and trailers for dance performances, festivals, and events. He has been collaborating with Wonderground since 2022.",
+      image: "/about/ignasi.jpg",
+      title: "Video Direction and Cinematography",
+      type: 'collaborator',
+    },
+    {
+      id: "armin-jazi",
       name: "Armin Jazi",
       bio: "A digital architect, Armin transforms Wonderground's artistic vision into compelling digital stories. As a software developer and designer, he crafts interfaces that mirror the creative vision of Wonderground. He operates in connections between physical and digital art. Armin co-manages Movement Archery with Tom and Roser.",
       image: "/about/arminjazi.jpeg",
