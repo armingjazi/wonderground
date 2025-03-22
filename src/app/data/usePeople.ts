@@ -38,8 +38,8 @@ export const usePeople = (): Person[] => {
       type: 'collaborator',
     },
     {
-      id: "odeda-vinathan",
-      name: "Odeda Vinathan",
+      id: "oded-avinathan",
+      name: "Oded Avinathan",
       bio: "Oded Avinathan is a circus artist specializing in group hand-to-hand acrobatics, based in Toulouse, France. Born in 1989 in Haifa, Israel, he began performing in 2012 at Sandciel, the Israeli Circus School. He later trained at CRAC de Lomme in Lille, France, under Mahmoud Louertani and Abdeliazide Senhadji of Company XY. Oded performed in the collective BimBim and collaborated on several creations, including works with Bernadette Gruson and Komplexkapharnaüm. In 2018, he joined Company XY for the creation of Möbius and later participated in Pas du Monde (2024). He has been collaborating with Wonderground since 2022, contributing to acrobatic and movement research and performing in Wall & Peace.",
       title: "Performer, Acrobat and Artistic Collaborator",
       image: "/about/odedavinathan.jpg",

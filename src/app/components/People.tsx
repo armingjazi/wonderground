@@ -10,9 +10,10 @@ const Profile = ({ person, index }: { person: Person; index: number }) => {
   return (
     <motion.div
       className="flex flex-col md:flex-row items-center gap-8 py-16 md:py-24 first:pt-0"
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 20, scale: 1.0 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.2 }}
+      whileInView={{ scale: 1.1 }}
     >
       <div
         className={`flex flex-col md:flex-row w-full items-center  ${isEven ? "md:flex-row" : "md:flex-row-reverse"} gap-2 md:gap-10 md:gap-16`}

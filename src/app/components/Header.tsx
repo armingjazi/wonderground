@@ -34,13 +34,13 @@ export const Header = ({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.5 }}
     >
-      <Link className="flex flex-col items-left cursor-pointer" href="/">
+      <Link className="items-left cursor-pointer" href="/">
         <Image
           src="/icon_inverted.png"
           alt="Wonderground"
           width="305"
           height="359"
-          className="sm:mb-[-8] w-8 h-8 sm:w-6 sm:h-6"
+          className="inline sm:hidden sm:mb-[-8] w-8 h-8 sm:w-6 sm:h-6"
         />
         <span className="hidden sm:inline text-l md:text-xl tracking-widest">WONDERGROUND</span>
       </Link>
