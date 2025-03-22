@@ -1,10 +1,11 @@
-'use client';
+"use client";
 
 import { AnimatePresence, motion } from "framer-motion";
 import { People } from "@/app/components/People";
 import { BackToTopButton } from "@/app/components/BackToTopButton";
+import { Language } from "@/app/util/language";
 
-export const AboutView = () => {
+export const AboutView = ({ language }: { language: Language }) => {
   return (
     <AnimatePresence>
       <motion.div
@@ -12,7 +13,7 @@ export const AboutView = () => {
         transition={{ duration: 1 }}
       >
         <div className="relative z-30 min-h-full pb-32">
-          <People />
+          <People language={language} />
 
           <BackToTopButton
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}

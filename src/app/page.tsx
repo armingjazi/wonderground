@@ -80,7 +80,7 @@ function Main() {
         {piece && piece.type === "calendar" && (
           <CalendarDetailOverlay piece={piece} onClose={() => setPiece(null)} />
         )}
-        {about && <AboutOverlay onClose={() => setAbout(false)} />}
+        {about && <AboutOverlay language={language} onClose={() => setAbout(false)} />}
         <Contact />
       </main>
     </div>

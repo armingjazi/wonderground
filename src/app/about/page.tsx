@@ -15,7 +15,7 @@ export default async function Page({
   return (
     <div>
       <Header selectedLanguage={language} />
-      <AboutView />
+      <AboutView language={language} />
     </div>
   );
 }

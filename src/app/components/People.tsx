@@ -3,6 +3,7 @@ import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useCompany } from "@/app/data/useCompany";
+import { Language } from "@/app/util/language";
 
 const Profile = ({ person, index }: { person: Person; index: number }) => {
   const isEven = index % 2 === 0;
@@ -40,7 +41,8 @@ const Profile = ({ person, index }: { person: Person; index: number }) => {
           <p className="text-base font-light leading-relaxed mb-4">
             <em>{person.title}</em>
           </p>
-          <p className="text-base font-light leading-relaxed"
+          <p
+            className="text-base font-light leading-relaxed"
             dangerouslySetInnerHTML={{ __html: person.bio }}
           />
         </div>
@@ -49,9 +51,9 @@ const Profile = ({ person, index }: { person: Person; index: number }) => {
   );
 };
 
-export const People = () => {
-  const people = usePeople();
-  const company = useCompany();
+export const People = ({ language }: { language: Language }) => {
+  const people = usePeople({ language });
+  const company = useCompany({ language });
 
   const main = people.filter((person) => person.type === "main");
   const collaborators = people.filter(

@@ -29,7 +29,7 @@ export const Header = ({
 
   return (
     <motion.header
-      className="p-6 flex justify-between items-center z-30 relative "
+      className="p-6 flex justify-between items-center z-40 relative "
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.5 }}

@@ -1,7 +1,7 @@
 import { Language } from "@/app/util/language";
 import englishPeople from "@/app/data/about_english.json";
-import spanishPeople from "@/app/data/about_español.json";
-import catalanPeople from "@/app/data/about_català.json";
+import spanishPeople from "@/app/data/about_espanish.json";
+import catalanPeople from "@/app/data/about_catalan.json";
 
 export interface Person {
   id: string;
