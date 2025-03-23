@@ -18,6 +18,7 @@
         "/pieces/after_the_rain/4.jpeg"
       ]
     },
+    "trailer": "https://youtu.be/jcWGJi9SeHs",
     "events": [],
     "position": 0
   },
@@ -40,6 +41,7 @@
         "/pieces/momentum/4.jpeg"
       ]
     },
+    "trailer": "https://youtu.be/9Atj0oc7yug",
     "events": [],
     "position": 1
   },
@@ -63,6 +65,7 @@
         "/pieces/wall_and_peace/4.jpeg"
       ]
     },
+    "trailer": "https://youtu.be/WuNHfDZaisU",
     "events": [],
     "position": 1
   },
@@ -85,6 +88,30 @@
         "/pieces/rise/4.jpg"
       ]
     },
+    "trailer": "https://youtu.be/XOUboemZg5Q",
+    "events": [],
+    "position": 0
+  },
+  {
+    "type": "piece",
+    "id": "island",
+    "color": "#5DAD8C",
+    "width": 160,
+    "height": 280,
+    "fontSize": 110,
+    "xTranslate": -400,
+    "yTranslate": 100,
+    "images": {
+      "main": "/pieces/island/main.jpg",
+      "mask": "/pieces/island/main.jpg",
+      "promos": [
+        "/pieces/island/1.jpeg",
+        "/pieces/island/2.jpeg",
+        "/pieces/island/3.jpeg",
+        "/pieces/island/4.jpeg"
+      ]
+    },
+    "trailer": "https://youtu.be/DVMwsU8wVWc",
     "events": [],
     "position": 0
   },
@@ -107,6 +134,7 @@
         "/pieces/falling_man/4.jpeg"
       ]
     },
+    "trailer": "https://youtu.be/7FyaWtG-XbY",
     "events": [],
     "position": 2
   },

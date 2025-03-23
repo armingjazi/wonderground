@@ -55,6 +55,17 @@
     "aesthetics": "A meditation on falling; fluid sequences across disciplines like contemporary dance, capoeira and parkour paired with baroque violin music. A choreography of gravity in non-conventional spaces."
   },
   {
+    "type": "piece",
+    "id": "island",
+    "title": "THE ISLAND",
+    "shortDesc": "A space for practice, creation, and artistic exchange",
+    "fullDesc": "This solo work questions de line between dance, imagination, and mental health. The Falling Man moves between collective memory and the personal experience, creating a fluid flow of images inspired by the act of falling.",
+    "castAndCrew": "<strong>Concept and Interpretation</strong> Tom Weksler/ <strong>Choreography</strong> Roser Tutusaus and Tom Weksler/ <strong>Music</strong> Franz Heinrich Biber / <strong>Costume Design</strong>: Paola Idrotino / <strong>Production</strong>: Wonderground / <strong>Distribution</strong>: Fani Benages",
+    "tagline": "What is it about the fall that occupies the human spirit so much?",
+    "concept": "Falling is an archetype that has accompanied humans from ancient times to the present. The fall from heaven speaks of Adam and Eve’s loss of purity. The fallen angels are those who lost their faith. Alice’s fall down the rabbit hole leads her to Wonderland and, at the same time, to a loss of control over reality.\nIn physical terms, falling is one of the most elegant gestures: the body's extension in space, a release of weight that feels more like a masterful dance than a failure. This work emerged from a personal loss and led to a search for universality in the act of falling. It is an evocative dialogue between movement and Franz Heinrich Biber’s Mysterious Sonatas.",
+    "aesthetics": "A meditation on falling; fluid sequences across disciplines like contemporary dance, capoeira and parkour paired with baroque violin music. A choreography of gravity in non-conventional spaces."
+  },
+  {
     "type": "calendar",
     "id": "event-calendar",
     "title": "UPCOMING EVENTS",
