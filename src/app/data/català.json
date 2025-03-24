@@ -55,6 +55,16 @@
     "aesthetics": "Una meditació sobre la caiguda; seqüències fluides a través de diferents disciplines, dansa contemporània, capoeira, parkour, combinades amb música de violí barroc. Una coreografia de la gravetat per a espais no convencionals."
   },
   {
+    "type": "piece",
+    "id": "island",
+    "title": "THE ISLAND",
+    "shortDesc": "A space for practice, creation, and artistic exchange",
+    "fullDesc": "Located in a non-urbanized natural landscape on the outskirts of Barcelona, the space is a renovated 180-square-meter stable.",
+    "tagline": "THE ISLAND is the creative home of WONDERGROUND and Movement Archery. ",
+    "concept": "At its heart is a 100-square-meter wooden dance floor, specially built by Tom and Roser with the intention of supporting movement and performance arts. Since its opening in November 2023, it has hosted the company’s creations, workshops, laboratories, and artistic exchanges.",
+    "aesthetics": "The vision of THE ISLAND is to offer a space for artistic inspiration, reflection on the connection between movement and nature, and to foster both artistic and philosophical dialogue."
+  },
+  {
     "type": "calendar",
     "id": "event-calendar",
     "title": "PROPERS ESDEVENIMENTS",

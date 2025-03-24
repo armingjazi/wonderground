@@ -36,6 +36,7 @@ export interface Piece {
   };
   position: 0 | 1 | 2;
   events: CalEvent[];
+  trailer: string;
 }
 
 export const usePieces = ({

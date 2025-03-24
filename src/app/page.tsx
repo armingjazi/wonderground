@@ -49,7 +49,7 @@ function Main() {
               alt="Wonderground"
               width="600"
               height="600"
-              className="fixed mb-95"
+              className="fixed mb-75"
             />
             <motion.div
               initial={{ opacity: 0, scale: 1.1 }}
