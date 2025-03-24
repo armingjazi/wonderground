@@ -25,7 +25,14 @@ export const PieceDossier = ({ piece }: { piece: Piece }) => {
         </motion.div>
 
         <div className="flex flex-col md:flex-row gap-8 items-start">
-          <motion.div className="flex-1">
+          <motion.div
+            className="flex-1"
+            initial={{ scale: 0.9}}
+            whileInView={{
+              scale: 1,
+              transition: { duration: 1.5 },
+            }}
+          >
             {piece.fullDesc.split(". ").map(
               (paragraph, index) =>
                 paragraph.trim() && (
@@ -80,7 +87,11 @@ export const PieceDossier = ({ piece }: { piece: Piece }) => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.7 }}
         >
-          <a className="border border-white px-8 py-3 rounded-full hover:bg-white hover:text-black transition-colors cursor-pointer" href={piece.trailer} target="_blank">
+          <a
+            className="border border-white px-8 py-3 rounded-full hover:bg-white hover:text-black transition-colors cursor-pointer"
+            href={piece.trailer}
+            target="_blank"
+          >
             WATCH TRAILER
           </a>
         </motion.div>
@@ -91,7 +102,7 @@ export const PieceDossier = ({ piece }: { piece: Piece }) => {
           className="w-full ml-[-4px] mt-4"
         />
 
-        {piece.quote &&
+        {piece.quote && (
           <motion.p
             className="m-6 md:m-12 text-3xl text-center p-12 uppercase"
             initial={{ opacity: 0, y: 30 }}
@@ -101,7 +112,7 @@ export const PieceDossier = ({ piece }: { piece: Piece }) => {
           >
             {piece.quote}
           </motion.p>
-        }
+        )}
 
         <motion.div
           className="m-6 md:m-12 md:w-2/3 mb-12 md:p-12"
