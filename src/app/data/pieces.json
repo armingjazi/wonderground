@@ -159,73 +159,94 @@
     "events": [
       {
         "id": "event-5",
-        "date": "2025/01/24",
-        "time": "20:00",
+        "date": "2025/03/29",
         "location": "Barcelona",
-        "name": "Momentum Premiere",
-        "venue": "Mercat de les Flors",
-        "link": "https://mercatflors.cat/",
-        "country": "Catalunya"
+        "name": "Momentum",
+        "venue": "Momentum Teatre Tarragona",
+        "link": "https://entrades.tarragona.cat/momentum?idioma=ES&_ga=2.209574354.1578784436.1736640000-447243502.1736640000",
+        "country": "Tarragona"
       },
       {
         "id": "event-4",
-        "date": "2024/08/24",
-        "time": "20:00",
-        "location": "Amersfoort",
-        "name": "Wall & Peace",
-        "venue": "Spoffin Festival",
-        "link": "https://spoffin.nl/",
-        "country": "Netherlands"
+        "date": "2025/04/26",
+        "location": "Barcelona",
+        "name": "After The Rain",
+        "venue": "Teatre Can Gomà Mollet",
+        "link": "https://cultura.molletvalles.cat/ca/programacio/c/1305-despres-de-la-plujadid.html",
+        "country": "Spain"
       },
       {
         "id": "event-3",
-        "date": "2024/08/23",
-        "time": "20:00",
-        "location": "Amersfoort",
-        "name": "Wall & Peace Premiere",
-        "venue": "Spoffin Festival",
-        "link": "https://spoffin.nl/",
-        "country": "Netherlands"
+        "date": "2025/05/30",
+        "location": "Osaka",
+        "name": "After The Rain",
+        "venue": "Site specific Exposició Universal Osaka",
+        "country": "Japan"
+      },
+      {
+        "id": "event-3",
+        "date": "2025/05/31",
+        "location": "Osaka",
+        "name": "After The Rain",
+        "venue": "Site specific Exposició Universal Osaka",
+        "country": "Japan"
       },
       {
         "id": "event-2",
-        "date": "2024/08/09",
-        "time": "20:00",
-        "location": "Les Piles",
-        "name": "Wall & Peace Pre-premiere",
+        "date": "2025/06/03",
+        "location": "Kobe",
+        "name": "Wonderground Residency",
         "venue": "Danseu Festival",
         "link": "https://danseufestival.com/",
-        "country": "Catalunya"
+        "country": "Japan"
       },
       {
         "id": "event-1",
-        "date": "2024/05/18",
-        "time": "20:00",
-        "location": "Tarragona",
-        "name": "The Falling Man",
-        "venue": "Centre Penitenciari",
-        "link": "https://www.tarragona.cat/cultura/agenda/2024/programacio-marc-juny-2024/cd/rise-roser-tutusaus-i-tom-weksler",
-        "country": "Catalunya"
+        "date": "2025/07/03",
+        "location": "Croatia",
+        "name": "After the Rain",
+        "venue": "Puff Festival",
+        "country": "Croatia"
       },
       {
         "id": "event-6",
-        "date": "Postponed",
-        "time": "20:00",
-        "location": "Mollet del Vallès",
-        "name": "After the Rain",
-        "venue": "Teatre Can Gomà",
-        "link": "https://molletvalles.koobin.com/index.php",
-        "country": "Catalunya"
+        "date": "2025/07/05",
+        "location": "Barcelona",
+        "name": "Wall & Peace",
+        "venue": "Per Amor a l’Art, Hospitalet de Llobregat",
+        "country": "Spain"
       },
       {
-        "id": "event-7",
-        "date": "Postponed",
-        "time": "20:00",
-        "location": "Mataró",
-        "name": "After the Rain",
-        "venue": "Teatre Monumental",
-        "link": "https://www.culturamataro.cat/teatre-monumental",
-        "country": "Catalunya"
+        "id": "event-61",
+        "date": "2025/07/15",
+        "location": "Barcelona",
+        "name": "Wall & Peace",
+        "venue": "Festival Tangent",
+        "country": "Spain"
+      },
+      {
+        "id": "event-9",
+        "date": "2025/08/9",
+        "location": "Barcelona",
+        "name": "RISE",
+        "venue": "Sziget Festival",
+        "country": "Spain"
+      },
+      {
+        "id": "event-91",
+        "date": "2025/08/10",
+        "location": "Barcelona",
+        "name": "RISE",
+        "venue": "Sziget Festival",
+        "country": "Spain"
+      },
+      {
+        "id": "event-922",
+        "date": "2025/09/12",
+        "location": "Barcelona",
+        "name": "RISE",
+        "venue": "Tierras de Qala’t",
+        "country": "Spain"
       }
     ],
     "position": 1

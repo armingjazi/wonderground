@@ -1,0 +1,88 @@
+[
+  {
+    "id": "roser-tutusaus",
+    "name": "Roser Tutusaus",
+    "bio": "Nacida en 1985 en Tarragona, España, Roser Tutusaus es una exploradora del movimiento que encuentra en el cuerpo un espacio para la poesía, la investigación y la transformación. Comienza en gimnasia rítmica y estudia música y teatro antes de adentrarse en la danza. Se forma en Artez Dance Academie (Países Bajos), estudia Periodismo en la UAB y Diseño de Espacios en la UPC-CCCB.\nSu formación multidisciplinaria le otorga una perspectiva única, que busca revelar los paisajes internos de los intérpretes y su diálogo con el espacio.\nHa trabajado con Anouk van Dijk, Giulio d’Anna, Erik Kaiel, Maria Rovira, Roberto Oliván y Pere Faura. El dúo de calle Menar, creado con Joan Català, gana el Premio a la Mejor Actuación de Calle en los Premios de la Crítica Catalana 2016. De 2014 a 2020, realiza giras internacionales con la compañía de danza de Guy Nader & Maria Campos.\nSu trabajo explora la fragilidad y la fuerza, los límites y la trascendencia, dando forma a un movimiento donde la fricción impulsa la expresión.\nEstá profundamente implicada en Movement Archery, donde participa como profesora y en el desarrollo de su contenido pedagógico, contribuyendo a su metodología y práctica.",
+    "image": "/about/rosertutusaus.jpg",
+    "type": "main"
+  },
+  {
+    "id": "tom-weksler",
+    "name": "Tom Weksler",
+    "bio": "Nacido en 1989 en Haifa, Israel, Tom Weksler explora el movimiento desde pequeño, atraído por el riesgo, la gravedad y la imprevisibilidad a través de la acrobacia y las artes marciales. Comienza a enseñar a los 16 años y se forma en danza en The Workshop for Dancers and Choreographers en Haifa.\nEntre 2009 y 2011, baila y actúa como acróbata en la Ópera de Israel. De 2010 a 2014, gira por todo el mundo con Inbal Pinto & Avshalom Pollak Dance Company. Más tarde, colabora con Rootlessroot y DOT504 en Collective Loss of Memory, espectáculo que ganó el premio a la Mejor Actuación en Tanec Praha y realizó una gira por Europa. De 2017 a 2020, trabaja con Guy Nader & Maria Campos. En 2021, es nominado como Mejor Bailarín del Año en los Premios MAX de España.\nCon una mirada decididamente multidisciplinaria, su trayectoria combina una técnica física potente con una sensibilidad filosófica, configurando un lenguaje de movimiento profundamente arraigado en la relación entre cuerpo, espacio y naturaleza.\nEs el creador de Movement Archery y un profesor reconocido a nivel internacional.\n",
+    "image": "/about/tomweksler.jpg",
+    "type": "main"
+  },
+  {
+    "id": "fani-benages",
+    "name": "Fani Benages",
+    "bio": "Fani Benages trabaja en el sector de las artes escénicas desde 1994, especializándose en danza contemporánea. Desde 2002, opera de manera independiente, centrándose en la representación, el coaching y la distribución de compañías de danza y creadores que trabajan con el movimiento y el teatro físico. A través de su agencia, Fani Benages, apoya las giras internacionales y el acceso a mercados en Europa, Oriente Próximo y Latinoamérica. Es miembro activa de diversas asociaciones del sector, incluyendo CDAEC, ACPDC y APGCC.",
+    "title": "Distribuidora y Gestora Cultural",
+    "image": "/about/fanibenages.jpg",
+    "type": "collaborator"
+  },
+  {
+    "id": "oded-avinathan",
+    "name": "Oded Avinathan",
+    "bio": "Artista de circo especializado en acrobacia mano a mano en grupo, residente en Toulouse, Francia. Nacido en 1989 en Haifa, Israel, comenzó su formación en 2012 en Sandciel, la Escuela de Circo de Israel. Posteriormente, se formó en el CRAC de Lomme, en Lille, Francia, con Mahmoud Louertani y Abdeliazide Senhadji de la Compañía XY.\nOded ha actuado con el colectivo BimBim y ha colaborado en diversas creaciones, incluyendo trabajos con Bernadette Gruson y Komplexkapharnaüm. En 2018, se incorporó a la Compañía XY para la creación de Möbius y, más recientemente, participó en Pas du Monde (2024).\nDesde 2022, colabora con Wonderground, aportando su experiencia en la investigación del movimiento acrobático y actuando en Wall & Peace.",
+    "title": "Intérprete, Acróbata y Colaborador Artístico",
+    "image": "/about/odedavinathan.jpg",
+    "type": "collaborator"
+  },
+  {
+    "id": "miguel-marin-pavon",
+    "name": "Miguel Marín Pavón",
+    "bio": "Compositor prolífico con una sólida trayectoria en la música independiente, la danza contemporánea y las bandas sonoras de cine. Inició su carrera en los años 90 en Londres como miembro de la influyente banda indie Piano Magic. En 2001, compuso la banda sonora de Son de Mar, dirigida por Bigas Luna, marcando así un giro hacia la experimentación sonora en cine y danza.\nPosteriormente, lanzó su proyecto en solitario, Árbol, con el que ha publicado cuatro álbumes y colaborado con Fibla. Con Árbol, ha actuado internacionalmente en países como Japón, Estados Unidos, Alemania y Turquía. Desde 2015, continúa su trabajo desde Sevilla y colabora con diversas compañías de danza de todo el mundo.\nMiguel trabaja con Wonderground desde 2019. Ha compuesto música para RISE, After The Rain, Wall & Peace y Momentum, pieza en la que también actúa en directo sobre el escenario.",
+    "title": "Compositor y Diseñador de Sonido",
+    "image": "/about/miguelmarin.jpg",
+    "type": "collaborator"
+  },
+  {
+    "id": "filp-horn",
+    "name": "Filp Horn",
+    "bio": "Nacido en 1997 en Praga, República Checa, Filip Horn estudió Tecnología Escénica y Producción en la Academia de Música y Artes Escénicas Janáček de Brno. Se especializó en diseño de iluminación bajo la tutela de Pavla Beranová, con un interés particular en la danza y el teatro físico.\nDesde 2020, trabaja con Roberta Legros Štěpánková y Relax Brothers en proyectos de teatro de títeres que incorporan nuevas tecnologías. En 2021, se unió a STUDIO ALTA en Praga como técnico de iluminación y actualmente colabora como diseñador de iluminación con compañías como Spitfire Company, Tantehorse y Dočasná Company. También forma parte del circo La Putika.\nFilip colabora con Wonderground desde 2022.",
+    "image": "/about/filphorn.png",
+    "title": "Diseñador de Iluminación y Técnico Escénico",
+    "type": "collaborator"
+  },
+  {
+    "id": "benjamin-nivison",
+    "name": "Benjamin Nivison",
+    "bio": "Diseñador, artista y emprendedor sudafricano. Tras completar sus estudios en diseño textil en el Shenkar College de Tel Aviv, regresó a Ciudad del Cabo para fundar una marca de moda y textiles.\nEn 2021, cofundó y se convirtió en el director creativo de BABA YAYA, una ONG dedicada a la danza contemporánea africana y al desarrollo juvenil en los townships de Sudáfrica. Su trabajo crea puentes entre la cultura, el movimiento y el diseño. Como él mismo dice: \"La interacción entre el movimiento y el diseño inteligente es lo que más me emociona. Se pueden lograr grandes cosas cuando el cuerpo y la estética se encuentran.\"\nBenjamin colabora con Wonderground desde 2022.",
+    "image": "/about/benjaminnvison.jpeg",
+    "title": "Diseño de Vestuario",
+    "type": "collaborator"
+  },
+  {
+    "id": "paola-didrontino",
+    "name": "Paola d’Idrontino",
+    "bio": "Artista textil, diseñadora de vestuario y creadora visual. Su obra fusiona la narración con elaboradas composiciones textiles para dar vida a vestuarios, esculturas y máscaras inspiradas en formas de otro mundo.\nGraduada en Central Saint Martins de Londres, en 2005 fundó la marca Papayapie, con el objetivo de amplificar y dramatizar la silueta natural del cuerpo. Sus creaciones han sido expuestas en instituciones como el MACBA, el Museo del Diseño de Barcelona y el Museo Marítimo de Barcelona, así como en publicaciones como Condé Nast Traveller y Hi-Fructose. También ha diseñado para producciones escénicas como Macbeth (dirigida por Moreno Bernardi) y ha dirigido el videoclip Wake Up de Radio83.\nPaola colabora con Wonderground desde 2024.",
+    "image": "/about/paoladidrontino.jpg",
+    "title": "Diseño y Creación de Vestuario",
+    "type": "collaborator"
+  },
+  {
+    "id": "aida-vargas",
+    "name": "Aida Vargas",
+    "bio": "Aida Vargas es una fotógrafa con una sensibilidad única para la luz y el movimiento. Su obra explora a menudo las posibilidades expresivas de la luz natural, al mismo tiempo que aprovecha la profundidad y el matiz que ofrecen los entornos de iluminación teatral y baja iluminación.\nCon una conexión personal con el mundo de la danza, gran parte de su trabajo se dedica al estudio del movimiento a través de la fotografía y el vídeo. Le apasiona capturar la esencia de un gesto o la atmósfera de un instante concreto en el tiempo y el espacio, traduciéndolo a través de su lente.\nSu enfoque artístico combina observación e imaginación: captar lo que existe, inventar desde la inspiración. A través del juego de luces, construye y deconstruye momentos, creando poemas visuales que van más allá de las palabras.",
+    "image": "/about/aidavargas.jpg",
+    "title": "Fotografía",
+    "type": "collaborator"
+  },
+  {
+    "id": "igni-castane",
+    "name": "Ignasi Castañé",
+    "bio": "Creador audiovisual, director de vídeo y cinematógrafo. Tiene un Grado Superior en Producción Audiovisual (ITES) y un Máster en Cinematografía (ESCAC). Desde 2010, dirige Cligbcn Productions, colaborando en proyectos de artes escénicas, documental y medios deportivos.\nHa trabajado con empresas como Evasión TV, Lavinia, Goroka y APdC, y ha participado en proyectos como Serás Hombre, Propietarios de sueños, NunArt – el documental y la serie Re-mou-te. También ha dirigido vídeos para la Mancomunitat del Pla de Mallorca, destacando el patrimonio cultural y el turismo sostenible.\nCon una amplia trayectoria en la danza contemporánea española, ha creado numerosos dance films, tráilers de piezas de danza, festivales y eventos. Ignasi colabora con Wonderground desde 2022.",
+    "image": "/about/ignasi.jpg",
+    "title": "Dirección de Vídeo y Cinematografía",
+    "type": "collaborator"
+  },
+  {
+    "id": "armin-jazi",
+    "name": "Armin Jazi",
+    "bio": "Arquitecto digital que transforma la visión artística de Wonderground en narrativas digitales cautivadoras. Como desarrollador de software y diseñador, crea interfaces que reflejan el espíritu creativo de la compañía, explorando la conexión entre el arte físico y el digital.\nAdemás, Armin co-gestiona Movement Archery junto con Tom y Roser, expandiendo esta filosofía al ámbito digital e interactivo",
+    "image": "/about/arminjazi.jpeg",
+    "title": "Gestión Digital",
+    "type": "collaborator"
+  }
+]
