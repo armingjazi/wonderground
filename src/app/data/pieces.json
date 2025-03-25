@@ -95,12 +95,13 @@
   {
     "type": "piece",
     "id": "island",
-    "color": "#ffffff",
+    "color": "#FFFF00",
     "width": 160,
     "height": 300,
     "fontSize": 130,
     "xTranslate": 100,
     "yTranslate": 150,
+    "maskOpacity": 0.7,
     "images": {
       "main": "/pieces/island/main.jpg",
       "mask": "/pieces/island/main.jpg",
