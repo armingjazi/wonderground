@@ -40,17 +40,6 @@ function Main() {
             exit={{ opacity: 0 }}
             transition={{ duration: 2.5 }}
           >
-            <motion.img
-              initial={{ opacity: 0, scale: 1.1 }}
-              animate={{ opacity: .25, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ duration: 2 }}
-              src="/icon_inverted.png"
-              alt="Wonderground"
-              width="600"
-              height="600"
-              className="fixed mb-75"
-            />
             <motion.div
               initial={{ opacity: 0, scale: 1.1 }}
               animate={{ opacity: 1, scale: 1 }}

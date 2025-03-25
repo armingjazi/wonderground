@@ -58,11 +58,11 @@
     "type": "piece",
     "id": "island",
     "title": "THE ISLAND",
-    "shortDesc": "A space for practice, creation, and artistic exchange",
-    "fullDesc": "Located in a non-urbanized natural landscape on the outskirts of Barcelona, the space is a renovated 180-square-meter stable.",
-    "tagline": "THE ISLAND is the creative home of WONDERGROUND and Movement Archery. ",
-    "concept": "At its heart is a 100-square-meter wooden dance floor, specially built by Tom and Roser with the intention of supporting movement and performance arts. Since its opening in November 2023, it has hosted the company’s creations, workshops, laboratories, and artistic exchanges.",
-    "aesthetics": "The vision of THE ISLAND is to offer a space for artistic inspiration, reflection on the connection between movement and nature, and to foster both artistic and philosophical dialogue."
+    "shortDesc": "Un espai per a la pràctica, creació i intercanvi artístic",
+    "fullDesc": "Situat en un paisatge natural no urbanitzat als afores de Barcelona, l'espai és una quadra renovada de 180 metres quadrats. L'ILLA és la llar creativa de WONDERGROUND i Movement Archery.",
+    "tagline": "L'Illa és per a la nostra pràctica artística el que un llenç és per a un pintor.",
+    "concept": "Al seu cor hi ha un terra de fusta per a dansa de 100 metres quadrats, construït especialment per Tom i Roser amb la intenció de donar suport a les arts del moviment i la performance. Des de la seva obertura al novembre de 2023, ha acollit les creacions, tallers, laboratoris i intercanvis artístics de la companyia.",
+    "aesthetics": "La visió de L'ILLA és oferir un espai per a la inspiració artística, la reflexió sobre la connexió entre el moviment i la natura, i fomentar el diàleg tant artístic com filosòfic."
   },
   {
     "type": "calendar",

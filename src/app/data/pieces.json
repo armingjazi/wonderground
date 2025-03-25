@@ -95,18 +95,18 @@
   {
     "type": "piece",
     "id": "island",
-    "color": "#5DAD8C",
+    "color": "#ffffff",
     "width": 160,
-    "height": 280,
-    "fontSize": 110,
-    "xTranslate": -400,
-    "yTranslate": 100,
+    "height": 300,
+    "fontSize": 120,
+    "xTranslate": 100,
+    "yTranslate": 150,
     "images": {
       "main": "/pieces/island/main.jpg",
       "mask": "/pieces/island/main.jpg",
       "promos": [
+        "/pieces/island/2.jpg",
         "/pieces/island/1.jpeg",
-        "/pieces/island/2.jpeg",
         "/pieces/island/3.jpeg",
         "/pieces/island/4.jpg"
       ]
