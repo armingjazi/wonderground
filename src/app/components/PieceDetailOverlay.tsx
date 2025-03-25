@@ -25,7 +25,7 @@ export const PieceDetailOverlay = ({ piece, onClose }: PieceDetailViewProps) => 
 
           <CloseButton onClick={onClose} />
           <BackToTopButton
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            onClick={() => window.scrollTo({ top: 700, behavior: "smooth" })}
           />
         </div>
       </motion.div>

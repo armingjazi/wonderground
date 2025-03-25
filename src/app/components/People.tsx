@@ -90,7 +90,7 @@ export const People = ({ language }: { language: Language }) => {
           transition={{ duration: 0.6 }}
           className="max-w-6xl mx-auto"
         >
-          <div className="flex flex-col mb-16">
+          <div className="flex flex-col mb-24">
             <div className="flex items-center w-full mb-12">
               <motion.div
                 variants={lineVariants}
@@ -117,7 +117,7 @@ export const People = ({ language }: { language: Language }) => {
               <Profile key={person.id} person={person} index={index} />
             ))}
           </div>
-          <div className="flex items-center w-full mb-12">
+          <div className="flex items-center w-full mb-24">
             <motion.div
               variants={lineVariants}
               className="h-px bg-white flex-1"

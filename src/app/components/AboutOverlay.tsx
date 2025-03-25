@@ -27,7 +27,7 @@ export const AboutOverlay = ({
 
           <CloseButton onClick={onClose} />
           <BackToTopButton
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            onClick={() => window.scrollTo({ top: 1200, behavior: "smooth" })}
           />
         </div>
       </motion.div>

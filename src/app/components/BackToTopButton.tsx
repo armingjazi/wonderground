@@ -1,7 +1,17 @@
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export function BackToTopButton(props: { onClick: () => void }) {
-  return (
+  const [isScrolled, setIsScrolled] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 100);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return isScrolled && (
     <motion.button
       onClick={props.onClick}
       className="fixed bottom-12 right-6 z-50 text-3xl hover:opacity-70 transition-opacity bg-black/50 w-10 h-10 rounded-full flex items-center justify-center cursor-pointer"
