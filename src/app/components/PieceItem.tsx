@@ -56,7 +56,7 @@ export const PieceItem = ({
           <svg
             width="100%"
             height="100%"
-            viewBox="0 0 1046 904"
+            viewBox="0 0 1146 904"
             className="m-auto pointer-events-none"
           >
             <defs>
