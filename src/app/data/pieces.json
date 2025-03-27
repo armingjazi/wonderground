@@ -35,7 +35,7 @@
       "main": "/pieces/momentum/main.jpeg",
       "mask": "/pieces/momentum/2.jpeg",
       "promos": [
-        "/pieces/momentum/1.jpeg",
+        "/pieces/momentum/1_2.jpeg",
         "/pieces/momentum/2.jpeg",
         "/pieces/momentum/3.jpeg",
         "/pieces/momentum/4.jpeg"
@@ -97,7 +97,7 @@
     "id": "island",
     "color": "#FFFF00",
     "width": 160,
-    "height": 300,
+    "height": 420,
     "fontSize": 130,
     "xTranslate": 100,
     "yTranslate": 150,
@@ -121,7 +121,7 @@
     "id": "falling-man",
     "color": "rgb(175,100,60)",
     "width": 260,
-    "height": 920,
+    "height": 1280,
     "fontSize": 80,
     "xTranslate": -300,
     "yTranslate": 10,
