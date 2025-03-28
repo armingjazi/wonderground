@@ -9,7 +9,7 @@ export interface Person {
   bio: string;
   image: string;
   title?: string;
-  type: "main" | "collaborator" | "performer";
+  type: "main" | "collaborator" | "performer" | "media";
 }
 
 export const usePeople = ({ language }: { language: Language }): Person[] => {

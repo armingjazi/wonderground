@@ -14,14 +14,6 @@
     "type": "main"
   },
   {
-    "id": "fani-benages",
-    "name": "Fani Benages",
-    "bio": "Fani Benages trabaja en el sector de las artes escénicas desde 1994, especializándose en danza contemporánea. Desde 2002, opera de manera independiente, centrándose en la representación, el coaching y la distribución de compañías de danza y creadores que trabajan con el movimiento y el teatro físico. A través de su agencia, Fani Benages, apoya las giras internacionales y el acceso a mercados en Europa, Oriente Próximo y Latinoamérica. Es miembro activa de diversas asociaciones del sector, incluyendo CDAEC, ACPDC y APGCC.",
-    "title": "Distribuidora y Gestora Cultural",
-    "image": "/about/fanibenages.jpg",
-    "type": "collaborator"
-  },
-  {
     "id": "oded-avinathan",
     "name": "Oded Avinathan",
     "bio": "Artista de circo especializado en acrobacia mano a mano en grupo, residente en Toulouse, Francia. Nacido en 1989 en Haifa, Israel, comenzó su formación en 2012 en Sandciel, la Escuela de Circo de Israel. Posteriormente, se formó en el CRAC de Lomme, en Lille, Francia, con Mahmoud Louertani y Abdeliazide Senhadji de la Compañía XY.\nOded ha actuado con el colectivo BimBim y ha colaborado en diversas creaciones, incluyendo trabajos con Bernadette Gruson y Komplexkapharnaüm. En 2018, se incorporó a la Compañía XY para la creación de Möbius y, más recientemente, participó en Pas du Monde (2024).\nDesde 2022, colabora con Wonderground, aportando su experiencia en la investigación del movimiento acrobático y actuando en Wall & Peace.",
@@ -62,12 +54,20 @@
     "type": "collaborator"
   },
   {
-    "id": "aida-vargas",
-    "name": "Aida Vargas",
-    "bio": "Aida Vargas es una fotógrafa con una sensibilidad única para la luz y el movimiento. Su obra explora a menudo las posibilidades expresivas de la luz natural, al mismo tiempo que aprovecha la profundidad y el matiz que ofrecen los entornos de iluminación teatral y baja iluminación.\nCon una conexión personal con el mundo de la danza, gran parte de su trabajo se dedica al estudio del movimiento a través de la fotografía y el vídeo. Le apasiona capturar la esencia de un gesto o la atmósfera de un instante concreto en el tiempo y el espacio, traduciéndolo a través de su lente.\nSu enfoque artístico combina observación e imaginación: captar lo que existe, inventar desde la inspiración. A través del juego de luces, construye y deconstruye momentos, creando poemas visuales que van más allá de las palabras.",
-    "image": "/about/aidavargas.jpg",
-    "title": "Fotografía",
-    "type": "collaborator"
+    "id": "fani-benages",
+    "name": "Fani Benages",
+    "bio": "Fani Benages trabaja en el sector de las artes escénicas desde 1994, especializándose en danza contemporánea. Desde 2002, opera de manera independiente, centrándose en la representación, el coaching y la distribución de compañías de danza y creadores que trabajan con el movimiento y el teatro físico. A través de su agencia, Fani Benages, apoya las giras internacionales y el acceso a mercados en Europa, Oriente Próximo y Latinoamérica. Es miembro activa de diversas asociaciones del sector, incluyendo CDAEC, ACPDC y APGCC.",
+    "title": "Distribuidora y Gestora Cultural",
+    "image": "/about/fanibenages.jpg",
+    "type": "media"
+  },
+  {
+    "id": "armin-jazi",
+    "name": "Armin Jazi",
+    "bio": "Arquitecto digital, Armin transforma la visión artística de Wonderground en historias digitales cautivadoras. Como desarrollador de software y diseñador, crea interfaces que reflejan la visión creativa de Wonderground. Opera en las conexiones entre el arte físico y digital. Armin cogestiona Movement Archery junto a Tom y Roser.\n\nCon más de una década de experiencia liderando equipos técnicos y creando experiencias digitales, Armin aporta su experiencia en gestión de ingeniería y arquitectura de soluciones a las artes escénicas. Su trayectoria abarca la transformación digital para clientes empresariales, diseño de infraestructura en la nube y desarrollo de tecnología de audio inmersivo. Su trabajo con Dear Reality en soluciones de audio espacial ha influido en su enfoque para traducir el movimiento físico a espacios digitales. La formación investigadora de Armin en dinámica de fluidos y modelado computacional en RWTH Aachen y la Universidad de Siegen ofrece una perspectiva única sobre la visualización del movimiento. Colabora con Wonderground desde 2024, aportando innovación técnica a la documentación de espectáculos de danza y a la participación del público.",
+    "image": "/about/arminjazi.jpeg",
+    "title": "Gestión Digital",
+    "type": "media"
   },
   {
     "id": "igni-castane",
@@ -75,15 +75,15 @@
     "bio": "Creador audiovisual, director de vídeo y cinematógrafo. Tiene un Grado Superior en Producción Audiovisual (ITES) y un Máster en Cinematografía (ESCAC). Desde 2010, dirige Cligbcn Productions, colaborando en proyectos de artes escénicas, documental y medios deportivos.\nHa trabajado con empresas como Evasión TV, Lavinia, Goroka y APdC, y ha participado en proyectos como Serás Hombre, Propietarios de sueños, NunArt – el documental y la serie Re-mou-te. También ha dirigido vídeos para la Mancomunitat del Pla de Mallorca, destacando el patrimonio cultural y el turismo sostenible.\nCon una amplia trayectoria en la danza contemporánea española, ha creado numerosos dance films, tráilers de piezas de danza, festivales y eventos. Ignasi colabora con Wonderground desde 2022.",
     "image": "/about/ignasi.jpg",
     "title": "Dirección de Vídeo y Cinematografía",
-    "type": "collaborator"
+    "type": "media"
   },
   {
-    "id": "armin-jazi",
-    "name": "Armin Jazi",
-    "bio": "Arquitecto digital que transforma la visión artística de Wonderground en narrativas digitales cautivadoras. Como desarrollador de software y diseñador, crea interfaces que reflejan el espíritu creativo de la compañía, explorando la conexión entre el arte físico y el digital.\nAdemás, Armin co-gestiona Movement Archery junto con Tom y Roser, expandiendo esta filosofía al ámbito digital e interactivo",
-    "image": "/about/arminjazi.jpeg",
-    "title": "Gestión Digital",
-    "type": "collaborator"
+    "id": "aida-vargas",
+    "name": "Aida Vargas",
+    "bio": "Aida Vargas es una fotógrafa con una sensibilidad única para la luz y el movimiento. Su obra explora a menudo las posibilidades expresivas de la luz natural, al mismo tiempo que aprovecha la profundidad y el matiz que ofrecen los entornos de iluminación teatral y baja iluminación.\nCon una conexión personal con el mundo de la danza, gran parte de su trabajo se dedica al estudio del movimiento a través de la fotografía y el vídeo. Le apasiona capturar la esencia de un gesto o la atmósfera de un instante concreto en el tiempo y el espacio, traduciéndolo a través de su lente.\nSu enfoque artístico combina observación e imaginación: captar lo que existe, inventar desde la inspiración. A través del juego de luces, construye y deconstruye momentos, creando poemas visuales que van más allá de las palabras.",
+    "image": "/about/aidavargas.jpg",
+    "title": "Fotografía",
+    "type": "media"
   },
   {
     "id": "yuval-finkelshtein",

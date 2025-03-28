@@ -70,6 +70,7 @@ export const People = ({ language }: { language: Language }) => {
     (person) => person.type === "collaborator",
   );
   const performers = people.filter((person) => person.type === "performer");
+  const media = people.filter((person) => person.type === "media");
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -167,7 +168,28 @@ export const People = ({ language }: { language: Language }) => {
           </div>
           <div className="flex flex-col">
             {collaborators.map((person, index) => (
-              <Profile key={person.id} person={person} index={index} orderFunction={(index) => index % 2 !== 0 } />
+              <Profile key={person.id} person={person} index={index} orderFunction={(index) => index % 2 !== 0} />
+            ))}
+          </div>
+          <div className="flex items-center w-full mb-24">
+            <motion.div
+              variants={lineVariants}
+              className="h-px bg-white flex-1"
+            />
+            <motion.h2
+              variants={itemVariants}
+              className="px-4 text-2xl font-light uppercase tracking-widest"
+            >
+              PRODUCTION & MEDIA
+            </motion.h2>
+            <motion.div
+              variants={lineVariants}
+              className="h-px bg-white flex-1"
+            />
+          </div>
+          <div className="flex flex-col">
+            {media.map((person, index) => (
+              <Profile key={person.id} person={person} index={index} orderFunction={(index) => index % 2 !== 0} />
             ))}
           </div>
         </motion.div>

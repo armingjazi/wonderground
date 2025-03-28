@@ -14,14 +14,6 @@
     "type": "main"
   },
   {
-    "id": "fani-benages",
-    "name": "Fani Benages",
-    "bio": "Fani Benages has worked in the performing arts sector since 1994, specializing in contemporary dance. Since 2002, she has operated independently, focusing on representation, coaching, and distribution for dance companies and creators working with movement and physical theatre. Through her agency, Fani Benages, she supports international touring and market access across Europe, the Middle East, and Latin America. She is an active member of several industry associations, including CDAEC, ACPDC, and APGCC.",
-    "title": "Cultural Manager and Distributor",
-    "image": "/about/fanibenages.jpg",
-    "type": "collaborator"
-  },
-  {
     "id": "oded-avinathan",
     "name": "Oded Avinathan",
     "bio": "Oded Avinathan is a circus artist specializing in group hand-to-hand acrobatics, based in Toulouse, France. Born in 1989 in Haifa, Israel, he began performing in 2012 at Sandciel, the Israeli Circus School. He later trained at CRAC de Lomme in Lille, France, under Mahmoud Louertani and Abdeliazide Senhadji of Company XY. Oded performed in the collective BimBim and collaborated on several creations, including works with Bernadette Gruson and Komplexkapharnaüm. In 2018, he joined Company XY for the creation of Möbius and later participated in Pas du Monde (2024). He has been collaborating with Wonderground since 2022, contributing to acrobatic and movement research and performing in Wall & Peace.",
@@ -62,12 +54,20 @@
     "type": "collaborator"
   },
   {
-    "id": "aida-vargas",
-    "name": "Aida Vargas",
-    "bio": "Aida Vargas is a photographer with a distinct sensitivity for light and movement. Her work often explores the expressive possibilities of natural light, while also embracing the depth and nuance offered by theatrical and low lighting environments. With a personal connection to the world of dance, much of her work is dedicated to studying movement through photography and video. She is drawn to capturing the essence of a gesture or the atmosphere of a specific moment in time and space—translating it through her lens. Her artistic approach combines observation and imagination: capturing what exists, inventing from inspiration. Through the play of light, she constructs and deconstructs moments—creating visual poems that go beyond words.",
-    "image": "/about/aidavargas.jpg",
-    "title": "Photography",
-    "type": "collaborator"
+    "id": "fani-benages",
+    "name": "Fani Benages",
+    "bio": "Fani Benages has worked in the performing arts sector since 1994, specializing in contemporary dance. Since 2002, she has operated independently, focusing on representation, coaching, and distribution for dance companies and creators working with movement and physical theatre. Through her agency, Fani Benages, she supports international touring and market access across Europe, the Middle East, and Latin America. She is an active member of several industry associations, including CDAEC, ACPDC, and APGCC.",
+    "title": "Cultural Manager and Distributor",
+    "image": "/about/fanibenages.jpg",
+    "type": "media"
+  },
+  {
+    "id": "armin-jazi",
+    "name": "Armin Jazi",
+    "bio": "A digital architect, Armin transforms Wonderground's artistic vision into compelling digital stories. As a software developer and designer, he crafts interfaces that mirror the creative vision of Wonderground. He operates in connections between physical and digital art. Armin co-manages Movement Archery with Tom and Roser.\n\nWith over a decade of experience leading technical teams and creating digital experiences, Armin brings expertise in engineering management and solution architecture to the performing arts. His background spans digital transformation for enterprise clients, cloud infrastructure design, and immersive audio technology development. His work with Dear Reality on spatial audio solutions has informed his approach to translating physical movement into digital spaces. He has been collaborating with Wonderground since 2024, bringing technical innovation to dance performance documentation and audience engagement.",
+    "image": "/about/arminjazi.jpeg",
+    "title": "Digital Manager",
+    "type": "media"
   },
   {
     "id": "igni-castane",
@@ -75,15 +75,15 @@
     "bio": "Ignasi Castañé is an audiovisual creator, video director, and cinematographer. He holds a Higher Degree in Audiovisual Production (ITES) and a Master’s in Cinematography (ESCAC). Since 2010, he leads Cligbcn Productions, collaborating across performing arts, documentary, and sports media. He has worked with companies such as Evasión TV, Lavinia, Goroka, and APdC, and contributed to projects like Serás Hombre, Propietarios de sueños, NunArt – el documental, and the Re-mou-te series. He also directed videos for the Mancomunitat del Pla de Mallorca, highlighting cultural heritage and sustainable tourism. Ignasi has been working extensively in the Spanish contemporary dance landscape and has created numerous dance films and trailers for dance performances, festivals, and events. He has been collaborating with Wonderground since 2022.",
     "image": "/about/ignasi.jpg",
     "title": "Video Direction and Cinematography",
-    "type": "collaborator"
+    "type": "media"
   },
   {
-    "id": "armin-jazi",
-    "name": "Armin Jazi",
-    "bio": "A digital architect, Armin transforms Wonderground's artistic vision into compelling digital stories. As a software developer and designer, he crafts interfaces that mirror the creative vision of Wonderground. He operates in connections between physical and digital art. Armin co-manages Movement Archery with Tom and Roser.",
-    "image": "/about/arminjazi.jpeg",
-    "title": "Digital Manager",
-    "type": "collaborator"
+    "id": "aida-vargas",
+    "name": "Aida Vargas",
+    "bio": "Aida Vargas is a photographer with a distinct sensitivity for light and movement. Her work often explores the expressive possibilities of natural light, while also embracing the depth and nuance offered by theatrical and low lighting environments. With a personal connection to the world of dance, much of her work is dedicated to studying movement through photography and video. She is drawn to capturing the essence of a gesture or the atmosphere of a specific moment in time and space—translating it through her lens. Her artistic approach combines observation and imagination: capturing what exists, inventing from inspiration. Through the play of light, she constructs and deconstructs moments—creating visual poems that go beyond words.",
+    "image": "/about/aidavargas.jpg",
+    "title": "Photography",
+    "type": "media"
   },
   {
     "id": "yuval-finkelshtein",
