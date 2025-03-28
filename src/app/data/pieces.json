@@ -20,7 +20,8 @@
     },
     "trailer": "https://youtu.be/jcWGJi9SeHs",
     "events": [],
-    "position": 0
+    "position": 0,
+    "order": 1
   },
   {
     "type": "piece",
@@ -43,7 +44,8 @@
     },
     "trailer": "https://youtu.be/9Atj0oc7yug",
     "events": [],
-    "position": 1
+    "position": 1,
+    "order": 0
   },
   {
     "type": "piece",
@@ -67,7 +69,8 @@
     },
     "trailer": "https://youtu.be/WuNHfDZaisU",
     "events": [],
-    "position": 1
+    "position": 1,
+    "order": 2
   },
   {
     "type": "piece",
@@ -90,7 +93,8 @@
     },
     "trailer": "https://youtu.be/XOUboemZg5Q",
     "events": [],
-    "position": 0
+    "position": 0,
+    "order": 3
   },
   {
     "type": "piece",
@@ -113,7 +117,8 @@
     },
     "trailer": "https://youtu.be/7FyaWtG-XbY",
     "events": [],
-    "position": 2
+    "position": 2,
+    "order": 4
   },
   {
     "type": "piece",
@@ -137,7 +142,8 @@
     },
     "trailer": "https://youtu.be/DVMwsU8wVWc",
     "events": [],
-    "position": 2
+    "position": 2,
+    "order": 5
   },
   {
     "type": "calendar",
@@ -250,6 +256,7 @@
         "country": "Spain"
       }
     ],
-    "position": 1
+    "position": 1,
+    "order": 6
   }
 ]

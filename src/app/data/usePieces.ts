@@ -37,6 +37,7 @@ export interface Piece {
   position: 0 | 1 | 2;
   events: CalEvent[];
   trailer: string;
+  order: number;
 }
 
 export const usePieces = ({

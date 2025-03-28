@@ -58,6 +58,7 @@ export const PieceGrid = ({
   activePiece,
   pieces
 }: PieceGridProps) => {
+  const orderedPieces = pieces.sort((a, b) => a.order - b.order);
   const first_desktop = pieces.filter((piece) => piece.position === 0).map((piece) => ({...piece, id: piece.id + 'first'}));
   const second_desktop = pieces.filter((piece) => piece.position === 1).map((piece) => ({...piece, id: piece.id + 'second'}));
   const third_desktop = pieces.filter((piece) => piece.position === 2).map((piece) => ({...piece, id: piece.id + 'third'}));
@@ -129,7 +130,7 @@ export const PieceGrid = ({
           ))}
         </div>
         <div className="md:hidden w-[100%] space-y-4">
-          {pieces.map((piece) => (
+          {orderedPieces.map((piece) => (
             <PieceFactory
               piece={piece}
               blur={blur}

@@ -24,7 +24,7 @@ const Profile = ({
       initial={{ opacity: 0, y: 20, scale: 1.0 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.2 }}
-      whileInView={{ scale: 1.1 }}
+      whileInView={{ scale: 1.01 }}
       id={person.id}
     >
       <div
