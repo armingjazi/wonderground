@@ -27,7 +27,7 @@
     "bio": "Artista de circ especialitzat en acrobàcia de mà a mà en grup, establert a Tolosa, França. Nascut el 1989 a Haifa, Israel, va començar a estudiar el 2012 a Sandciel, l’Escola de Circ d’Israel. Més tard, es va formar al CRAC de Lomme, a Lille, França, amb Mahmoud Louertani i Abdeliazide Senhadji de la Companyia XY.\nOded ha actuat amb el col·lectiu BimBim i ha col·laborat en diverses creacions, incloent-hi treballs amb Bernadette Gruson i Komplexkapharnaüm. L’any 2018 es va incorporar a la Companyia XY per a la creació de Möbius i, més recentment, participar a Pas du Monde (2024).\nDes del 2022 col·labora amb Wonderground, aportant la seva experiència en investigació acrobàtica i de moviment, i actuant a Wall & Peace.",
     "title": "Intèrpret, Acròbata i Col·laborador Artístic",
     "image": "/about/odedavinathan.jpg",
-    "type": "collaborator"
+    "type": "performer"
   },
   {
     "id": "miguel-marin-pavon",
@@ -84,5 +84,21 @@
     "image": "/about/arminjazi.jpeg",
     "title": "Gestió Digital",
     "type": "collaborator"
+  },
+  {
+    "id": "yuval-finkelshtein",
+    "name": "Yuval Finkelshtein",
+    "bio": " Yuval Finkelshtein is a professional dancer, teacher, and emerging choreographer based in Tel Aviv, Israel. She graduated from the Vertigo Training Program for Dancers in 2018.\nAs a performer, she has collaborated with a wide range of choreographers including Olivia Court Messa, Ravid Abarbanel, Mor Shany, Hai Cohen (as part of Vertigo Company and Power of Balance), Dafi Eltabeb, Lilach Livne, Anabelle Dvir, Anat Oz, and Mica Kupfer, among others. She is also a performer in the award-winning children’s show Once Upon a World, created by Aviv Horowitz and the Train Theatre. In 2022, she was selected for the DanceWeb scholarship program at the ImPulsTanz Festival in Vienna.\nAs a creator, she premiered her first choreographic work Variations of a Meeting in 2021, in collaboration with Uri Dicker. Her most recent piece, Dance of the Daily, co-created with Noam Ben Israel, premiered at the IntimaDance Festival in Tel Aviv in 2024.\nYuval teaches contemporary dance, contact improvisation, and partnering to both professional dancers and the general public in Israel and internationally.\nYuval is performing with Wonderground since 2024.",
+    "image": "/about/yuvalfinkelshtein.jpeg",
+    "title": "Dancer, Teacher, and Emerging Choreographer",
+    "type": "performer"
+  },
+  {
+    "id": "nora-baylach",
+    "name": "Nora Baylach",
+    "bio": " Nora Baylach is a contemporary dancer, creator, educator, and performance photographer. Her formation developed outside institutional academic frameworks, embracing an independent and multidisciplinary path.\nShe began her professional career as a performer in the National Dance Production of Catalonia, working under the direction of Thomas Noone and Roser López Espinosa. Since then, she has maintained an ongoing collaboration with López Espinosa, performing in Noviembre, Trama, and Cometa. In parallel, she has worked with various companies and independent artists, including Laia Santanach, Animal Religion, Anna Borrosa, Cía. Elelei, and La Taimada, among others.\nDeeply interested in pedagogy, she has participated in several educational initiatives such as Projecte Onades—a school-based dance project recognized with the Baldiri Connexions Award by Fundació Carulla—En un sí desconegut, and Sin docente no hay proyecto, both part of Caixa d’Eines, a pedagogical framework led by El Graner and Escola Enric Granados. She regularly teaches at Área, espai de dansa i creació, nunArt Guinardó, and has been a guest teacher at Institut del Teatre.\nNora is performing with Wonderground since 2024.",
+    "image": "/about/norabaylach.jpeg",
+    "title": "Dancer, Creator, Educator, and Performance Photographer",
+    "type": "performer"
   }
 ]

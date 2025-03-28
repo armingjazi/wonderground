@@ -5,12 +5,22 @@ import Image from "next/image";
 import { useCompany } from "@/app/data/useCompany";
 import { Language } from "@/app/util/language";
 
-const Profile = ({ person, index }: { person: Person; index: number }) => {
-  const isEven = index % 2 === 0;
+export interface ProfileProps {
+  person: Person;
+  index: number;
+  orderFunction?: (index: number) => boolean;
+}
+
+const Profile = ({
+  person,
+  index,
+  orderFunction = (index: number) => index % 2 === 0,
+}: ProfileProps) => {
+  const isEven = orderFunction(index);
 
   return (
     <motion.div
-      className="flex flex-col md:flex-row items-center gap-8 py-16 md:py-24 first:pt-0"
+      className="flex flex-col md:flex-row items-center gap-8 py-12 md:py-20 first:pt-0"
       initial={{ opacity: 0, y: 20, scale: 1.0 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.2 }}
@@ -59,6 +69,7 @@ export const People = ({ language }: { language: Language }) => {
   const collaborators = people.filter(
     (person) => person.type === "collaborator",
   );
+  const performers = people.filter((person) => person.type === "performer");
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -126,6 +137,27 @@ export const People = ({ language }: { language: Language }) => {
               variants={itemVariants}
               className="px-4 text-2xl font-light uppercase tracking-widest"
             >
+              PERFORMERS
+            </motion.h2>
+            <motion.div
+              variants={lineVariants}
+              className="h-px bg-white flex-1"
+            />
+          </div>
+          <div className="flex flex-col">
+            {performers.map((person, index) => (
+              <Profile key={person.id} person={person} index={index} />
+            ))}
+          </div>
+          <div className="flex items-center w-full mb-24">
+            <motion.div
+              variants={lineVariants}
+              className="h-px bg-white flex-1"
+            />
+            <motion.h2
+              variants={itemVariants}
+              className="px-4 text-2xl font-light uppercase tracking-widest"
+            >
               COLLABORATORS
             </motion.h2>
             <motion.div
@@ -135,7 +167,7 @@ export const People = ({ language }: { language: Language }) => {
           </div>
           <div className="flex flex-col">
             {collaborators.map((person, index) => (
-              <Profile key={person.id} person={person} index={index} />
+              <Profile key={person.id} person={person} index={index} orderFunction={(index) => index % 2 !== 0 } />
             ))}
           </div>
         </motion.div>
