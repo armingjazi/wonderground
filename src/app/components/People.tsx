@@ -19,16 +19,12 @@ const Profile = ({
   const isEven = orderFunction(index);
 
   return (
-    <motion.div
-      className="flex flex-col md:flex-row items-center gap-8 py-6 md:py-16 first:pt-0"
-      initial={{ opacity: 0, y: 20, scale: 1.0 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: index * 0.2 }}
-      whileInView={{ scale: 1.01 }}
+    <div
+      className="flex flex-col md:flex-row items-center gap-8 py-8 md:py-16 first:pt-0"
       id={person.id}
     >
       <div
-        className={`flex flex-col md:flex-row w-full items-center  ${isEven ? "md:flex-row" : "md:flex-row-reverse"} gap-2 md:gap-10 md:gap-16`}
+        className={`flex flex-col md:flex-row items-center md:items-start w-full  ${isEven ? "md:flex-row" : "md:flex-row-reverse"} gap-2 md:gap-10 md:gap-16`}
       >
         <div className="w-full md:w-1/4 mb-2 md:mb-0">
           <div className="relative overflow-hidden aspect-square w-1/2 h-1/2 md:w-full md:h-full">
@@ -43,21 +39,21 @@ const Profile = ({
         </div>
 
         <div
-          className={`w-full md:w-7/12 ${isEven ? "md:text-left" : "md:text-left"}`}
+          className="w-full md:w-7/12 md:text-left"
         >
           <h3 className="text-2xl font-light tracking-wide mb-1">
             {person.name}
           </h3>
-          <p className="text-base font-light leading-relaxed mb-4">
+          <p className="text-md font-light leading-relaxed mb-4">
             <em>{person.title}</em>
           </p>
           <p
-            className="text-base font-light leading-relaxed"
+            className="text-lg font-light leading-relaxed"
             dangerouslySetInnerHTML={{ __html: person.bio }}
           />
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
