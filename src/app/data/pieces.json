@@ -9,10 +9,10 @@
     "yTranslate": -100,
     "maskOpacity": 0.6,
     "images": {
-      "main": "/pieces/after_the_rain/1.jpg",
-      "mask": "/pieces/after_the_rain/4.jpeg",
+      "main": "/pieces/after_the_rain/main.jpg",
+      "mask": "/pieces/after_the_rain/main.jpg",
       "promos": [
-        "/pieces/after_the_rain/main.png",
+        "/pieces/after_the_rain/1.jpg",
         "/pieces/after_the_rain/2.jpeg",
         "/pieces/after_the_rain/3.jpeg",
         "/pieces/after_the_rain/4.jpeg"
@@ -94,6 +94,29 @@
   },
   {
     "type": "piece",
+    "id": "falling-man",
+    "color": "rgb(175,100,60)",
+    "width": 260,
+    "height": 960,
+    "fontSize": 80,
+    "xTranslate": -300,
+    "yTranslate": 10,
+    "images": {
+      "main": "/pieces/falling_man/main.png",
+      "mask": "/pieces/falling_man/main.png",
+      "promos": [
+        "/pieces/falling_man/1.jpeg",
+        "/pieces/falling_man/3.jpeg",
+        "/pieces/falling_man/2.jpeg",
+        "/pieces/falling_man/4.jpeg"
+      ]
+    },
+    "trailer": "https://youtu.be/7FyaWtG-XbY",
+    "events": [],
+    "position": 2
+  },
+  {
+    "type": "piece",
     "id": "island",
     "color": "#FFFF00",
     "width": 160,
@@ -113,29 +136,6 @@
       ]
     },
     "trailer": "https://youtu.be/DVMwsU8wVWc",
-    "events": [],
-    "position": 1
-  },
-  {
-    "type": "piece",
-    "id": "falling-man",
-    "color": "rgb(175,100,60)",
-    "width": 260,
-    "height": 960,
-    "fontSize": 80,
-    "xTranslate": -300,
-    "yTranslate": 10,
-    "images": {
-      "main": "/pieces/falling_man/main.png",
-      "mask": "/pieces/falling_man/main.png",
-      "promos": [
-        "/pieces/falling_man/1.jpeg",
-        "/pieces/falling_man/3.jpeg",
-        "/pieces/falling_man/2.jpeg",
-        "/pieces/falling_man/4.jpeg"
-      ]
-    },
-    "trailer": "https://youtu.be/7FyaWtG-XbY",
     "events": [],
     "position": 2
   },
@@ -163,7 +163,7 @@
         "date": "2025/03/29",
         "location": "Barcelona",
         "name": "Momentum",
-        "venue": "Momentum Teatre Tarragona",
+        "venue": "Teatre Tarragona",
         "link": "https://entrades.tarragona.cat/momentum?idioma=ES&_ga=2.209574354.1578784436.1736640000-447243502.1736640000",
         "country": "Tarragona"
       },
@@ -250,6 +250,6 @@
         "country": "Spain"
       }
     ],
-    "position": 2
+    "position": 1
   }
 ]

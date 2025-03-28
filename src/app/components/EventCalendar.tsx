@@ -61,14 +61,16 @@ export const EventCalendar = ({
             transition={{ duration: 0.5 }}
           >
             <h1
-              className="text-white text-md sm:text-lg font-medium"
+              className="text-white text-sm sm:text-lg md:text-2xl font-normal tracking-wide sm:tracking-wider md:tracking-widest"
             >
               {event.name}
             </h1>
             <p className="text-white text-xs sm:text-sm font-normal">{event.date}</p>
-            <p className="text-white text-xs sm:text-sm font-normal">{event.location}</p>
           </motion.div>
         ))}
+      </div>
+      <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/100 to-transparent">
+        <p className="text-lg text-white">{piece.shortDesc}</p>
       </div>
     </motion.div>
   );
