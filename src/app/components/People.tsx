@@ -20,7 +20,7 @@ const Profile = ({
 
   return (
     <motion.div
-      className="flex flex-col md:flex-row items-center gap-8 py-12 md:py-20 first:pt-0"
+      className="flex flex-col md:flex-row items-center gap-8 py-6 md:py-16 first:pt-0"
       initial={{ opacity: 0, y: 20, scale: 1.0 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.2 }}
@@ -30,8 +30,8 @@ const Profile = ({
       <div
         className={`flex flex-col md:flex-row w-full items-center  ${isEven ? "md:flex-row" : "md:flex-row-reverse"} gap-2 md:gap-10 md:gap-16`}
       >
-        <div className="w-full md:w-1/4 mb-8 md:mb-0">
-          <div className="relative overflow-hidden aspect-square  w-1/2 h-1/2 md:w-full md:h-full">
+        <div className="w-full md:w-1/4 mb-2 md:mb-0">
+          <div className="relative overflow-hidden aspect-square w-1/2 h-1/2 md:w-full md:h-full">
             <Image
               src={person.image}
               alt={person.name}
@@ -102,7 +102,7 @@ export const People = ({ language }: { language: Language }) => {
           transition={{ duration: 0.6 }}
           className="max-w-6xl mx-auto"
         >
-          <div className="flex flex-col mb-24">
+          <div className="flex flex-col mb-12">
             <div className="flex items-center w-full mb-12">
               <motion.div
                 variants={lineVariants}
@@ -129,7 +129,7 @@ export const People = ({ language }: { language: Language }) => {
               <Profile key={person.id} person={person} index={index} />
             ))}
           </div>
-          <div className="flex items-center w-full mb-24">
+          <div className="flex items-center w-full mb-12 mt-6">
             <motion.div
               variants={lineVariants}
               className="h-px bg-white flex-1"
@@ -150,7 +150,7 @@ export const People = ({ language }: { language: Language }) => {
               <Profile key={person.id} person={person} index={index} />
             ))}
           </div>
-          <div className="flex items-center w-full mb-24">
+          <div className="flex items-center w-full mb-12 mt-6">
             <motion.div
               variants={lineVariants}
               className="h-px bg-white flex-1"
@@ -171,7 +171,7 @@ export const People = ({ language }: { language: Language }) => {
               <Profile key={person.id} person={person} index={index} orderFunction={(index) => index % 2 !== 0} />
             ))}
           </div>
-          <div className="flex items-center w-full mb-24">
+          <div className="flex items-center w-full mb-12 mt-6">
             <motion.div
               variants={lineVariants}
               className="h-px bg-white flex-1"
