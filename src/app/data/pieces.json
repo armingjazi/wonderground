@@ -176,7 +176,7 @@
       {
         "id": "event-4",
         "date": "2025/04/26",
-        "location": "Barcelona",
+        "location": "del Vallès",
         "name": "After The Rain",
         "venue": "Teatre Can Gomà Mollet",
         "link": "https://cultura.molletvalles.cat/ca/programacio/c/1305-despres-de-la-plujadid.html",
@@ -201,7 +201,7 @@
       {
         "id": "event-2",
         "date": "2025/06/03",
-        "location": "Kobe",
+        "location": "Arik Kobe",
         "name": "Residency",
         "venue": "Danseu Festival",
         "link": "https://danseufestival.com/",
@@ -233,25 +233,25 @@
       },
       {
         "id": "event-9",
-        "date": "2025/08/9",
-        "location": "Barcelona",
+        "date": "2025/08/09",
+        "location": "Budapest",
         "name": "RISE",
         "venue": "Sziget Festival",
-        "country": "Spain"
+        "country": "Hungary"
       },
       {
         "id": "event-91",
         "date": "2025/08/10",
-        "location": "Barcelona",
+        "location": "Budapest",
         "name": "RISE",
         "venue": "Sziget Festival",
-        "country": "Spain"
+        "country": "Hungary"
       },
       {
         "id": "event-922",
         "date": "2025/09/12",
-        "location": "Barcelona",
-        "name": "RISE",
+        "location": "Alcalá de Gurrea",
+        "name": "Wall & Peace",
         "venue": "Tierras de Qala’t",
         "country": "Spain"
       }
