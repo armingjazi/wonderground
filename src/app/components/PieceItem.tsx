@@ -61,7 +61,7 @@ export const PieceItem = ({
           >
             <defs>
               <pattern
-                id={`image-pattern-${piece.id}`}
+                id={`image-pattern-${piece.visualId}`}
                 patternUnits="userSpaceOnUse"
                 width="1046"
                 height="100%"
@@ -82,7 +82,7 @@ export const PieceItem = ({
                   filter={"contrast(200%)"}
                 />
               </pattern>
-              <mask id={`text-mask-${piece.id}`}>
+              <mask id={`text-mask-${piece.visualId}`}>
                 <text
                   x="50%"
                   y="50%"
@@ -102,8 +102,8 @@ export const PieceItem = ({
               className="opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-2000"
               width="1200"
               height="904"
-              fill={`url(#image-pattern-${piece.id})`}
-              mask={`url(#text-mask-${piece.id})`}
+              fill={`url(#image-pattern-${piece.visualId})`}
+              mask={`url(#text-mask-${piece.visualId})`}
             />
           </svg>
         </svg>

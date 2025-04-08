@@ -59,12 +59,12 @@ export const PieceGrid = ({
   pieces
 }: PieceGridProps) => {
   const orderedPieces = pieces.sort((a, b) => a.order - b.order);
-  const first_desktop = pieces.filter((piece) => piece.position === 0).map((piece) => ({...piece, id: piece.id + 'first'}));
-  const second_desktop = pieces.filter((piece) => piece.position === 1).map((piece) => ({...piece, id: piece.id + 'second'}));
-  const third_desktop = pieces.filter((piece) => piece.position === 2).map((piece) => ({...piece, id: piece.id + 'third'}));
+  const first_desktop = pieces.filter((piece) => piece.position === 0).map((piece) => ({...piece, visualId: piece.id + 'first'}));
+  const second_desktop = pieces.filter((piece) => piece.position === 1).map((piece) => ({...piece, visualId: piece.id + 'second'}));
+  const third_desktop = pieces.filter((piece) => piece.position === 2).map((piece) => ({...piece, visualId: piece.id + 'third'}));
 
-  const first_tablet = pieces.filter((piece) => piece.position === 0 || piece.position === 2).map((piece) => ({...piece, id: piece.id + 'first_tablet'}));
-  const second_tablet = pieces.filter((piece) => piece.position === 1).map((piece) => ({...piece, id: piece.id + 'second_tablet'}));
+  const first_tablet = pieces.filter((piece) => piece.position === 0 || piece.position === 2).map((piece) => ({...piece, visualId: piece.id + 'first_tablet'}));
+  const second_tablet = pieces.filter((piece) => piece.position === 1).map((piece) => ({...piece, visualId: piece.id + 'second_tablet'}));
 
   const classes = blur ? "pointer-events-none" : "";
 

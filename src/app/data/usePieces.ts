@@ -38,6 +38,7 @@ export interface Piece {
   events: CalEvent[];
   trailer: string;
   order: number;
+  visualId: string;
 }
 
 export const usePieces = ({

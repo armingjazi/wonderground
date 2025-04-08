@@ -10,11 +10,15 @@ import { AboutOverlay } from "@/app/components/AboutOverlay";
 import { Contact } from "@/app/components/Contact";
 import { CalendarDetailOverlay } from "@/app/components/CalendarDetailOverlay";
 import { Language } from "@/app/util/language";
-import { useSearchParams } from "next/navigation";
-
+import { useRouter, useSearchParams } from "next/navigation";
+import { useBreakpoint } from "@/app/util/useBreakpoint";
 
 function Main() {
   const searchParams = useSearchParams();
+  const router = useRouter();
+  const { isXs, isSm, isMd } = useBreakpoint();
+
+  const isMobile = isXs || isSm || isMd;
 
   const language = (searchParams.get("language") as Language) || "ENGLISH";
   const [hasInitialLoad, setHasInitialLoad] = useState(false);
@@ -29,6 +33,23 @@ function Main() {
   const [piece, setPiece] = useState<Piece | null>(null);
   const [about, setAbout] = useState(false);
   const { loading, pieces } = usePieces({ language });
+
+  const handlePieceClick = (piece: Piece) => {
+    if (!isMobile) {
+      setPiece(piece);
+    } else {
+      router.push(`/pieces/${piece.id}?language=${language}`);
+    }
+  };
+
+  const handleAboutClick = () => {
+    if (!isMobile) {
+      setAbout(true);
+    } else {
+      router.push(`/about?language=${language}`);
+    }
+  };
+
 
   return (
     <div className="flex flex-col h-full bg-black text-white font-light">
@@ -52,13 +73,10 @@ function Main() {
           </motion.div>
         )}
       </AnimatePresence>
-      <Header
-        onAbout={setAbout}
-        selectedLanguage={language}
-      />
+      <Header onAbout={handleAboutClick} selectedLanguage={language} />
       <main className="flex-1 flex flex-col overflow-y-auto">
         <PieceGrid
-          onPieceClick={setPiece}
+          onPieceClick={handlePieceClick}
           blur={!!piece || about}
           activePiece={piece}
           pieces={pieces}
@@ -69,13 +87,14 @@ function Main() {
         {piece && piece.type === "calendar" && (
           <CalendarDetailOverlay piece={piece} onClose={() => setPiece(null)} />
         )}
-        {about && <AboutOverlay language={language} onClose={() => setAbout(false)} />}
+        {about && (
+          <AboutOverlay language={language} onClose={() => setAbout(false)} />
+        )}
         <Contact />
       </main>
     </div>
   );
 }
-
 
 export default function Page() {
   return (
