@@ -1,14 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 import { LanguageKey, languageKeys } from "@/app/util/language";
-import piecesVisuals from "@/app/data/pieces.json";
 
 const STORYBLOK_TOKEN = process.env.STORYBLOK_TOKEN;
 const SPACE_ROOT = "pieces";
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
-  const language = (searchParams.get("language") ||
-    "ENGLISH") as LanguageKey;
+  const language = (searchParams.get("language") || "ENGLISH") as LanguageKey;
   const lang = (
     languageKeys.includes(language) ? language : "ENGLISH"
   ).toLowerCase();
@@ -62,6 +60,15 @@ export async function GET(request: NextRequest) {
           alt: string;
         }[];
         trailer?: string;
+        color?: string;
+        width?: number;
+        height?: number;
+        fontSize?: number;
+        xTranslate?: number;
+        yTranslate?: number;
+        position?: number;
+        order?: number;
+        maskOpacity?: number;
       };
     }[] = stories.map(
       (story: {
@@ -87,7 +94,7 @@ export async function GET(request: NextRequest) {
         );
         return {
           id: c.id,
-          type: 'piece',
+          type: "piece",
           title: c.Title || c.Name || story.name,
           shortDesc: c.ShortDescription || "",
           fullDesc: c.FullDescription || "",
@@ -112,13 +119,22 @@ export async function GET(request: NextRequest) {
                 }),
               ) || [],
             trailer: match?.content.trailer.url || "",
+            color: match?.content.color,
+            width: parseInt(match?.content.width),
+            height: parseInt(match?.content.height),
+            fontSize: parseInt(match?.content.fontSize),
+            xTranslate: parseInt(match?.content.xTranslate),
+            yTranslate: parseInt(match?.content.yTranslate),
+            position: parseInt(match?.content.position),
+            order: parseInt(match?.content.order),
+            maskOpacity: parseFloat(match?.content.maskOpacity),
           },
         };
       },
     );
 
     const resEventCal = await fetch(
-      `https://api.storyblok.com/v2/cdn/stories/${SPACE_ROOT}/event-calendar?token=${STORYBLOK_TOKEN}`,
+      `https://api.storyblok.com/v2/cdn/stories/${SPACE_ROOT}/event-calendar?token=${STORYBLOK_TOKEN}&resolve_relations=event-calendar.visuals`,
       {
         headers: {
           "Content-Type": "application/json",
@@ -135,12 +151,15 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    const { story: calendarStory } = await resEventCal.json();
+    const { story: calendarStory, rels: calendarRels } = await resEventCal.json();
 
+    const match = calendarRels.find(
+      (r: { uuid: string }) => r.uuid === calendarStory.content.visuals?.[0],
+    );
     parsed.push({
       id: "event-calendar",
       title: "UPCOMING EVENTS",
-      type: 'calendar',
+      type: "calendar",
       events: calendarStory.content.events.map(
         (event: {
           id: string;
@@ -172,18 +191,19 @@ export async function GET(request: NextRequest) {
           filename: calendarStory.content.image.filename,
           alt: calendarStory.content.image.filename,
         },
+        color: match?.content.color,
+        width: parseInt(match?.content.width),
+        height: parseInt(match?.content.height),
+        fontSize: parseInt(match?.content.fontSize),
+        xTranslate: parseInt(match?.content.xTranslate),
+        yTranslate: parseInt(match?.content.yTranslate),
+        position: parseInt(match?.content.position),
+        order: parseInt(match?.content.order),
+        maskOpacity: parseFloat(match?.content.maskOpacity),
       },
     });
 
-    const merged = piecesVisuals.map((piece) => {
-      const match = parsed.find((d) => d.id === piece.id);
-      return {
-        ...piece,
-        ...match,
-      };
-    });
-
-    return NextResponse.json(merged);
+    return NextResponse.json(parsed);
   } catch (error) {
     console.error("Error loading data:", error);
     return NextResponse.json(

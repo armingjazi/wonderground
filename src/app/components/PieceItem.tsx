@@ -19,12 +19,12 @@ export const PieceItem = ({
       key={piece.id}
       className="relative rounded-md shadow-2xl overflow-hidden cursor-pointer w-full image-full mb-2 group"
       style={{
-        backgroundColor: piece.color,
+        backgroundColor: piece.visuals.color,
         transformStyle: "preserve-3d",
         transformOrigin: "center center",
       }}
       initial={{
-        height: piece.height,
+        height: piece.visuals.height,
       }}
       animate={{
         filter: blur ? (active ? "blur(10px)" : "blur(20px)") : "none",
@@ -68,20 +68,20 @@ export const PieceItem = ({
                 patternUnits="userSpaceOnUse"
                 width="1046"
                 height="100%"
-                patternTransform={`translate(${piece.xTranslate}, ${piece.yTranslate})`}
+                patternTransform={`translate(${piece.visuals.xTranslate}, ${piece.visuals.yTranslate})`}
               >
                 <rect
                   x="0"
                   y="0"
                   width="1046"
                   height="904"
-                  fill={piece.color}
+                  fill={piece.visuals.color}
                 />
                 <image
                   href={piece.visuals.mask.filename}
                   width="1046"
                   height="904"
-                  opacity={piece.maskOpacity ?? 0.8}
+                  opacity={piece.visuals.maskOpacity ?? 0.8}
                   filter={"contrast(200%)"}
                 />
               </pattern>
@@ -93,7 +93,7 @@ export const PieceItem = ({
                   textAnchor="middle"
                   dominantBaseline="middle"
                   fontFamily="var(--font-jost-sans)"
-                  fontSize={piece.fontSize}
+                  fontSize={piece.visuals.fontSize}
                   fontWeight="700"
                   fill="white"
                 >

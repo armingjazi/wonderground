@@ -102,18 +102,6 @@ export const PieceDossier = ({ piece }: { piece: Piece }) => {
           className="w-full ml-[-4px] mt-4"
         />
 
-        {piece.quote && (
-          <motion.p
-            className="m-6 md:m-12 text-3xl text-center p-12 uppercase"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            whileInView={{ scale: 1.1 }}
-            transition={{ duration: 1.5, delay: 0.4 }}
-          >
-            {piece.quote}
-          </motion.p>
-        )}
-
         <motion.div
           className="m-6 md:m-12 md:w-2/3 mb-12 md:p-12"
           whileInView={{ scale: 1.05 }}

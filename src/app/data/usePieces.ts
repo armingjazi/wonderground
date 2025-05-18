@@ -20,15 +20,7 @@ export interface Piece {
   castAndCrew: string;
   tagline: string;
   concept: string;
-  quote?: string;
   aesthetics: string;
-  color: string;
-  width: number;
-  height: number;
-  fontSize?: number;
-  xTranslate: number;
-  yTranslate: number;
-  maskOpacity?: number;
   visuals: {
     main: {
       filename: string;
@@ -43,6 +35,15 @@ export interface Piece {
       alt: string;
     }[]
     trailer: string;
+    position: 0 | 1 | 2;
+    order: number;
+    color: string;
+    width: number;
+    height: number;
+    fontSize: number;
+    xTranslate: number;
+    yTranslate: number;
+    maskOpacity: number;
   };
   position: 0 | 1 | 2;
   events: CalEvent[];
