@@ -16,7 +16,6 @@ export async function GET(request: NextRequest) {
   const language = (searchParams.get("language") ||
     "ENGLISH") as LanguageKey;
 
-
   const lang = (
     languageKeys.includes(language) ? language : "ENGLISH"
   ).toLowerCase();

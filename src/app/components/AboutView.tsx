@@ -3,9 +3,9 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { People } from "@/app/components/People";
 import { BackToTopButton } from "@/app/components/BackToTopButton";
-import { Language } from "@/app/util/language";
+import { LanguageKey } from "@/app/util/language";
 
-export const AboutView = ({ language }: { language: Language }) => {
+export const AboutView = ({ language }: { language: LanguageKey }) => {
   return (
     <AnimatePresence>
       <motion.div

@@ -3,7 +3,7 @@ import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useCompany } from "@/app/data/useCompany";
-import { Language } from "@/app/util/language";
+import { LanguageKey } from "@/app/util/language";
 
 export interface ProfileProps {
   person: Person;
@@ -55,7 +55,7 @@ const Profile = ({
   );
 };
 
-export const People = ({ language }: { language: Language }) => {
+export const People = ({ language }: { language: LanguageKey }) => {
   const { people } = usePeople({ language });
   const { company } = useCompany({ language });
 

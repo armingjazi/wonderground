@@ -9,7 +9,7 @@ import { Header } from "@/app/components/Header";
 import { AboutOverlay } from "@/app/components/AboutOverlay";
 import { Contact } from "@/app/components/Contact";
 import { CalendarDetailOverlay } from "@/app/components/CalendarDetailOverlay";
-import { Language } from "@/app/util/language";
+import { LanguageKey } from "@/app/util/language";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useBreakpoint } from "@/app/util/useBreakpoint";
 
@@ -20,7 +20,7 @@ function Main() {
 
   const isMobile = isXs || isSm || isMd;
 
-  const language = (searchParams.get("language") as Language) || "ENGLISH";
+  const language = (searchParams.get("language") as LanguageKey) || "ENGLISH";
   const [hasInitialLoad, setHasInitialLoad] = useState(false);
 
   useEffect(() => {

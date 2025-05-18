@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import React, { MouseEvent } from "react";
 import { LanguageSelect } from "@/app/components/LanguageSelect";
 import Image from "next/image";
-import { Language } from "@/app/util/language";
+import { LanguageKey } from "@/app/util/language";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 
@@ -13,7 +13,7 @@ export const Header = ({
   selectedLanguage,
 }: {
   onAbout?: (show: boolean) => void;
-  selectedLanguage: Language;
+  selectedLanguage: LanguageKey;
 }) => {
   const router = useRouter();
   const pathname = usePathname();
@@ -23,7 +23,7 @@ export const Header = ({
     onAbout?.(true);
   };
 
-  const handleLanguageChange = (language: Language) => {
+  const handleLanguageChange = (language: LanguageKey) => {
     router.push(`${pathname}?language=${language}`);
   };
 

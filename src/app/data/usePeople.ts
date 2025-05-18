@@ -1,4 +1,4 @@
-import { Language } from "@/app/util/language";
+import { LanguageKey } from "@/app/util/language";
 import { useEffect, useState } from "react";
 
 export interface Person {
@@ -13,7 +13,7 @@ export interface Person {
 export const usePeople = ({
   language,
 }: {
-  language: Language;
+  language: LanguageKey;
 }): { loading: boolean; error: Error | null; people: Person[] } => {
   const [people, setPeople] = useState<Person[]>([]);
   const [loading, setLoading] = useState(true);

@@ -2,7 +2,7 @@ import { Piece } from "@/app/data/usePieces";
 import { PieceDetailView } from "@/app/components/PieceDetailView";
 import { Header } from "@/app/components/Header";
 import React from "react";
-import { Language } from "@/app/util/language";
+import { LanguageKey } from "@/app/util/language";
 import { notFound } from "next/navigation";
 import { CalendarDetailView } from "@/app/components/CalendarDetailView";
 
@@ -16,7 +16,7 @@ export default async function Page({
   const { slug } = await params;
   const search = await searchParams;
 
-  const language = (search.language as Language) || "ENGLISH";
+  const language = (search.language as LanguageKey) || "ENGLISH";
 
   const baseUrl = process.env.BASE_URL || "";
 

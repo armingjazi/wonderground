@@ -1,6 +1,6 @@
 import React from "react";
 import { AboutView } from "@/app/components/AboutView";
-import { Language } from "@/app/util/language";
+import { LanguageKey } from "@/app/util/language";
 import { Header } from "@/app/components/Header";
 
 export default async function Page({
@@ -10,7 +10,7 @@ export default async function Page({
 }) {
   const search = await searchParams;
 
-  const language = (search.language as Language) || "ENGLISH";
+  const language = (search.language as LanguageKey) || "ENGLISH";
 
   return (
     <div>

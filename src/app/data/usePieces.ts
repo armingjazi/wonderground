@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Language } from "@/app/util/language";
+import { LanguageKey } from "@/app/util/language";
 
 export interface CalEvent {
   id: string;
@@ -53,7 +53,7 @@ export interface Piece {
 export const usePieces = ({
   language,
 }: {
-  language: Language;
+  language: LanguageKey;
 }): { loading: boolean; error: Error | null; pieces: Piece[] } => {
   const [pieces, setPieces] = useState<Piece[]>([]);
   const [loading, setLoading] = useState(true);

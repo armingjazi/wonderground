@@ -1,4 +1,4 @@
-import { Language } from "@/app/util/language";
+import { LanguageKey } from "@/app/util/language";
 import { useEffect, useState } from "react";
 
 export interface Company {
@@ -8,7 +8,7 @@ export interface Company {
 export const useCompany = ({
   language,
 }: {
-  language: Language;
+  language: LanguageKey;
 }): { loading: boolean; error: Error | null; company: Company } => {
   const [company, setCompany] = useState<Company>({
     bio:

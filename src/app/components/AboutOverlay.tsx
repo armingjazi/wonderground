@@ -3,14 +3,14 @@ import { CloseButton } from "@/app/components/CloseButton";
 import { People } from "@/app/components/People";
 import { useScrollAnimation } from "@/app/util/useScrollAnimation";
 import { BackToTopButton } from "@/app/components/BackToTopButton";
-import { Language } from "@/app/util/language";
+import { LanguageKey } from "@/app/util/language";
 
 export const AboutOverlay = ({
   onClose,
   language,
 }: {
   onClose: () => void;
-  language: Language;
+  language: LanguageKey;
 }) => {
   const root = useScrollAnimation(onClose);
   return (
