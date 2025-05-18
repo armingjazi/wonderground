@@ -27,12 +27,12 @@ export async function GET(request: NextRequest) {
 
   try {
     const res = await fetch(
-      `https://api.storyblok.com/v2/cdn/stories?token=${STORYBLOK_TOKEN}&starts_with=${folderSlug}&sort_by=content.order&cv=${Date.now()}`,
+      `https://api.storyblok.com/v2/cdn/stories?token=${STORYBLOK_TOKEN}&starts_with=${folderSlug}&sort_by=content.order`,
       {
         headers: {
           "Content-Type": "application/json",
         },
-        next: { revalidate: 60 },
+        next: { revalidate: 300 },
       },
     );
 

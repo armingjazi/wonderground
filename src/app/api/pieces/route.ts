@@ -17,12 +17,12 @@ export async function GET(request: NextRequest) {
 
   try {
     const res = await fetch(
-      `https://api.storyblok.com/v2/cdn/stories?token=${STORYBLOK_TOKEN}&starts_with=${folderSlug}&resolve_relations=piece.visuals&cv=${Date.now()}`,
+      `https://api.storyblok.com/v2/cdn/stories?token=${STORYBLOK_TOKEN}&starts_with=${folderSlug}&resolve_relations=piece.visuals`,
       {
         headers: {
           "Content-Type": "application/json",
         },
-        next: { revalidate: 60 },
+        next: { revalidate: 300 },
       },
     );
 
@@ -118,12 +118,12 @@ export async function GET(request: NextRequest) {
     );
 
     const resEventCal = await fetch(
-      `https://api.storyblok.com/v2/cdn/stories/${SPACE_ROOT}/event-calendar?token=${STORYBLOK_TOKEN}&cv=${Date.now()}`,
+      `https://api.storyblok.com/v2/cdn/stories/${SPACE_ROOT}/event-calendar?token=${STORYBLOK_TOKEN}`,
       {
         headers: {
           "Content-Type": "application/json",
         },
-        next: { revalidate: 60 },
+        next: { revalidate: 300 },
       },
     );
 
