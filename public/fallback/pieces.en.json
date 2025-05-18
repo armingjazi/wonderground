@@ -1,0 +1,427 @@
+[
+  {
+    "id": "island",
+    "type": "piece",
+    "title": "THE ISLAND",
+    "shortDesc": "A space for practice, creation, and artistic exchange",
+    "fullDesc": "Located in a non-urbanized natural landscape on the outskirts of Barcelona, the space is a renovated 180-square-meter stable. THE ISLAND is the creative home of WONDERGROUND and Movement Archery. ",
+    "tagline": "The Island is to our artistic practice what a canvas is to a painter",
+    "concept": "At its heart is a 100-square-meter wooden dance floor, specially built by Tom and Roser with the intention of supporting movement and performance arts. Since its opening in November 2023, it has hosted the company’s creations, workshops, laboratories, and artistic exchanges.",
+    "aesthetics": "The vision of THE ISLAND is to offer a space for artistic inspiration, reflection on the connection between movement and nature, and to empower both artistic and philosophical dialogue.",
+    "castAndCrew": "",
+    "visuals": {
+      "main": {
+        "filename": "https://a.storyblok.com/f/339375/1640x924/fc87244f3a/main.jpg",
+        "alt": ""
+      },
+      "mask": {
+        "filename": "https://a.storyblok.com/f/339375/1640x924/fc87244f3a/main.jpg",
+        "alt": ""
+      },
+      "promos": [
+        {
+          "filename": "https://a.storyblok.com/f/339375/1920x1080/9e227e052d/2.jpg",
+          "alt": ""
+        },
+        {
+          "filename": "https://a.storyblok.com/f/339375/6240x4160/89f3799bff/1.jpeg",
+          "alt": ""
+        },
+        {
+          "filename": "https://a.storyblok.com/f/339375/6240x4160/76dd0e36e2/3.jpeg",
+          "alt": ""
+        },
+        {
+          "filename": "https://a.storyblok.com/f/339375/1920x1080/427dc10114/4.jpg",
+          "alt": ""
+        }
+      ],
+      "trailer": "https://youtu.be/DVMwsU8wVWc",
+      "color": "#FFFF00",
+      "width": 160,
+      "height": 560,
+      "fontSize": 130,
+      "xTranslate": 100,
+      "yTranslate": 150,
+      "position": 2,
+      "order": 5,
+      "maskOpacity": 0.7
+    }
+  },
+  {
+    "id": "falling-man",
+    "type": "piece",
+    "title": "THE FALLING MAN",
+    "shortDesc": "A choreography of gravity: the universality in the act of falling",
+    "fullDesc": "This solo work questions de line between dance, imagination, and mental health. The Falling Man moves between collective memory and the personal experience, creating a fluid flow of images inspired by the act of falling.",
+    "tagline": "What is it about the fall that occupies the human spirit so much?",
+    "concept": "Falling is an archetype that has accompanied humans from ancient times to the present. The fall from heaven speaks of Adam and Eve’s loss of purity. The fallen angels are those who lost their faith. Alice’s fall down the rabbit hole leads her to Wonderland and, at the same time, to a loss of control over reality.\nIn physical terms, falling is one of the most elegant gestures: the body's extension in space, a release of weight that feels more like a masterful dance than a failure. This work emerged from a personal loss and led to a search for universality in the act of falling. It is an evocative dialogue between movement and Franz Heinrich Biber’s Mysterious Sonatas.",
+    "aesthetics": "A meditation on falling; fluid sequences across disciplines like contemporary dance, capoeira and parkour paired with baroque violin music. A choreography of gravity in non-conventional spaces.",
+    "castAndCrew": "<strong>Concept and Interpretation</strong> Tom Weksler/ <strong>Choreography</strong> Roser Tutusaus and Tom Weksler/ <strong>Music</strong> Franz Heinrich Biber / <strong>Costume Design</strong>: Paola Idrotino / <strong>Production</strong>: Wonderground / <strong>Distribution</strong>: Fani Benages",
+    "visuals": {
+      "main": {
+        "filename": "https://a.storyblok.com/f/339375/1046x952/a9a802b032/main.png",
+        "alt": ""
+      },
+      "mask": {
+        "filename": "https://a.storyblok.com/f/339375/1046x952/a9a802b032/main.png",
+        "alt": ""
+      },
+      "promos": [
+        {
+          "filename": "https://a.storyblok.com/f/339375/3444x3366/bf86da9b13/1.jpeg",
+          "alt": ""
+        },
+        {
+          "filename": "https://a.storyblok.com/f/339375/5184x3456/96b5122a5b/2.jpeg",
+          "alt": ""
+        },
+        {
+          "filename": "https://a.storyblok.com/f/339375/4893x3262/a31e28c4c6/3.jpeg",
+          "alt": ""
+        },
+        {
+          "filename": "https://a.storyblok.com/f/339375/5184x3456/ea0486893d/4.jpeg",
+          "alt": ""
+        }
+      ],
+      "trailer": "https://youtu.be/7FyaWtG-XbY",
+      "color": "rgb(175,100,60)",
+      "width": 260,
+      "height": 960,
+      "fontSize": 80,
+      "xTranslate": -300,
+      "yTranslate": 10,
+      "position": 2,
+      "order": 3,
+      "maskOpacity": 0.8
+    }
+  },
+  {
+    "id": "rise",
+    "type": "piece",
+    "title": "RISE",
+    "shortDesc": "A wild brushstroke of calligraphy in public space",
+    "fullDesc": "It transforms an everyday urban space into a meeting place, where initial distance turns into intimacy. Movement, acrobatics, and interactions with the audience make the performance unfold in real time, creating an experience that reflects, in its most primal form, on the authenticity in human relationships, personal transformation, and collective connection.",
+    "tagline": "Raise your hand if you feel like a human being...",
+    "concept": "<strong>RISE</strong> does not seek definitive answers, but rather focuses on the movement that emerges from questioning, opening new perspectives. To question oneself is a profoundly existential act that also evokes the innocent curiosity of childhood.\nPhysically, RISE explores the collision and encounter of different physical languages, reflecting the diverse artistic backgrounds of Tom and Roser. Butoh, Contemporary Dance, Acrobatics, Capoeira, and Partnering are removed from their original contexts and recontextualized to express current expressive needs. This creates a movement that, far from being merely technical, encourages the emergence of a sincere and meaningful gesture.",
+    "aesthetics": "Inspired by the cold, urban, futuristic aesthetic of <em>The Matrix</em> and the primal sensitivity of cave art, RISE is both a physical and poetic experience, where transformation, or regression, becomes the driving force of everything.",
+    "castAndCrew": "<strong>Creation & Interpretation</strong> Roser Tutusaus Tom Weksler / <strong>Artistic Collaboration</strong> Orit Nevo, Oryan Zacks & Spela Vodev / <strong>Costume Design</strong> Benjamin Nivisson & Tom Weklser / <strong>Music Composition</strong> Miguel Marín Pavón / <strong>Choreography assistant</strong> Marta Dalmau / <strong>Promotion & Distribution</strong> Fani Benages / <strong>Production</strong> Wonderground and Brechtje Randag/ <strong>Supported By</strong> Circuit Est-Centre Chorégraphique Montréal, Maison pour la danse de Québec, Me'ever Mitzpe Ramon a Israel, Aula de Teatre i Dansa de Mataró, On Contemporary Circus Creation de Israel, Centre Cívic de la Barceloneta, Institut Ramon Lull.",
+    "visuals": {
+      "main": {
+        "filename": "https://a.storyblok.com/f/339375/5622x4016/f0027ba75b/main.jpeg",
+        "alt": ""
+      },
+      "mask": {
+        "filename": "https://a.storyblok.com/f/339375/5622x4016/f0027ba75b/main.jpeg",
+        "alt": ""
+      },
+      "promos": [
+        {
+          "filename": "https://a.storyblok.com/f/339375/4016x5622/97ff9920a9/1.jpeg",
+          "alt": ""
+        },
+        {
+          "filename": "https://a.storyblok.com/f/339375/3000x2000/75e8ffa284/2.jpeg",
+          "alt": ""
+        },
+        {
+          "filename": "https://a.storyblok.com/f/339375/6000x3919/f79579335b/3.jpeg",
+          "alt": ""
+        },
+        {
+          "filename": "https://a.storyblok.com/f/339375/5622x4016/93be584e5b/4.jpg",
+          "alt": ""
+        }
+      ],
+      "trailer": "https://youtu.be/XOUboemZg5Q",
+      "color": "rgba(255,255,255)",
+      "width": 160,
+      "height": 960,
+      "fontSize": 180,
+      "xTranslate": -400,
+      "yTranslate": 100,
+      "position": 0,
+      "order": 3,
+      "maskOpacity": 0.8
+    }
+  },
+  {
+    "id": "wall-peace",
+    "type": "piece",
+    "title": "WALL & PEACE",
+    "shortDesc": "A site-specific night show that follows the mysterious story of two men and a wall, illuminated by a woman",
+    "fullDesc": "Through dance, circus and martial arts, the two men rediscover their friendship and perhaps, their place in the world. The show transforms the public space into an imaginary theatrical landscape that pushes the boundaries of handmade aesthetics and physical storytelling.",
+    "tagline": "WHAT LIES ON THE OTHER SIDE OF THE WALL?",
+    "concept": "Inspired by the mystery and fantasy of bedtime tales, a play with shadows; with visible and invisible; with dreams and ghosts. <strong>An act of transformation</strong",
+    "aesthetics": "A self-lit, handmade performance where movement, light, and space are inseparable. The wall carries multiple layers of meaning — as obstacle, companion, and symbol — within an atmosphere shaped by physical craft and poetic tension. <strong> A unique show that seeks to convey the spectacular nature of intimacy. </strong>",
+    "castAndCrew": "<strong>Direction</strong> Roser Tutusaus (Wonderground) <strong>Concept, choreography and dramaturgy:</strong> Roser Tutusaus and Tom Weksler (Wonderground) <strong>Performers creators</strong> Tom Weklser, Oded Avinathan <strong>Musical composition</strong> Miguel Marin Pavón <strong>Lighting design</strong> Filip Horn and Roser Tutusaus <strong>Costumes</strong> Benjamin Nivisson <strong>Artistic collaborators</strong> Ariadna Montfort, Joan Català and Hadas Lulu <strong>Production</strong> Wondergroud and Brechtje Randag <strong>Promotion and Communication</strong> Fani Benages <strong>Co-production and support</strong> Festival Spoffin, Festival el Danseu, K D M l e j n, Sismògraf, Departament de Cultura Generalitat de Catalunya, Institut Ramón Llull, The Island",
+    "visuals": {
+      "main": {
+        "filename": "https://a.storyblok.com/f/339375/993x904/41bb0e2a51/main.png",
+        "alt": ""
+      },
+      "mask": {
+        "filename": "https://a.storyblok.com/f/339375/993x904/41bb0e2a51/main.png",
+        "alt": ""
+      },
+      "promos": [
+        {
+          "filename": "https://a.storyblok.com/f/339375/5088x3392/c1908ee4d9/1.jpeg",
+          "alt": ""
+        },
+        {
+          "filename": "https://a.storyblok.com/f/339375/8192x5464/5d83b928cc/2.jpeg",
+          "alt": ""
+        },
+        {
+          "filename": "https://a.storyblok.com/f/339375/5088x3392/4681a8fc14/3.jpeg",
+          "alt": ""
+        },
+        {
+          "filename": "https://a.storyblok.com/f/339375/1306x871/4957165059/4.jpeg",
+          "alt": ""
+        }
+      ],
+      "trailer": "https://youtu.be/WuNHfDZaisU",
+      "color": "rgb(255,255,255)",
+      "width": 600,
+      "height": 460,
+      "fontSize": 120,
+      "xTranslate": 850,
+      "yTranslate": -1000,
+      "position": 1,
+      "order": 2,
+      "maskOpacity": 0.4
+    }
+  },
+  {
+    "id": "momentum",
+    "type": "piece",
+    "title": "MOMENTUM",
+    "shortDesc": "A mythological tale about humans, nature and gravity",
+    "fullDesc": "In this new creation, Wonderground presents a dreamlike journey in which four performers—two women, one man, and a live musician—explore the tensions between the human instinct for connection and the forces that pull us, both literally and metaphorically. Through landscapes that oscillate between the real and the imaginary—an internal storm, a body defying gravity, and a mountain that breaks and rebuilds itself—they create a choreography that reflects the fragility and resilience of our time. Somewhere between a poetic recital and a rock concert, MOMENTUM fuses movement, acrobatic dance, minimalism, and humor to imagine what our future could be.",
+    "tagline": "What moves us in a world that seems to have lost its balance?",
+    "concept": "There is a universal truth when one feels gravity and the weight of the body. It is one of the most primal human experiences of what it is to be in the world. If we add displacement, a multiplicity of questions begins to arise. Why do we move in one direction? What drives us? Where do we want to go? What do we expect to find? Are we going or returning? <br/>  <br/>In MOMENTUM, this displacement materializes through the use of various extreme actions as generators of dramatic choreography. Spinning, falling, dragging, climbing, suspending, or flying all have a very specific relationship with gravity when we consider their distance from the ground. <br/>  <br/> <strong> We place these actions within archetypal natural landscapes, which follow one another and intuitively reveal symbolic relationships—both of the soul's inner landscapes and of the forces that sometimes govern our relationships. </strong>",
+    "aesthetics": "Minimalist acrobatic dance meets live music. Altered natural imagery and elemental movement states — falling, flying, crawling — shape a visual futuristic world of shifting forces.",
+    "castAndCrew": "<strong>Concept, choreography and direction</strong> Roser Tutusaus and Tom Weksler / <strong>Dancers</strong> Tom Weksler, Nora Baylach and Yuval Finkelshtein / <strong>Original music and artistic collaboration</strong>  Miguel Marin Pavón / <strong>Lighting Design</strong> Filip Horn / <strong>Costumes Design</strong> Benjamin Nivison, Paola Idrontino / <strong>Collaboració artística</strong> Oded Avinathan, Ariadna Montfort and Joan Català / <strong>Participants of the first phase of creation</strong> Carla Piris Lasaga and Girordan Cruz / <strong>Promotion & Distribution</strong> Fani Benages / <strong>Production</strong> Wonderground / <strong>Videography</strong> Ignasi Castañé / <strong>Photography</strong> Aida Vargas / <strong>Coproduction</strong> Mercat de les Flors and Ajuntament de Tarragona / <strong>Residencies</strong> El Canal Centre d'arts Escèniques de Salt and The Island / <strong>Supported By</strong> Beca recerca OSIC, Departament de Cultura-Generalitat de Catalunya i l'Institut Ramón Llull and Movement Archery",
+    "visuals": {
+      "main": {
+        "filename": "https://a.storyblok.com/f/339375/3181x2122/43ad7e0bb0/main.jpeg",
+        "alt": ""
+      },
+      "mask": {
+        "filename": "https://a.storyblok.com/f/339375/3037x2026/d3059005f6/2.jpeg",
+        "alt": ""
+      },
+      "promos": [
+        {
+          "filename": "https://a.storyblok.com/f/339375/5453x4686/c5c38535aa/1_2.jpeg",
+          "alt": ""
+        },
+        {
+          "filename": "https://a.storyblok.com/f/339375/3037x2026/d3059005f6/2.jpeg",
+          "alt": ""
+        },
+        {
+          "filename": "https://a.storyblok.com/f/339375/7923x5285/eefe04b8a1/3.jpeg",
+          "alt": ""
+        },
+        {
+          "filename": "https://a.storyblok.com/f/339375/6218x4092/f16e67008c/4.jpeg",
+          "alt": ""
+        }
+      ],
+      "trailer": "https://youtu.be/9Atj0oc7yug",
+      "color": "#5DAD8C",
+      "width": 300,
+      "height": 560,
+      "fontSize": 140,
+      "xTranslate": 300,
+      "yTranslate": -100,
+      "position": 1,
+      "order": 0,
+      "maskOpacity": 0.8
+    }
+  },
+  {
+    "id": "after_the_rain",
+    "type": "piece",
+    "title": "AFTER THE RAIN",
+    "shortDesc": "A kinetic poem about letting go of someone you love",
+    "fullDesc": "Through an energetic dance of forces, open narratives and transient landscapes; The meeting and constant transformation of two individuals awakens unexpected memories about the nature of our lives. After the Rain is a dance of hopes and fears.",
+    "tagline": "After the Rain takes this natural phenomenon as a metaphor for the ephemeral",
+    "concept": "At the same time that Tom and Roser entered a studio together, Roser's father was diagnosed with a brain tumor. AFTER THE RAIN is the artistic work that has accompanied and moved through the process of her father's illness and passing. It holds the sensations and questions that arise—many of which are deeply tied to the very essence of living. And it does so by looking at nature as a reflection. Letting go of someone you love is a deeply personal experience, yet also a universal one. From this perspective, the piece explores beliefs about love, death, transformation, spirit, and transcendence, mirroring itself in the natural world and its processes.",
+    "aesthetics": "Minimal scenography, yet charged with symbolic imagery and natural elements. A poetic space where imagination, emotional landscapes, and metaphors of nature quietly unfold.",
+    "castAndCrew": "<strong>Direction, Choreography and Interpretation</strong>: Roser Tutusaus and Tom Weksler/ <strong>Original Music and Soundscape</strong>: Miguel Marin Pavón / <strong>Musical Research</strong>: Adrien Grellet (Didacte) / <strong>Lighting Design:</strong> Filip Horn / <strong>Lighting Research</strong>: Conchita Pons / <strong>Costume Design:</strong> Benjamin Nivison /<strong>Production: </strong>Wonderground and Brechtje Randag / <strong>Promotion and Communication:</strong> Katerina Vassiliadis\n<strong>Distribution: </strong>Fani Benages / <strong>Coproduction: </strong>Dansa Metropolitana and Derida Dance Center / <strong>Artistic Collaborators</strong>: Mal Pelo (Pep Ramis and Maria Muñoz), Marta Dalmau and Ariadna Montfort <strong>Special Thanks:</strong> Oryan Zacks, Nicols Protopappas, Berta Escalas, Carla Piris / <strong>Videography:</strong> Petya Ivanova / <strong>Supported by</strong>: Generalitat de Catalunya, Espai Pla Roig, Centre Cívic Barceloneta, Can Gassol Mataró, Ca l'Estruch, Ajuntament de Sabadell, L'Animal a l'Esquena, Certamen Coreográfico de Madrid, La Visiva, Instituto Cervantes Sofia.",
+    "visuals": {
+      "main": {
+        "filename": "https://a.storyblok.com/f/339375/2200x1468/bfd5ab2fdb/main.jpg",
+        "alt": ""
+      },
+      "mask": {
+        "filename": "https://a.storyblok.com/f/339375/2200x1468/bfd5ab2fdb/main.jpg",
+        "alt": ""
+      },
+      "promos": [
+        {
+          "filename": "https://a.storyblok.com/f/339375/2200x1468/70b76bf7d9/1.jpg",
+          "alt": ""
+        },
+        {
+          "filename": "https://a.storyblok.com/f/339375/2200x1468/e6467ec206/2.jpeg",
+          "alt": ""
+        },
+        {
+          "filename": "https://a.storyblok.com/f/339375/2200x1468/e320cb8163/3.jpeg",
+          "alt": ""
+        },
+        {
+          "filename": "https://a.storyblok.com/f/339375/2200x1468/336f4f9193/4.jpeg",
+          "alt": ""
+        }
+      ],
+      "trailer": "https://youtu.be/jcWGJi9SeHs",
+      "color": "#ff0000",
+      "width": 200,
+      "height": 360,
+      "fontSize": 90,
+      "xTranslate": -400,
+      "yTranslate": -100,
+      "position": 0,
+      "order": 1,
+      "maskOpacity": 0.6
+    }
+  },
+  {
+    "id": "event-calendar",
+    "title": "UPCOMING EVENTS",
+    "type": "calendar",
+    "events": [
+      {
+        "id": "event-1",
+        "name": "Momentum",
+        "date": "2025/03/29",
+        "location": "Barcelona",
+        "venue": "Teatre Tarragona",
+        "country": "Tarragona",
+        "link": {
+          "id": "",
+          "url": "https://entrades.tarragona.cat/momentum?idioma=ES",
+          "linktype": "url",
+          "fieldtype": "multilink",
+          "cached_url": "https://entrades.tarragona.cat/momentum?idioma=ES"
+        }
+      },
+      {
+        "id": "event-2",
+        "name": "After The Rain",
+        "date": "2025/04/26",
+        "location": "del Vallès",
+        "venue": "Teatre Can Gomà Mollet",
+        "country": "Spain",
+        "link": {
+          "id": "",
+          "url": "https://cultura.molletvalles.cat/ca/programacio/c/1305-despres-de-la-plujadid.html",
+          "linktype": "url",
+          "fieldtype": "multilink",
+          "cached_url": "https://cultura.molletvalles.cat/ca/programacio/c/1305-despres-de-la-plujadid.html"
+        }
+      },
+      {
+        "id": "event-3",
+        "name": "After The Rain",
+        "date": "2025/05/30",
+        "location": "Osaka",
+        "venue": "Site specific Exposició Universal Osaka",
+        "country": "Japan"
+      },
+      {
+        "id": "event-4",
+        "name": "After The Rain",
+        "date": "2025/05/31",
+        "location": "Osaka",
+        "venue": "Site specific Exposició Universal Osaka",
+        "country": "Japan"
+      },
+      {
+        "id": "event-5",
+        "name": "Residency",
+        "date": "2025/06/03",
+        "location": "Airk Kobe",
+        "venue": "Danseu Festival",
+        "country": "Japan",
+        "link": {
+          "id": "",
+          "url": "https://danseufestival.com/",
+          "linktype": "url",
+          "fieldtype": "multilink",
+          "cached_url": "https://danseufestival.com/"
+        }
+      },
+      {
+        "id": "event-6",
+        "name": "After the Rain",
+        "date": "2025/07/03",
+        "location": "Croatia",
+        "venue": "Puff Festival",
+        "country": "Croatia"
+      },
+      {
+        "id": "event-7",
+        "name": "Wall & Peace",
+        "date": "2025/07/05",
+        "location": "Barcelona",
+        "venue": "Per Amor a l’Art, Hospitalet de Llobregat",
+        "country": "Spain"
+      },
+      {
+        "id": "event-8",
+        "name": "Wall & Peace",
+        "date": "2025/07/15",
+        "location": "Barcelona",
+        "venue": "Festival Tangent",
+        "country": "Spain"
+      },
+      {
+        "id": "event-9",
+        "name": "RISE",
+        "date": "2025/08/09",
+        "location": "Budapest",
+        "venue": "Sziget Festival",
+        "country": "Hungary"
+      },
+      {
+        "id": "event-10",
+        "name": "RISE",
+        "date": "2025/08/10",
+        "location": "Budapest",
+        "venue": "Sziget Festival",
+        "country": "Hungary"
+      },
+      {
+        "id": "event-11",
+        "name": "Wall & Peace",
+        "date": "2025/08/12",
+        "location": "Alcalá de Gurrea",
+        "venue": "Tierras de Qala’t",
+        "country": "Spain"
+      }
+    ],
+    "visuals": {
+      "main": {
+        "filename": "https://a.storyblok.com/f/339375/5637x2983/db0b7e2be7/event-calendar.jpg",
+        "alt": ""
+      },
+      "color": "rgb(0,0,0)",
+      "width": 260,
+      "height": 500,
+      "fontSize": 80,
+      "xTranslate": -300,
+      "yTranslate": 10,
+      "position": 1,
+      "order": 6,
+      "maskOpacity": 1
+    }
+  }
+]

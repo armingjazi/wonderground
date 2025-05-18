@@ -1,5 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { LanguageKey, languageKeys } from "@/app/util/language";
+import { FOLDER_MAP } from "@/app/util/folderMap";
+import path from "path";
+import fs from 'fs';
 
 const STORYBLOK_TOKEN = process.env.STORYBLOK_TOKEN;
 const SPACE_ROOT = "company";
@@ -32,14 +35,7 @@ export async function GET(request: NextRequest) {
         next: { revalidate: 60 },
       },
     );
-
-    if (!res.ok) {
-      console.error("Storyblok API error:", await res.text());
-      return NextResponse.json(
-        { error: "Failed to fetch from Storyblok" },
-        { status: res.status },
-      );
-    }
+    if (!res.ok) throw new Error(await res.text());
 
     const { stories } = await res.json();
 
@@ -53,10 +49,25 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.json(parsed[0]);
   } catch (error) {
-    console.error("Error loading data:", error);
-    return NextResponse.json(
-      { error: "Unexpected failure loading data" },
-      { status: 500 },
-    );
+    console.error("❌ Storyblok fetch failed:", error);
+
+    try {
+      const langCode = FOLDER_MAP[language];
+
+      const fallbackPath = path.resolve(
+        process.cwd(),
+        `public/fallback/company.${langCode}.json`,
+      );
+      const file = fs.readFileSync(fallbackPath, "utf-8");
+      const fallback = JSON.parse(file);
+      console.warn("⚠️ Serving fallback data:", fallbackPath);
+      return NextResponse.json(fallback);
+    } catch (readError) {
+      console.error("❌ Fallback file failed to load:", readError);
+      return NextResponse.json(
+        { error: "Failed to load data from both Storyblok and fallback." },
+        { status: 500 },
+      );
+    }
   }
 }
