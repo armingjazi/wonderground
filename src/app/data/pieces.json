@@ -8,17 +8,6 @@
     "xTranslate": -400,
     "yTranslate": -100,
     "maskOpacity": 0.6,
-    "images": {
-      "main": "/pieces/after_the_rain/main.jpg",
-      "mask": "/pieces/after_the_rain/main.jpg",
-      "promos": [
-        "/pieces/after_the_rain/1.jpg",
-        "/pieces/after_the_rain/2.jpeg",
-        "/pieces/after_the_rain/3.jpeg",
-        "/pieces/after_the_rain/4.jpeg"
-      ]
-    },
-    "trailer": "https://youtu.be/jcWGJi9SeHs",
     "events": [],
     "position": 0,
     "order": 1
@@ -32,17 +21,6 @@
     "fontSize": 140,
     "xTranslate": 300,
     "yTranslate": -100,
-    "images": {
-      "main": "/pieces/momentum/main.jpeg",
-      "mask": "/pieces/momentum/2.jpeg",
-      "promos": [
-        "/pieces/momentum/1_2.jpeg",
-        "/pieces/momentum/2.jpeg",
-        "/pieces/momentum/3.jpeg",
-        "/pieces/momentum/4.jpeg"
-      ]
-    },
-    "trailer": "https://youtu.be/9Atj0oc7yug",
     "events": [],
     "position": 1,
     "order": 0
@@ -57,17 +35,6 @@
     "xTranslate": 850,
     "yTranslate": -1000,
     "maskOpacity": 0.4,
-    "images": {
-      "main": "/pieces/wall_and_peace/main.png",
-      "mask": "/pieces/wall_and_peace/main.png",
-      "promos": [
-        "/pieces/wall_and_peace/1.jpeg",
-        "/pieces/wall_and_peace/2.jpeg",
-        "/pieces/wall_and_peace/3.jpeg",
-        "/pieces/wall_and_peace/4.jpeg"
-      ]
-    },
-    "trailer": "https://youtu.be/WuNHfDZaisU",
     "events": [],
     "position": 1,
     "order": 2
@@ -81,17 +48,6 @@
     "fontSize": 180,
     "xTranslate": -400,
     "yTranslate": 100,
-    "images": {
-      "main": "/pieces/rise/main.jpeg",
-      "mask": "/pieces/rise/main.jpeg",
-      "promos": [
-        "/pieces/rise/1.jpeg",
-        "/pieces/rise/2.jpeg",
-        "/pieces/rise/3.jpeg",
-        "/pieces/rise/4.jpg"
-      ]
-    },
-    "trailer": "https://youtu.be/XOUboemZg5Q",
     "events": [],
     "position": 0,
     "order": 3
@@ -105,17 +61,6 @@
     "fontSize": 80,
     "xTranslate": -300,
     "yTranslate": 10,
-    "images": {
-      "main": "/pieces/falling_man/main.png",
-      "mask": "/pieces/falling_man/main.png",
-      "promos": [
-        "/pieces/falling_man/1.jpeg",
-        "/pieces/falling_man/3.jpeg",
-        "/pieces/falling_man/2.jpeg",
-        "/pieces/falling_man/4.jpeg"
-      ]
-    },
-    "trailer": "https://youtu.be/7FyaWtG-XbY",
     "events": [],
     "position": 2,
     "order": 4
@@ -130,17 +75,6 @@
     "xTranslate": 100,
     "yTranslate": 150,
     "maskOpacity": 0.7,
-    "images": {
-      "main": "/pieces/island/main.jpg",
-      "mask": "/pieces/island/main.jpg",
-      "promos": [
-        "/pieces/island/2.jpg",
-        "/pieces/island/1.jpeg",
-        "/pieces/island/3.jpeg",
-        "/pieces/island/4.jpg"
-      ]
-    },
-    "trailer": "https://youtu.be/DVMwsU8wVWc",
     "events": [],
     "position": 2,
     "order": 5
@@ -154,108 +88,6 @@
     "fontSize": 80,
     "xTranslate": -300,
     "yTranslate": 10,
-    "images": {
-      "main": "/pieces/event_calendar/main.jpg",
-      "mask": "/pieces/event_calendar/main.jpg",
-      "promos": [
-        "/pieces/event_calendar/1.png",
-        "/pieces/event_calendar/2.png",
-        "/pieces/event_calendar/3.png"
-      ]
-    },
-    "events": [
-      {
-        "id": "event-5",
-        "date": "2025/03/29",
-        "location": "Barcelona",
-        "name": "Momentum",
-        "venue": "Teatre Tarragona",
-        "link": "https://entrades.tarragona.cat/momentum?idioma=ES&_ga=2.209574354.1578784436.1736640000-447243502.1736640000",
-        "country": "Tarragona"
-      },
-      {
-        "id": "event-4",
-        "date": "2025/04/26",
-        "location": "del Vallès",
-        "name": "After The Rain",
-        "venue": "Teatre Can Gomà Mollet",
-        "link": "https://cultura.molletvalles.cat/ca/programacio/c/1305-despres-de-la-plujadid.html",
-        "country": "Spain"
-      },
-      {
-        "id": "event-31",
-        "date": "2025/05/30",
-        "location": "Osaka",
-        "name": "After The Rain",
-        "venue": "Site specific Exposició Universal Osaka",
-        "country": "Japan"
-      },
-      {
-        "id": "event-3",
-        "date": "2025/05/31",
-        "location": "Osaka",
-        "name": "After The Rain",
-        "venue": "Site specific Exposició Universal Osaka",
-        "country": "Japan"
-      },
-      {
-        "id": "event-2",
-        "date": "2025/06/03",
-        "location": "Airk Kobe",
-        "name": "Residency",
-        "venue": "Danseu Festival",
-        "link": "https://danseufestival.com/",
-        "country": "Japan"
-      },
-      {
-        "id": "event-1",
-        "date": "2025/07/03",
-        "location": "Croatia",
-        "name": "After the Rain",
-        "venue": "Puff Festival",
-        "country": "Croatia"
-      },
-      {
-        "id": "event-6",
-        "date": "2025/07/05",
-        "location": "Barcelona",
-        "name": "Wall & Peace",
-        "venue": "Per Amor a l’Art, Hospitalet de Llobregat",
-        "country": "Spain"
-      },
-      {
-        "id": "event-61",
-        "date": "2025/07/15",
-        "location": "Barcelona",
-        "name": "Wall & Peace",
-        "venue": "Festival Tangent",
-        "country": "Spain"
-      },
-      {
-        "id": "event-9",
-        "date": "2025/08/09",
-        "location": "Budapest",
-        "name": "RISE",
-        "venue": "Sziget Festival",
-        "country": "Hungary"
-      },
-      {
-        "id": "event-91",
-        "date": "2025/08/10",
-        "location": "Budapest",
-        "name": "RISE",
-        "venue": "Sziget Festival",
-        "country": "Hungary"
-      },
-      {
-        "id": "event-922",
-        "date": "2025/09/12",
-        "location": "Alcalá de Gurrea",
-        "name": "Wall & Peace",
-        "venue": "Tierras de Qala’t",
-        "country": "Spain"
-      }
-    ],
     "position": 1,
     "order": 6
   }

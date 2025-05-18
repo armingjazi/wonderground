@@ -41,7 +41,7 @@ export const EventCalendar = ({
       onClick={onClick}
     >
       <motion.img
-        src={piece.images.main}
+        src={piece.visuals.main.filename}
         className="w-full h-full object-cover "
         whileHover={{
           scale: 1.1,

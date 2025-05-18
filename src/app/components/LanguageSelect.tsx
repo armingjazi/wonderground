@@ -3,20 +3,20 @@
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Language, languages } from "@/app/util/language";
+import { LanguageKey, languageNames, languageKeys } from "@/app/util/language";
 
 export const LanguageSelect = ({
   onChange,
   selectedLanguage,
 }: {
-  onChange: (lang: Language) => void;
-  selectedLanguage: Language;
+  onChange: (lang: LanguageKey) => void;
+  selectedLanguage: LanguageKey;
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => setIsOpen(!isOpen);
 
-  const selectLanguage = (language: Language) => {
+  const selectLanguage = (language: LanguageKey) => {
     onChange(language);
     setIsOpen(false);
   };
@@ -29,7 +29,7 @@ export const LanguageSelect = ({
           onClick={toggleDropdown}
           whileTap={{ scale: 0.97 }}
         >
-          <span className="text-white text-sm">{selectedLanguage}</span>
+          <span className="text-white text-sm">{languageNames[selectedLanguage]}</span>
           <motion.svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -58,7 +58,7 @@ export const LanguageSelect = ({
               transition={{ duration: 0.2 }}
             >
               <motion.ul className="py-1">
-                {languages.map((language) => (
+                {languageKeys.map((language) => (
                   <motion.li
                     key={language}
                     whileHover={{ backgroundColor: "#bdbdbd", color: "#000" }}
@@ -69,7 +69,7 @@ export const LanguageSelect = ({
                     }`}
                     onClick={() => selectLanguage(language)}
                   >
-                    {language}
+                    {languageNames[language]}
                   </motion.li>
                 ))}
               </motion.ul>

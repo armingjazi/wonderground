@@ -29,14 +29,23 @@ export interface Piece {
   xTranslate: number;
   yTranslate: number;
   maskOpacity?: number;
-  images: {
-    main: string;
-    mask: string;
-    promos: string[];
+  visuals: {
+    main: {
+      filename: string;
+      alt: string;
+    }
+    mask: {
+      filename: string;
+      alt: string;
+    }
+    promos: {
+      filename: string;
+      alt: string;
+    }[]
+    trailer: string;
   };
   position: 0 | 1 | 2;
   events: CalEvent[];
-  trailer: string;
   order: number;
   visualId: string;
 }

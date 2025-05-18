@@ -1,43 +1,194 @@
-import { NextRequest, NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
-import { Language, languages } from "@/app/util/language";
-import piecesVisuals from '@/app/data/pieces.json';
+import { NextRequest, NextResponse } from "next/server";
+import { LanguageKey, languageKeys } from "@/app/util/language";
+import piecesVisuals from "@/app/data/pieces.json";
 
+const STORYBLOK_TOKEN = process.env.STORYBLOK_TOKEN;
+const SPACE_ROOT = "pieces";
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
-  const language: Language = (searchParams.get('language') || 'ENGLISH') as Language;
+  const language = (searchParams.get("language") ||
+    "ENGLISH") as LanguageKey;
+  const lang = (
+    languageKeys.includes(language) ? language : "ENGLISH"
+  ).toLowerCase();
 
-  const lang = (languages.includes(language) ? language : 'ENGLISH').toLowerCase();
+  const folderSlug = `${SPACE_ROOT}/${lang}/`;
 
   try {
-    const filePath = path.join(process.cwd(), 'src', 'app', 'data', `${lang}.json`);
+    const res = await fetch(
+      `https://api.storyblok.com/v2/cdn/stories?token=${STORYBLOK_TOKEN}&starts_with=${folderSlug}&resolve_relations=piece.visuals&cv=${Date.now()}`,
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+        next: { revalidate: 60 },
+      },
+    );
 
-    if (!fs.existsSync(filePath)) {
+    if (!res.ok) {
+      console.error("Storyblok API error:", await res.text());
       return NextResponse.json(
-        { error: `Language file for ${lang} not found` },
-        { status: 404 }
+        { error: "Failed to fetch from Storyblok" },
+        { status: res.status },
       );
     }
 
-    const fileContents = fs.readFileSync(filePath, 'utf8');
-    const data = JSON.parse(fileContents);
+    const { stories, rels } = await res.json();
 
-    const pieces = piecesVisuals.map((piece) => {
-      const pieceData = data.find((d: {id: string}) => d.id === piece.id);
+    const parsed: {
+      id: string;
+      title?: string;
+      type: string;
+      shortDesc?: string;
+      fullDesc?: string;
+      tagline?: string;
+      concept?: string;
+      aesthetics?: string;
+      trailer?: string;
+      castAndCrew?: string;
+      events?: [];
+      visuals: {
+        main: {
+          filename: string;
+          alt: string;
+        };
+        mask?: {
+          filename: string;
+          alt: string;
+        };
+        promos?: {
+          filename: string;
+          alt: string;
+        }[];
+        trailer?: string;
+      };
+    }[] = stories.map(
+      (story: {
+        content: {
+          CastAndCrew: string;
+          id: string;
+          Title?: string;
+          Name?: string;
+          ShortDescription?: string;
+          FullDescription?: string;
+          Tagline?: string;
+          Concept?: string;
+          Aesthetics?: string;
+          Trailer?: string;
+          visuals?: string[];
+        };
+        name: string;
+        id: string;
+      }) => {
+        const c = story.content;
+        const match = rels.find(
+          (r: { uuid: string }) => r.uuid === story.content.visuals?.[0],
+        );
+        return {
+          id: c.id,
+          type: 'piece',
+          title: c.Title || c.Name || story.name,
+          shortDesc: c.ShortDescription || "",
+          fullDesc: c.FullDescription || "",
+          tagline: c.Tagline || "",
+          concept: c.Concept || "",
+          aesthetics: c.Aesthetics || "",
+          castAndCrew: c.CastAndCrew || "",
+          visuals: {
+            main: {
+              filename: match?.content.main.filename || "",
+              alt: match?.content.main.alt || "",
+            },
+            mask: {
+              filename: match?.content.mask.filename || "",
+              alt: match?.content.mask.alt || "",
+            },
+            promos:
+              match?.content.promos.map(
+                (promo: { filename: string; alt: string }) => ({
+                  filename: promo.filename,
+                  alt: promo.alt || "",
+                }),
+              ) || [],
+            trailer: match?.content.trailer.url || "",
+          },
+        };
+      },
+    );
+
+    const resEventCal = await fetch(
+      `https://api.storyblok.com/v2/cdn/stories/${SPACE_ROOT}/event-calendar?token=${STORYBLOK_TOKEN}&cv=${Date.now()}`,
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+        next: { revalidate: 60 },
+      },
+    );
+
+    if (!resEventCal.ok) {
+      console.error("Storyblok API error:", await resEventCal.text());
+      return NextResponse.json(
+        { error: "Failed to fetch from Storyblok" },
+        { status: resEventCal.status },
+      );
+    }
+
+    const { story: calendarStory } = await resEventCal.json();
+
+    parsed.push({
+      id: "event-calendar",
+      title: "UPCOMING EVENTS",
+      type: 'calendar',
+      events: calendarStory.content.events.map(
+        (event: {
+          id: string;
+          name: string;
+          date: string;
+          location: string;
+          venue: string;
+          link: string;
+          country: string;
+        }) => {
+          const date = new Date(event.date);
+
+          const year = date.getFullYear();
+          const month = date.getMonth() + 1;
+          const day = date.getDate();
+          return {
+            id: event.id,
+            name: event.name,
+            date: `${year}/${month < 10 ? "0" : ""}${month}/${day < 10 ? "0" : ""}${day}`,
+            location: event.location,
+            country: event.country,
+            venue: event.venue,
+            link: event.link,
+          };
+        },
+      ),
+      visuals: {
+        main: {
+          filename: calendarStory.content.image.filename,
+          alt: calendarStory.content.image.filename,
+        },
+      },
+    });
+
+    const merged = piecesVisuals.map((piece) => {
+      const match = parsed.find((d) => d.id === piece.id);
       return {
         ...piece,
-        ...pieceData,
+        ...match,
       };
     });
 
-    return NextResponse.json(pieces);
+    return NextResponse.json(merged);
   } catch (error) {
-    console.error('Error loading pieces data:', error);
+    console.error("Error loading data:", error);
     return NextResponse.json(
-      { error: 'Failed to load data' },
-      { status: 500 }
+      { error: "Unexpected failure loading data" },
+      { status: 500 },
     );
   }
 }

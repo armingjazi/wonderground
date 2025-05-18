@@ -13,6 +13,7 @@ export const PieceItem = ({
   blur?: boolean;
   active: boolean;
 }) => {
+
   return (
     <motion.div
       key={piece.id}
@@ -26,8 +27,9 @@ export const PieceItem = ({
         height: piece.height,
       }}
       animate={{
-        filter: blur ? "blur(20px)" : "none",
-        scale: blur ? (active ? 1.2 : 0.7) : 1,
+        filter: blur ? (active ? "blur(10px)" : "blur(20px)") : "none",
+        scale: blur ? (active ? 1.5 : 0.7) : 1,
+        zIndex: blur ? (active ? 10 : 0) : 0,
       }}
       whileHover={{
         transition: { duration: 0.3 },
@@ -41,7 +43,8 @@ export const PieceItem = ({
       onClick={onClick}
     >
       <motion.img
-        src={piece.images.main}
+        src={piece.visuals.main.filename}
+        alt={piece.visuals.main.alt}
         className="w-full h-full object-cover"
         whileHover={{
           scale: 1.1,
@@ -75,7 +78,7 @@ export const PieceItem = ({
                   fill={piece.color}
                 />
                 <image
-                  href={piece.images.mask}
+                  href={piece.visuals.mask.filename}
                   width="1046"
                   height="904"
                   opacity={piece.maskOpacity ?? 0.8}

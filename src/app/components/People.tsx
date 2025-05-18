@@ -38,9 +38,7 @@ const Profile = ({
           </div>
         </div>
 
-        <div
-          className="w-full md:w-7/12 md:text-left"
-        >
+        <div className="w-full md:w-7/12 md:text-left">
           <h3 className="text-2xl font-light tracking-wide mb-1">
             {person.name}
           </h3>
@@ -58,8 +56,8 @@ const Profile = ({
 };
 
 export const People = ({ language }: { language: Language }) => {
-  const people = usePeople({ language });
-  const company = useCompany({ language });
+  const { people } = usePeople({ language });
+  const { company } = useCompany({ language });
 
   const main = people.filter((person) => person.type === "main");
   const collaborators = people.filter(
@@ -164,7 +162,12 @@ export const People = ({ language }: { language: Language }) => {
           </div>
           <div className="flex flex-col">
             {collaborators.map((person, index) => (
-              <Profile key={person.id} person={person} index={index} orderFunction={(index) => index % 2 !== 0} />
+              <Profile
+                key={person.id}
+                person={person}
+                index={index}
+                orderFunction={(index) => index % 2 !== 0}
+              />
             ))}
           </div>
           <div className="flex items-center w-full mb-12 mt-6">
@@ -185,7 +188,12 @@ export const People = ({ language }: { language: Language }) => {
           </div>
           <div className="flex flex-col">
             {media.map((person, index) => (
-              <Profile key={person.id} person={person} index={index} orderFunction={(index) => index % 2 !== 0} />
+              <Profile
+                key={person.id}
+                person={person}
+                index={index}
+                orderFunction={(index) => index % 2 !== 0}
+              />
             ))}
           </div>
         </motion.div>

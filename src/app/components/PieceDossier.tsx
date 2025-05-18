@@ -49,8 +49,8 @@ export const PieceDossier = ({ piece }: { piece: Piece }) => {
             )}
           </motion.div>
           <motion.img
-            src={piece.images.promos[0]}
-            alt="Dance performance capturing momentum"
+            src={piece.visuals.promos[0].filename}
+            alt={piece.visuals.promos[0].alt}
             className="w-full md:w-1/2 lg:w-2/3"
           />
         </div>
@@ -65,8 +65,8 @@ export const PieceDossier = ({ piece }: { piece: Piece }) => {
         </motion.p>
 
         <motion.img
-          src={piece.images.promos[1]}
-          alt="Dance performance capturing momentum"
+          src={piece.visuals.promos[1].filename}
+          alt={piece.visuals.promos[1].alt}
           className="w-full md:w-2/3 lg:w-3/4 ml-[-4px] mt-4"
         />
 
@@ -89,7 +89,7 @@ export const PieceDossier = ({ piece }: { piece: Piece }) => {
         >
           <a
             className="border border-white px-8 py-3 rounded-full hover:bg-white hover:text-black transition-colors cursor-pointer"
-            href={piece.trailer}
+            href={piece.visuals.trailer}
             target="_blank"
           >
             WATCH TRAILER
@@ -97,8 +97,8 @@ export const PieceDossier = ({ piece }: { piece: Piece }) => {
         </motion.div>
 
         <motion.img
-          src={piece.images.promos[2]}
-          alt="Dance performance capturing momentum"
+          src={piece.visuals.promos[2].filename}
+          alt={piece.visuals.promos[2].alt}
           className="w-full ml-[-4px] mt-4"
         />
 
@@ -127,8 +127,8 @@ export const PieceDossier = ({ piece }: { piece: Piece }) => {
       </div>
 
       <motion.img
-        src={piece.images.promos[3]}
-        alt="Dance performance capturing momentum"
+        src={piece.visuals.promos[3].filename}
+        alt={piece.visuals.promos[3].alt}
         className="w-full"
       />
 
