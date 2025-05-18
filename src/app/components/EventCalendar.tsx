@@ -18,12 +18,12 @@ export const EventCalendar = ({
       key={piece.id}
       className="relative rounded-md shadow-2xl overflow-hidden cursor-pointer w-full image-full mb-8 group"
       style={{
-        backgroundColor: piece.color,
+        backgroundColor: piece.visuals.color,
         transformStyle: "preserve-3d",
         transformOrigin: "center center",
       }}
       initial={{
-        height: piece.height,
+        height: piece.visuals.height,
       }}
       animate={{
         filter: blur ? "blur(20px)" : "none",
@@ -49,7 +49,7 @@ export const EventCalendar = ({
         transition={{
           duration: 0.4,
         }}
-        style={{ backgroundColor: piece.color }}
+        style={{ backgroundColor: piece.visuals.color }}
       ></motion.img>
       <div className="absolute top-4 left-0 pt-6 pl-2 h-4/5 w-full flex flex-col flex-wrap pointer-events-none">
         {piece.events.map((event) => (
