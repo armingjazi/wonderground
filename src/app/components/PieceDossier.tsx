@@ -27,26 +27,21 @@ export const PieceDossier = ({ piece }: { piece: Piece }) => {
         <div className="flex flex-col md:flex-row gap-8 items-start">
           <motion.div
             className="flex-1"
-            initial={{ scale: 0.9}}
+            initial={{ scale: 0.9 }}
             whileInView={{
               scale: 1,
               transition: { duration: 1.5 },
             }}
           >
-            {piece.fullDesc.split(". ").map(
-              (paragraph, index) =>
-                paragraph.trim() && (
-                  <motion.p
-                    key={index}
-                    className="mb-6 text-xl leading-relaxed"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
-                  >
-                    {paragraph.trim() + (paragraph.endsWith(".") ? "" : ".")}
-                  </motion.p>
-                ),
-            )}
+            <motion.div
+              className="mb-6 text-xl leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+            >
+              <span
+                dangerouslySetInnerHTML={{ __html: piece.fullDesc }}
+              />
+            </motion.div>
           </motion.div>
           <motion.img
             src={piece.visuals.promos[0].filename}
@@ -71,7 +66,7 @@ export const PieceDossier = ({ piece }: { piece: Piece }) => {
         />
 
         <motion.div
-          className="m-6 md:m-12 md:pl-100"
+          className="m-6 mt-8 md:m-12 md:pl-100"
           whileInView={{ scale: 1.1 }}
           transition={{ duration: 1.5 }}
         >
