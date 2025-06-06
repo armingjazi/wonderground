@@ -35,7 +35,10 @@ export interface Piece {
       alt: string;
     }[]
     trailer: string;
-    position: 0 | 1 | 2;
+    position: {
+      desktop: 0 | 1 | 2;
+      tablet: 0 | 1;
+    }
     order: number;
     color: string;
     width: number;

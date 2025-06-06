@@ -62,29 +62,29 @@ export const PieceGrid = ({
     .sort((a, b) => a.visuals.order - b.visuals.order)
     .map((piece) => ({ ...piece, visualId: piece.id + "mobile" }));
   const first_desktop = pieces
-    .filter((piece) => piece.visuals.position === 0)
+    .filter((piece) => piece.visuals.position.desktop === 0)
     .map((piece) => ({ ...piece, visualId: piece.id + "first" }));
   const second_desktop = pieces
-    .filter((piece) => piece.visuals.position === 1)
+    .filter((piece) => piece.visuals.position.desktop === 1)
     .map((piece) => ({ ...piece, visualId: piece.id + "second" }));
   const third_desktop = pieces
-    .filter((piece) => piece.visuals.position === 2)
+    .filter((piece) => piece.visuals.position.desktop === 2)
     .map((piece) => ({ ...piece, visualId: piece.id + "third" }));
 
   const first_tablet = pieces
     .filter(
-      (piece) => piece.visuals.position === 0 || piece.visuals.position === 2,
+      (piece) => piece.visuals.position.tablet === 0,
     )
     .map((piece) => ({ ...piece, visualId: piece.id + "first_tablet" }));
   const second_tablet = pieces
-    .filter((piece) => piece.visuals.position === 1)
+    .filter((piece) => piece.visuals.position.tablet === 1)
     .map((piece) => ({ ...piece, visualId: piece.id + "second_tablet" }));
 
   const classes = blur ? "pointer-events-none" : "";
 
   return (
     <div
-      className={`inset-0 z-0 flex items-center justify-center m-2 ${classes}`}
+      className={`inset-0 z-0 flex items-center justify-center mx-0 sm:mx-2 my-2 ${classes}`}
     >
       <div className="relative flex gap-2 pb-2 w-full">
         <div className="hidden lg:block w-[30%] space-y-4">

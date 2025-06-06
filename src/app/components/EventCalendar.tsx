@@ -61,7 +61,7 @@ export const EventCalendar = ({
             transition={{ duration: 0.5 }}
           >
             <h1
-              className="text-white text-lg md:text-md lg:text-lg xl:text-xl font-normal tracking-wide sm:tracking-wider md:tracking-widest"
+              className="text-white text-md md:text-md lg:text-lg xl:text-xl font-normal tracking-wide sm:tracking-wider md:tracking-widest"
             >
               {event.name}
             </h1>

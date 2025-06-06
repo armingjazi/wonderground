@@ -63,7 +63,10 @@ export async function GET(request: NextRequest) {
         fontSize?: number;
         xTranslate?: number;
         yTranslate?: number;
-        position?: number;
+        position?: {
+          desktop: number;
+          tablet: number;
+        };
         order?: number;
         maskOpacity?: number;
       };
@@ -122,7 +125,10 @@ export async function GET(request: NextRequest) {
             fontSize: parseInt(match?.content.fontSize),
             xTranslate: parseInt(match?.content.xTranslate),
             yTranslate: parseInt(match?.content.yTranslate),
-            position: parseInt(match?.content.position),
+            position: {
+              desktop: parseInt(match?.content.desktopPosition) || 0,
+              tablet: parseInt(match?.content.tabletPosition) || 0,
+            },
             order: parseInt(match?.content.order),
             maskOpacity: parseFloat(match?.content.maskOpacity),
           },
@@ -188,7 +194,10 @@ export async function GET(request: NextRequest) {
         fontSize: parseInt(match?.content.fontSize),
         xTranslate: parseInt(match?.content.xTranslate),
         yTranslate: parseInt(match?.content.yTranslate),
-        position: parseInt(match?.content.position),
+        position: {
+          desktop: parseInt(match?.content.desktopPosition) || 0,
+          tablet: parseInt(match?.content.tabletPosition) || 0,
+        },
         order: parseInt(match?.content.order),
         maskOpacity: parseFloat(match?.content.maskOpacity),
       },

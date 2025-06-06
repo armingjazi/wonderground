@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export const PieceDossier = ({ piece }: { piece: Piece }) => {
   return (
     <div>
-      <div className="max-w-6xl mx-auto p-2 w-full">
+      <div className="max-w-6xl mx-auto sm:p-2 w-full">
         <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
@@ -66,7 +66,7 @@ export const PieceDossier = ({ piece }: { piece: Piece }) => {
         />
 
         <motion.div
-          className="m-6 mt-8 md:m-12 md:pl-100"
+          className="m-6 mt-14 md:m-12 md:pl-100"
           whileInView={{ scale: 1.1 }}
           transition={{ duration: 1.5 }}
         >
