@@ -31,7 +31,7 @@ export function CalendarDetail({piece}: {piece: Piece}) {
             </h2>
             <a
               className="text-xs sm:text-sm md:text-lg font-light underline"
-              href={event.link}
+              href={event.link?.url}
               target="_blank"
               rel="noreferrer"
             >

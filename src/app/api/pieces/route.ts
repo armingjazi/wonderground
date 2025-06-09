@@ -42,7 +42,9 @@ export async function GET(request: NextRequest) {
       aesthetics?: string;
       trailer?: string;
       castAndCrew?: string;
-      events?: [];
+      events?: {
+        url: string;
+      }[];
       visuals: {
         main: {
           filename: string;
@@ -164,7 +166,9 @@ export async function GET(request: NextRequest) {
           date: string;
           location: string;
           venue: string;
-          link: string;
+          link: {
+            url: string;
+          };
           country: string;
         }) => {
           const date = new Date(event.date);
@@ -172,6 +176,7 @@ export async function GET(request: NextRequest) {
           const year = date.getFullYear();
           const month = date.getMonth() + 1;
           const day = date.getDate();
+
           return {
             id: event.id,
             name: event.name,

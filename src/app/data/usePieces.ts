@@ -9,7 +9,9 @@ export interface CalEvent {
   location: string;
   country: string;
   venue?: string;
-  link?: string;
+  link?: {
+    url: string;
+  };
 }
 export interface Piece {
   type: "piece" | "calendar" | "other";
