@@ -12,6 +12,7 @@ import { CalendarDetailOverlay } from "@/app/components/CalendarDetailOverlay";
 import { LanguageKey } from "@/app/util/language";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useBreakpoint } from "@/app/util/useBreakpoint";
+import { TeamOverlay } from "@/app/components/TeamOverlay";
 
 function Main() {
   const searchParams = useSearchParams();
@@ -32,6 +33,7 @@ function Main() {
 
   const [piece, setPiece] = useState<Piece | null>(null);
   const [about, setAbout] = useState(false);
+  const [team, setTeam] = useState(false);
   const { loading, pieces } = usePieces({ language });
 
   const handlePieceClick = (piece: Piece) => {
@@ -50,6 +52,13 @@ function Main() {
     }
   };
 
+  const handleTeamClick = () => {
+    if (!isMobile) {
+      setTeam(true);
+    } else {
+      router.push(`/team?language=${language}`);
+    }
+  };
 
   return (
     <div className="flex flex-col h-full bg-black text-white font-light">
@@ -73,11 +82,15 @@ function Main() {
           </motion.div>
         )}
       </AnimatePresence>
-      <Header onAbout={handleAboutClick} selectedLanguage={language} />
+      <Header
+        onAbout={handleAboutClick}
+        onTeam={handleTeamClick}
+        selectedLanguage={language}
+      />
       <main className="flex-1 flex flex-col overflow-y-auto">
         <PieceGrid
           onPieceClick={handlePieceClick}
-          blur={!!piece || about}
+          blur={!!piece || about || team}
           activePiece={piece}
           pieces={pieces}
         />
@@ -89,6 +102,9 @@ function Main() {
         )}
         {about && (
           <AboutOverlay language={language} onClose={() => setAbout(false)} />
+        )}
+        {team && (
+          <TeamOverlay language={language} onClose={() => setTeam(false)} />
         )}
         <Contact />
       </main>

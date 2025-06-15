@@ -1,11 +1,11 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { CloseButton } from "@/app/components/CloseButton";
-import { Company } from "@/app/components/Company";
 import { useScrollAnimation } from "@/app/util/useScrollAnimation";
 import { BackToTopButton } from "@/app/components/BackToTopButton";
 import { LanguageKey } from "@/app/util/language";
+import { Team } from "@/app/components/Team";
 
-export const AboutOverlay = ({
+export const TeamOverlay = ({
   onClose,
   language,
 }: {
@@ -23,8 +23,7 @@ export const AboutOverlay = ({
           className="relative z-30 min-h-full pt-24 pb-32 bg-black md:bg-transparent"
           ref={root}
         >
-          <Company language={language} />
-
+          <Team language={language} />
           <CloseButton onClick={onClose} />
           <BackToTopButton
             onClick={() => window.scrollTo({ top: 1200, behavior: "smooth" })}

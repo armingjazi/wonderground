@@ -10,9 +10,11 @@ import Link from "next/link";
 
 export const Header = ({
   onAbout,
+  onTeam,
   selectedLanguage,
 }: {
   onAbout?: (show: boolean) => void;
+  onTeam?: (show: boolean) => void;
   selectedLanguage: LanguageKey;
 }) => {
   const router = useRouter();
@@ -21,6 +23,11 @@ export const Header = ({
   const handleAboutClick = (e: MouseEvent) => {
     e.preventDefault();
     onAbout?.(true);
+  };
+
+  const handleTeamClick = (e: MouseEvent) => {
+    e.preventDefault();
+    onTeam?.(true);
   };
 
   const handleLanguageChange = (language: LanguageKey) => {
@@ -50,6 +57,13 @@ export const Header = ({
           <nav className="flex gap-6 text-sm">
             <a href="#" onClick={handleAboutClick} className="hover:underline">
               ABOUT
+            </a>
+          </nav>
+        }
+        {onTeam &&
+          <nav className="flex gap-6 text-sm">
+            <a href="#" onClick={handleTeamClick} className="hover:underline">
+              TEAM
             </a>
           </nav>
         }
