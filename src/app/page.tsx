@@ -80,22 +80,13 @@ function Main() {
               WONDERGROUND
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 1, delay: 1 }}
-              className="text-lg tracking-widest font-extralight mt-8"
-            >
-              By
-            </motion.div>
-            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 3, delay: 1.5 }}
-              className="text-xl mt-4 font-light tracking-widest"
+              className="text-xl mt-1 font-light tracking-widest"
             >
-              Roser Tutusaus & Tom Weksler
+              By Roser Tutusaus & Tom Weksler
             </motion.div>
           </motion.div>
         )}
