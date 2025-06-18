@@ -65,19 +65,37 @@ function Main() {
       <AnimatePresence>
         {(!hasInitialLoad || loading) && (
           <motion.div
-            className="fixed inset-0 z-50 bg-black flex items-center justify-center"
+            className="fixed inset-0 z-50 bg-black flex items-center justify-center flex-col"
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 2.5 }}
+            transition={{ duration: 3 }}
           >
             <motion.div
               initial={{ opacity: 0, scale: 1.1 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 2 }}
-              className="text-4xl tracking-widest font-extralight"
+              className="text-4xl tracking-widest font-light"
             >
               WONDERGROUND
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 1, delay: 1 }}
+              className="text-lg tracking-widest font-extralight mt-8"
+            >
+              By
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 3, delay: 1.5 }}
+              className="text-xl mt-4 font-light tracking-widest"
+            >
+              Roser Tutusaus & Tom Weksler
             </motion.div>
           </motion.div>
         )}
